@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MD. Saif Islam — WordPress Web Developer & Web Designer</title>
-<meta name="description" content="MD. Saif Islam is a professional WordPress Web Developer specializing in modern websites, Elementor, WooCommerce, responsive design and performance optimization.">
-<meta name="theme-color" content="#050505">
-<meta property="og:type" content="website">
-<meta property="og:title" content="MD. Saif Islam — WordPress Web Developer & Web Designer">
-<meta property="og:description" content="I build fast, modern and conversion-focused WordPress websites.">
-<meta name="twitter:card" content="summary_large_image">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;MD. Saif Islam — WordPress Web Developer &amp; Web Designer&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;MD. Saif Islam is a professional WordPress Web Developer specializing in modern websites, Elementor, WooCommerce, responsive design and performance optimization.&quot;&gt;
+&lt;meta name=&quot;theme-color&quot; content=&quot;#050505&quot;&gt;
+&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;
+&lt;meta property=&quot;og:title&quot; content=&quot;MD. Saif Islam — WordPress Web Developer &amp; Web Designer&quot;&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;I build fast, modern and conversion-focused WordPress websites.&quot;&gt;
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;&gt;
 
-<style>
+&lt;style&gt;
 /* ============================================================
    TOKENS
 ============================================================ */
@@ -29,8 +29,8 @@
   --success:#2fd97a;
   --warn:#e6b23a;
 
-  --font-display:'Sora','Helvetica Neue',Arial,sans-serif;
-  --font-body:'Inter','Helvetica Neue',Arial,sans-serif;
+  --font-display:&#39;Sora&#39;,&#39;Helvetica Neue&#39;,Arial,sans-serif;
+  --font-body:&#39;Inter&#39;,&#39;Helvetica Neue&#39;,Arial,sans-serif;
 
   --container:1240px;
   --gutter:clamp(24px,5vw,72px);
@@ -72,7 +72,7 @@ input,select,textarea{ font-family:inherit; }
   font-size:12.5px; letter-spacing:.08em; color:var(--muted);
   font-family:var(--font-display); font-weight:600; margin-bottom:18px;
 }
-.kicker::before{ content:''; width:16px; height:1px; background:var(--accent); }
+.kicker::before{ content:&#39;&#39;; width:16px; height:1px; background:var(--accent); }
 
 .section-head{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:clamp(40px,6vw,72px); }
 .section-head h2{ font-size:clamp(32px,4.2vw,52px); }
@@ -146,14 +146,14 @@ header.nav.scrolled{ padding:13px 0; background:rgba(5,5,5,.72); backdrop-filter
 .brand span{ color:var(--accent-light); }
 .nav-links{ display:flex; align-items:center; gap:38px; }
 .nav-links a{ position:relative; font-size:14px; font-weight:500; color:var(--muted); transition:color .3s var(--ease); padding:4px 0; }
-.nav-links a::after{ content:''; position:absolute; left:0; bottom:-2px; width:0; height:1px; background:var(--accent-light); transition:width .3s var(--ease); }
+.nav-links a::after{ content:&#39;&#39;; position:absolute; left:0; bottom:-2px; width:0; height:1px; background:var(--accent-light); transition:width .3s var(--ease); }
 .nav-links a:hover{ color:var(--text); }
 .nav-links a.active{ color:var(--text); }
 .nav-links a.active::after{ width:100%; }
 .nav-right{ display:flex; align-items:center; gap:22px; }
 .availability{ display:flex; align-items:center; gap:8px; font-size:11.5px; letter-spacing:.08em; color:var(--muted); font-family:var(--font-display); font-weight:600; white-space:nowrap; }
 .status-dot{ width:7px; height:7px; border-radius:50%; background:var(--accent-light); position:relative; flex-shrink:0; }
-.status-dot::after{ content:''; position:absolute; inset:-4px; border-radius:50%; border:1px solid var(--accent-light); animation:pulse-ring 2.2s var(--ease) infinite; }
+.status-dot::after{ content:&#39;&#39;; position:absolute; inset:-4px; border-radius:50%; border:1px solid var(--accent-light); animation:pulse-ring 2.2s var(--ease) infinite; }
 @keyframes pulse-ring{ 0%{ transform:scale(.6); opacity:.9; } 80%{ transform:scale(1.9); opacity:0; } 100%{ opacity:0; } }
 .nav-cta{ padding:10px 22px; font-size:13px; }
 .hamburger{ display:none; width:38px; height:38px; border-radius:50%; border:1px solid var(--border); background:transparent; align-items:center; justify-content:center; flex-direction:column; gap:5px; flex-shrink:0; }
@@ -178,7 +178,7 @@ header.nav.scrolled{ padding:13px 0; background:rgba(5,5,5,.72); backdrop-filter
 .hero{ position:relative; min-height:100vh; display:flex; align-items:center; padding-top:140px; padding-bottom:80px; }
 .hero-inner{ display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(40px,6vw,90px); align-items:center; position:relative; z-index:2; }
 .hero-eyebrow{ font-family:var(--font-display); font-size:13px; font-weight:600; letter-spacing:.1em; color:var(--accent-light); margin-bottom:22px; display:flex; align-items:center; gap:10px; }
-.hero-eyebrow::before{ content:''; width:22px; height:1px; background:var(--accent-light); }
+.hero-eyebrow::before{ content:&#39;&#39;; width:22px; height:1px; background:var(--accent-light); }
 .hero h1{ font-size:clamp(42px,6.4vw,84px); margin-bottom:6px; }
 .hero-title{ font-family:var(--font-display); font-size:clamp(16px,1.9vw,21px); font-weight:600; color:var(--muted); margin-bottom:26px; letter-spacing:.01em; }
 .hero-headline{ font-size:clamp(19px,2.3vw,26px); font-weight:500; line-height:1.35; margin-bottom:20px; max-width:600px; font-family:var(--font-display); }
@@ -202,7 +202,7 @@ header.nav.scrolled{ padding:13px 0; background:rgba(5,5,5,.72); backdrop-filter
 }
 @keyframes float-card{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-14px); } }
 .dev-card::before{
-  content:''; position:absolute; inset:0; border-radius:var(--radius-l); padding:1px;
+  content:&#39;&#39;; position:absolute; inset:0; border-radius:var(--radius-l); padding:1px;
   background:linear-gradient(140deg, rgba(56,189,248,.5), rgba(56,189,248,0) 40%, rgba(56,189,248,0) 60%, rgba(22,131,255,.35));
   -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none;
 }
@@ -234,7 +234,7 @@ header.nav.scrolled{ padding:13px 0; background:rgba(5,5,5,.72); backdrop-filter
 .about-text p{ color:var(--muted); font-size:16.5px; margin-bottom:20px; max-width:560px; }
 .about-text .lede{ color:var(--text); font-size:19px; font-weight:500; margin-bottom:26px; max-width:560px; font-family:var(--font-display); }
 .profile-card{ border:1px solid var(--border); border-radius:var(--radius-l); background:var(--surface); padding:34px; position:relative; overflow:hidden; }
-.profile-card::after{ content:''; position:absolute; top:-40%; right:-30%; width:220px; height:220px; background:radial-gradient(circle, rgba(22,131,255,.18), transparent 70%); pointer-events:none; }
+.profile-card::after{ content:&#39;&#39;; position:absolute; top:-40%; right:-30%; width:220px; height:220px; background:radial-gradient(circle, rgba(22,131,255,.18), transparent 70%); pointer-events:none; }
 .profile-row{ display:flex; justify-content:space-between; align-items:flex-start; gap:20px; padding:16px 0; border-bottom:1px solid var(--border-soft); }
 .profile-row:first-of-type{ padding-top:0; }
 .profile-row:last-of-type{ border-bottom:none; padding-bottom:0; }
@@ -302,7 +302,7 @@ header.nav.scrolled{ padding:13px 0; background:rgba(5,5,5,.72); backdrop-filter
 .services-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border-soft); border:1px solid var(--border-soft); border-radius:var(--radius-l); overflow:hidden; }
 .service-card{ background:var(--surface); padding:34px 28px; position:relative; transition:background .4s var(--ease); min-height:230px; display:flex; flex-direction:column; justify-content:space-between; }
 .service-card:hover{ background:var(--surface-light); }
-.service-card::before{ content:''; position:absolute; inset:0; opacity:0; background:radial-gradient(220px circle at 20% 0%, rgba(22,131,255,.16), transparent 70%); transition:opacity .4s var(--ease); pointer-events:none; }
+.service-card::before{ content:&#39;&#39;; position:absolute; inset:0; opacity:0; background:radial-gradient(220px circle at 20% 0%, rgba(22,131,255,.16), transparent 70%); transition:opacity .4s var(--ease); pointer-events:none; }
 .service-card:hover::before{ opacity:1; }
 .service-num{ font-family:var(--font-display); font-size:13px; font-weight:700; color:var(--muted-2); transition:color .4s var(--ease); }
 .service-card:hover .service-num{ color:var(--accent-light); }
@@ -335,11 +335,11 @@ header.nav.scrolled{ padding:13px 0; background:rgba(5,5,5,.72); backdrop-filter
    TIMELINE
 ============================================================ */
 .timeline{ position:relative; max-width:780px; }
-.timeline::before{ content:''; position:absolute; left:9px; top:6px; bottom:6px; width:1px; background:var(--border); }
+.timeline::before{ content:&#39;&#39;; position:absolute; left:9px; top:6px; bottom:6px; width:1px; background:var(--border); }
 .timeline-item{ position:relative; padding-left:44px; padding-bottom:56px; }
 .timeline-item:last-child{ padding-bottom:0; }
 .timeline-dot{ position:absolute; left:0; top:4px; width:19px; height:19px; border-radius:50%; border:1px solid var(--border); background:var(--bg); display:flex; align-items:center; justify-content:center; }
-.timeline-dot::after{ content:''; width:7px; height:7px; border-radius:50%; background:var(--accent-light); box-shadow:0 0 8px rgba(56,189,248,.8); }
+.timeline-dot::after{ content:&#39;&#39;; width:7px; height:7px; border-radius:50%; background:var(--accent-light); box-shadow:0 0 8px rgba(56,189,248,.8); }
 .timeline-year{ font-family:var(--font-display); font-size:13px; font-weight:700; color:var(--accent-light); margin-bottom:8px; letter-spacing:.04em; }
 .timeline-item h3{ font-size:19px; margin-bottom:4px; }
 .timeline-org{ font-size:13px; color:var(--muted); font-family:var(--font-display); font-weight:600; margin-bottom:14px; letter-spacing:.03em; }
@@ -362,7 +362,7 @@ header.nav.scrolled{ padding:13px 0; background:rgba(5,5,5,.72); backdrop-filter
    BROWSER SHOWCASE
 ============================================================ */
 .showcase-wrap{ position:relative; border-radius:var(--radius-l); border:1px solid var(--border); background:linear-gradient(180deg, rgba(21,21,21,.6), rgba(9,9,9,.9)); padding:clamp(20px,4vw,44px); overflow:hidden; }
-.showcase-wrap::before{ content:''; position:absolute; width:420px; height:420px; top:-160px; left:50%; transform:translateX(-50%); background:radial-gradient(circle, rgba(22,131,255,.22), transparent 70%); pointer-events:none; }
+.showcase-wrap::before{ content:&#39;&#39;; position:absolute; width:420px; height:420px; top:-160px; left:50%; transform:translateX(-50%); background:radial-gradient(circle, rgba(22,131,255,.22), transparent 70%); pointer-events:none; }
 .browser-mock{ position:relative; border:1px solid var(--border); border-radius:var(--radius-m); background:var(--surface); overflow:hidden; box-shadow:0 40px 90px -40px rgba(0,0,0,.8); }
 .browser-bar{ display:flex; align-items:center; gap:16px; padding:14px 18px; border-bottom:1px solid var(--border-soft); background:var(--surface-light); }
 .browser-dots{ display:flex; gap:7px; }
@@ -388,7 +388,7 @@ header.nav.scrolled{ padding:13px 0; background:rgba(5,5,5,.72); backdrop-filter
    CONTACT
 ============================================================ */
 .contact-inner{ position:relative; border:1px solid var(--border); border-radius:var(--radius-l); padding:clamp(48px,8vw,96px) clamp(28px,6vw,80px); overflow:hidden; text-align:center; background:var(--surface); }
-.contact-inner::before{ content:''; position:absolute; width:600px; height:600px; top:-300px; left:50%; transform:translateX(-50%); background:radial-gradient(circle, rgba(22,131,255,.22), transparent 70%); pointer-events:none; }
+.contact-inner::before{ content:&#39;&#39;; position:absolute; width:600px; height:600px; top:-300px; left:50%; transform:translateX(-50%); background:radial-gradient(circle, rgba(22,131,255,.22), transparent 70%); pointer-events:none; }
 .contact-inner h2{ font-size:clamp(32px,5.4vw,58px); max-width:760px; margin:0 auto 16px; position:relative; }
 .contact-inner .sub{ font-family:var(--font-display); font-weight:600; color:var(--accent-light); font-size:clamp(14px,1.6vw,18px); margin-bottom:22px; position:relative; }
 .contact-inner .desc{ max-width:520px; margin:0 auto 40px; color:var(--muted); font-size:16px; position:relative; }
@@ -433,7 +433,7 @@ footer{ border-top:1px solid var(--border-soft); padding:56px 0 40px; }
 ============================================================ */
 .reveal{ opacity:0; transform:translateY(26px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
 .reveal.in-view{ opacity:1; transform:translateY(0); }
-.reveal-stagger.in-view > *{ transition-delay:calc(var(--i,0) * 90ms); }
+.reveal-stagger.in-view &gt; *{ transition-delay:calc(var(--i,0) * 90ms); }
 
 /* ============================================================
    CHAT WIDGET
@@ -521,7 +521,7 @@ footer{ border-top:1px solid var(--border-soft); padding:56px 0 40px; }
 .modal-close:hover{ color:var(--text); border-color:var(--accent-light); }
 .form-row{ margin-bottom:18px; }
 .form-row label{ display:block; font-family:var(--font-display); font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--muted); margin-bottom:8px; }
-.form-row input[type="text"], .form-row input[type="number"], .form-row input[type="url"], .form-row select, .form-row textarea{
+.form-row input[type=&quot;text&quot;], .form-row input[type=&quot;number&quot;], .form-row input[type=&quot;url&quot;], .form-row select, .form-row textarea{
   width:100%; background:var(--bg); border:1px solid var(--border); border-radius:var(--radius-s); padding:12px 14px; color:var(--text); font-size:14px;
 }
 .form-row input:focus, .form-row select:focus, .form-row textarea:focus{ border-color:var(--accent-light); }
@@ -539,7 +539,7 @@ footer{ border-top:1px solid var(--border-soft); padding:56px 0 40px; }
 }
 .image-drop:hover{ border-color:var(--accent-light); }
 .image-drop img{ max-height:130px; border-radius:8px; }
-.image-drop input[type="file"]{ position:absolute; inset:0; opacity:0; cursor:pointer; }
+.image-drop input[type=&quot;file&quot;]{ position:absolute; inset:0; opacity:0; cursor:pointer; }
 .image-remove-btn{ margin-top:8px; font-size:11px; color:#ff6b6b; }
 .modal-actions{ display:flex; justify-content:flex-end; gap:12px; margin-top:26px; }
 
@@ -664,615 +664,615 @@ table.admin-table tr:last-child td{ border-bottom:none; }
   .contact-ctas .btn{ width:100%; }
   .admin-stats-grid{ grid-template-columns:1fr; }
 }
-</style>
-</head>
-<body>
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
 
-<!-- LOADER -->
-<div id="loader" role="status" aria-live="polite">
-  <div class="loader-mark">SAIF<span>.DEV</span></div>
-  <div class="loader-bar"><div class="loader-bar-fill" id="loader-fill"></div></div>
-  <div class="loader-status">LOADING…</div>
-</div>
+&lt;!-- LOADER --&gt;
+&lt;div id=&quot;loader&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;
+  &lt;div class=&quot;loader-mark&quot;&gt;SAIF&lt;span&gt;.DEV&lt;/span&gt;&lt;/div&gt;
+  &lt;div class=&quot;loader-bar&quot;&gt;&lt;div class=&quot;loader-bar-fill&quot; id=&quot;loader-fill&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&quot;loader-status&quot;&gt;LOADING…&lt;/div&gt;
+&lt;/div&gt;
 
-<!-- NAVBAR -->
-<header class="nav" id="site-nav">
-  <div class="container nav-inner">
-    <a href="#top" class="brand" aria-label="SAIF.DEV — home">
-      <span class="brand-dot" aria-hidden="true"></span>
-      SAIF<span>.DEV</span>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#work" data-nav>WORK</a>
-      <a href="#about" data-nav>ABOUT</a>
-      <a href="#services" data-nav>SERVICES</a>
-      <a href="#experience" data-nav>EXPERIENCE</a>
-      <a href="#contact" data-nav>CONTACT</a>
-    </nav>
-    <div class="nav-right">
-      <div class="availability"><span class="status-dot" aria-hidden="true"></span>AVAILABLE FOR WORK</div>
-      <a href="#contact" class="btn btn-primary nav-cta">LET'S TALK</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
+&lt;!-- NAVBAR --&gt;
+&lt;header class=&quot;nav&quot; id=&quot;site-nav&quot;&gt;
+  &lt;div class=&quot;container nav-inner&quot;&gt;
+    &lt;a href=&quot;#top&quot; class=&quot;brand&quot; aria-label=&quot;SAIF.DEV — home&quot;&gt;
+      &lt;span class=&quot;brand-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+      SAIF&lt;span&gt;.DEV&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;nav class=&quot;nav-links&quot; aria-label=&quot;Primary&quot;&gt;
+      &lt;a href=&quot;#work&quot; data-nav&gt;WORK&lt;/a&gt;
+      &lt;a href=&quot;#about&quot; data-nav&gt;ABOUT&lt;/a&gt;
+      &lt;a href=&quot;#services&quot; data-nav&gt;SERVICES&lt;/a&gt;
+      &lt;a href=&quot;#experience&quot; data-nav&gt;EXPERIENCE&lt;/a&gt;
+      &lt;a href=&quot;#contact&quot; data-nav&gt;CONTACT&lt;/a&gt;
+    &lt;/nav&gt;
+    &lt;div class=&quot;nav-right&quot;&gt;
+      &lt;div class=&quot;availability&quot;&gt;&lt;span class=&quot;status-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;AVAILABLE FOR WORK&lt;/div&gt;
+      &lt;a href=&quot;#contact&quot; class=&quot;btn btn-primary nav-cta&quot;&gt;LET&#39;S TALK&lt;/a&gt;
+      &lt;button class=&quot;hamburger&quot; id=&quot;hamburger&quot; aria-label=&quot;Open menu&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;mobile-menu&quot;&gt;
+        &lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
 
-<div class="mobile-menu" id="mobile-menu">
-  <a href="#work" data-nav>WORK</a>
-  <a href="#about" data-nav>ABOUT</a>
-  <a href="#services" data-nav>SERVICES</a>
-  <a href="#experience" data-nav>EXPERIENCE</a>
-  <a href="#contact" data-nav>CONTACT</a>
-  <a href="#contact" class="btn btn-primary">LET'S TALK</a>
-  <div class="mm-contact">
-    <a href="https://wa.me/8801516549964" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
-    <a href="mailto:mdsaifislam790@gmail.com" aria-label="Email">Email</a>
-  </div>
-</div>
+&lt;div class=&quot;mobile-menu&quot; id=&quot;mobile-menu&quot;&gt;
+  &lt;a href=&quot;#work&quot; data-nav&gt;WORK&lt;/a&gt;
+  &lt;a href=&quot;#about&quot; data-nav&gt;ABOUT&lt;/a&gt;
+  &lt;a href=&quot;#services&quot; data-nav&gt;SERVICES&lt;/a&gt;
+  &lt;a href=&quot;#experience&quot; data-nav&gt;EXPERIENCE&lt;/a&gt;
+  &lt;a href=&quot;#contact&quot; data-nav&gt;CONTACT&lt;/a&gt;
+  &lt;a href=&quot;#contact&quot; class=&quot;btn btn-primary&quot;&gt;LET&#39;S TALK&lt;/a&gt;
+  &lt;div class=&quot;mm-contact&quot;&gt;
+    &lt;a href=&quot;https://wa.me/8801516549964&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; aria-label=&quot;WhatsApp&quot;&gt;WhatsApp&lt;/a&gt;
+    &lt;a href=&quot;mailto:mdsaifislam790@gmail.com&quot; aria-label=&quot;Email&quot;&gt;Email&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-<main id="top">
+&lt;main id=&quot;top&quot;&gt;
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="bg-fx">
-      <canvas id="particle-canvas" aria-hidden="true"></canvas>
-      <div class="bg-grid" id="hero-grid" aria-hidden="true"></div>
-      <div class="bg-glow" aria-hidden="true"></div>
-      <div class="bg-glow two" aria-hidden="true"></div>
-    </div>
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <div class="hero-eyebrow">WORDPRESS DEVELOPER • WEB DESIGNER</div>
-        <h1>MD. SAIF ISLAM</h1>
-        <div class="hero-title">WORDPRESS WEB DEVELOPER</div>
-        <p class="hero-headline">I build fast, modern and conversion-focused WordPress websites.</p>
-        <p class="hero-para">I create professional WordPress websites that combine clean design, responsive development, performance, and a seamless user experience.</p>
-        <div class="hero-ctas">
-          <a href="#work" class="btn btn-primary">EXPLORE MY WORK</a>
-          <a href="#contact" class="btn btn-ghost">START A PROJECT</a>
-        </div>
-        <a href="#services" class="link-arrow hero-secondary-link">
+  &lt;!-- HERO --&gt;
+  &lt;section class=&quot;hero&quot; id=&quot;hero&quot;&gt;
+    &lt;div class=&quot;bg-fx&quot;&gt;
+      &lt;canvas id=&quot;particle-canvas&quot; aria-hidden=&quot;true&quot;&gt;&lt;/canvas&gt;
+      &lt;div class=&quot;bg-grid&quot; id=&quot;hero-grid&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;bg-glow&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+      &lt;div class=&quot;bg-glow two&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container hero-inner&quot;&gt;
+      &lt;div class=&quot;hero-copy&quot;&gt;
+        &lt;div class=&quot;hero-eyebrow&quot;&gt;WORDPRESS DEVELOPER • WEB DESIGNER&lt;/div&gt;
+        &lt;h1&gt;MD. SAIF ISLAM&lt;/h1&gt;
+        &lt;div class=&quot;hero-title&quot;&gt;WORDPRESS WEB DEVELOPER&lt;/div&gt;
+        &lt;p class=&quot;hero-headline&quot;&gt;I build fast, modern and conversion-focused WordPress websites.&lt;/p&gt;
+        &lt;p class=&quot;hero-para&quot;&gt;I create professional WordPress websites that combine clean design, responsive development, performance, and a seamless user experience.&lt;/p&gt;
+        &lt;div class=&quot;hero-ctas&quot;&gt;
+          &lt;a href=&quot;#work&quot; class=&quot;btn btn-primary&quot;&gt;EXPLORE MY WORK&lt;/a&gt;
+          &lt;a href=&quot;#contact&quot; class=&quot;btn btn-ghost&quot;&gt;START A PROJECT&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;#services&quot; class=&quot;link-arrow hero-secondary-link&quot;&gt;
           VIEW SERVICES
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-        <div class="hero-contact-row">
-          <a href="https://wa.me/8801516549964" target="_blank" rel="noopener" class="contact-chip" aria-label="Chat on WhatsApp">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.35A9.96 9.96 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10Zm0 18.15c-1.6 0-3.16-.43-4.52-1.24l-.32-.19-3.05.8.81-2.98-.21-.31A8.15 8.15 0 0 1 3.85 12c0-4.5 3.68-8.15 8.19-8.15 4.5 0 8.15 3.66 8.15 8.15 0 4.5-3.65 8.15-8.15 8.15Z"/></svg>
+          &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M3 8h10M9 4l4 4-4 4&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;hero-contact-row&quot;&gt;
+          &lt;a href=&quot;https://wa.me/8801516549964&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; class=&quot;contact-chip&quot; aria-label=&quot;Chat on WhatsApp&quot;&gt;
+            &lt;svg width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;currentColor&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M12.04 2c-5.5 0-10 4.5-10 10 0 1.77.46 3.5 1.34 5.02L2 22l5.13-1.35A9.96 9.96 0 0 0 12.04 22c5.5 0 10-4.5 10-10s-4.5-10-10-10Zm0 18.15c-1.6 0-3.16-.43-4.52-1.24l-.32-.19-3.05.8.81-2.98-.21-.31A8.15 8.15 0 0 1 3.85 12c0-4.5 3.68-8.15 8.19-8.15 4.5 0 8.15 3.66 8.15 8.15 0 4.5-3.65 8.15-8.15 8.15Z&quot;/&gt;&lt;/svg&gt;
             01516549964
-          </a>
-          <a href="mailto:mdsaifislam790@gmail.com" class="contact-chip" aria-label="Email Saif">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18v12H3z" stroke="currentColor" stroke-width="1.4"/><path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.4"/></svg>
+          &lt;/a&gt;
+          &lt;a href=&quot;mailto:mdsaifislam790@gmail.com&quot; class=&quot;contact-chip&quot; aria-label=&quot;Email Saif&quot;&gt;
+            &lt;svg width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M3 6h18v12H3z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot;/&gt;&lt;path d=&quot;m3 7 9 6 9-6&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot;/&gt;&lt;/svg&gt;
             mdsaifislam790@gmail.com
-          </a>
-        </div>
-      </div>
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
 
-      <div class="hero-visual" id="hero-parallax-card">
-        <div class="dev-card">
-          <div class="dev-card-head">
-            <div class="dev-card-dots"><span></span><span></span><span></span></div>
-            <div class="dev-card-label">STACK.OVERVIEW</div>
-          </div>
-          <div class="dev-stack">
-            <div class="dev-stack-item"><i></i>WORDPRESS</div>
-            <div class="dev-stack-item"><i></i>ELEMENTOR</div>
-            <div class="dev-stack-item"><i></i>WOOCOMMERCE</div>
-            <div class="dev-stack-item"><i></i>PHP</div>
-            <div class="dev-stack-item"><i></i>HTML</div>
-            <div class="dev-stack-item"><i></i>CSS</div>
-            <div class="dev-stack-item"><i></i>JAVASCRIPT</div>
-            <div class="dev-stack-item"><i></i>MYSQL</div>
-          </div>
-          <div class="dev-card-meter">
-            <div class="dev-meter-row"><span>PERFORMANCE SCORE</span><span class="accent-text">98%</span></div>
-            <div class="dev-meter-track"><div class="dev-meter-fill" id="hero-meter"></div></div>
-          </div>
-        </div>
-        <div class="float-chip chip-a"><i></i>98% PERFORMANCE</div>
-        <div class="float-chip chip-b"><i></i>RESPONSIVE</div>
-        <div class="float-chip chip-c"><i></i>SEO READY</div>
-        <div class="float-chip chip-d"><i></i>MOBILE FRIENDLY</div>
-      </div>
-    </div>
-  </section>
+      &lt;div class=&quot;hero-visual&quot; id=&quot;hero-parallax-card&quot;&gt;
+        &lt;div class=&quot;dev-card&quot;&gt;
+          &lt;div class=&quot;dev-card-head&quot;&gt;
+            &lt;div class=&quot;dev-card-dots&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;dev-card-label&quot;&gt;STACK.OVERVIEW&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;dev-stack&quot;&gt;
+            &lt;div class=&quot;dev-stack-item&quot;&gt;&lt;i&gt;&lt;/i&gt;WORDPRESS&lt;/div&gt;
+            &lt;div class=&quot;dev-stack-item&quot;&gt;&lt;i&gt;&lt;/i&gt;ELEMENTOR&lt;/div&gt;
+            &lt;div class=&quot;dev-stack-item&quot;&gt;&lt;i&gt;&lt;/i&gt;WOOCOMMERCE&lt;/div&gt;
+            &lt;div class=&quot;dev-stack-item&quot;&gt;&lt;i&gt;&lt;/i&gt;PHP&lt;/div&gt;
+            &lt;div class=&quot;dev-stack-item&quot;&gt;&lt;i&gt;&lt;/i&gt;HTML&lt;/div&gt;
+            &lt;div class=&quot;dev-stack-item&quot;&gt;&lt;i&gt;&lt;/i&gt;CSS&lt;/div&gt;
+            &lt;div class=&quot;dev-stack-item&quot;&gt;&lt;i&gt;&lt;/i&gt;JAVASCRIPT&lt;/div&gt;
+            &lt;div class=&quot;dev-stack-item&quot;&gt;&lt;i&gt;&lt;/i&gt;MYSQL&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;dev-card-meter&quot;&gt;
+            &lt;div class=&quot;dev-meter-row&quot;&gt;&lt;span&gt;PERFORMANCE SCORE&lt;/span&gt;&lt;span class=&quot;accent-text&quot;&gt;98%&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;dev-meter-track&quot;&gt;&lt;div class=&quot;dev-meter-fill&quot; id=&quot;hero-meter&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;float-chip chip-a&quot;&gt;&lt;i&gt;&lt;/i&gt;98% PERFORMANCE&lt;/div&gt;
+        &lt;div class=&quot;float-chip chip-b&quot;&gt;&lt;i&gt;&lt;/i&gt;RESPONSIVE&lt;/div&gt;
+        &lt;div class=&quot;float-chip chip-c&quot;&gt;&lt;i&gt;&lt;/i&gt;SEO READY&lt;/div&gt;
+        &lt;div class=&quot;float-chip chip-d&quot;&gt;&lt;i&gt;&lt;/i&gt;MOBILE FRIENDLY&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- ABOUT -->
-  <section class="section section-border-top" id="about">
-    <div class="container">
-      <div class="kicker">ABOUT ME</div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p class="lede">I'm a WordPress Web Developer focused on creating modern, responsive and high-performing websites for businesses, brands and individuals.</p>
-          <p>I transform ideas into professional websites using WordPress, Elementor, WooCommerce and modern web technologies. My approach combines clean design, usability, performance and business-focused functionality.</p>
-          <p>From landing pages and business websites to eCommerce stores and custom WordPress solutions, I build websites that look professional, work smoothly and help businesses grow.</p>
-        </div>
-        <div class="profile-card reveal">
-          <div class="profile-row"><span class="profile-label">NAME</span><span class="profile-value">MD. SAIF ISLAM</span></div>
-          <div class="profile-row"><span class="profile-label">ROLE</span><span class="profile-value">WORDPRESS WEB DEVELOPER</span></div>
-          <div class="profile-row"><span class="profile-label">SPECIALTY</span><span class="profile-value">WORDPRESS • ELEMENTOR • WOOCOMMERCE</span></div>
-          <div class="profile-row"><span class="profile-label">WHATSAPP</span><span class="profile-value"><a href="https://wa.me/8801516549964" target="_blank" rel="noopener">01516549964</a></span></div>
-          <div class="profile-row"><span class="profile-label">EMAIL</span><span class="profile-value"><a href="mailto:mdsaifislam790@gmail.com">mdsaifislam790@gmail.com</a></span></div>
-          <div class="profile-row"><span class="profile-label">STATUS</span><span class="profile-value status"><i></i>AVAILABLE FOR WORK</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  &lt;!-- ABOUT --&gt;
+  &lt;section class=&quot;section section-border-top&quot; id=&quot;about&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;kicker&quot;&gt;ABOUT ME&lt;/div&gt;
+      &lt;div class=&quot;about-grid&quot;&gt;
+        &lt;div class=&quot;about-text reveal&quot;&gt;
+          &lt;p class=&quot;lede&quot;&gt;I&#39;m a WordPress Web Developer focused on creating modern, responsive and high-performing websites for businesses, brands and individuals.&lt;/p&gt;
+          &lt;p&gt;I transform ideas into professional websites using WordPress, Elementor, WooCommerce and modern web technologies. My approach combines clean design, usability, performance and business-focused functionality.&lt;/p&gt;
+          &lt;p&gt;From landing pages and business websites to eCommerce stores and custom WordPress solutions, I build websites that look professional, work smoothly and help businesses grow.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;profile-card reveal&quot;&gt;
+          &lt;div class=&quot;profile-row&quot;&gt;&lt;span class=&quot;profile-label&quot;&gt;NAME&lt;/span&gt;&lt;span class=&quot;profile-value&quot;&gt;MD. SAIF ISLAM&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;profile-row&quot;&gt;&lt;span class=&quot;profile-label&quot;&gt;ROLE&lt;/span&gt;&lt;span class=&quot;profile-value&quot;&gt;WORDPRESS WEB DEVELOPER&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;profile-row&quot;&gt;&lt;span class=&quot;profile-label&quot;&gt;SPECIALTY&lt;/span&gt;&lt;span class=&quot;profile-value&quot;&gt;WORDPRESS • ELEMENTOR • WOOCOMMERCE&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;profile-row&quot;&gt;&lt;span class=&quot;profile-label&quot;&gt;WHATSAPP&lt;/span&gt;&lt;span class=&quot;profile-value&quot;&gt;&lt;a href=&quot;https://wa.me/8801516549964&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;01516549964&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;profile-row&quot;&gt;&lt;span class=&quot;profile-label&quot;&gt;EMAIL&lt;/span&gt;&lt;span class=&quot;profile-value&quot;&gt;&lt;a href=&quot;mailto:mdsaifislam790@gmail.com&quot;&gt;mdsaifislam790@gmail.com&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;profile-row&quot;&gt;&lt;span class=&quot;profile-label&quot;&gt;STATUS&lt;/span&gt;&lt;span class=&quot;profile-value status&quot;&gt;&lt;i&gt;&lt;/i&gt;AVAILABLE FOR WORK&lt;/span&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- STATS -->
-  <section class="section section-border-top" style="padding-top:0;">
-    <div class="container">
-      <div class="stats-strip reveal">
-        <div class="stat-item"><div class="stat-number"><span class="counter" data-target="5">0</span><span class="accent-text">+</span></div><div class="stat-label">YEARS EXPERIENCE</div></div>
-        <div class="stat-item"><div class="stat-number"><span class="counter" data-target="100">0</span><span class="accent-text">+</span></div><div class="stat-label">WEBSITES BUILT</div></div>
-        <div class="stat-item"><div class="stat-number"><span class="counter" data-target="50">0</span><span class="accent-text">+</span></div><div class="stat-label">HAPPY CLIENTS</div></div>
-        <div class="stat-item"><div class="stat-number"><span class="counter" data-target="10">0</span><span class="accent-text">M+</span></div><div class="stat-label">TOTAL WEBSITE VISITS</div></div>
-      </div>
-    </div>
-  </section>
+  &lt;!-- STATS --&gt;
+  &lt;section class=&quot;section section-border-top&quot; style=&quot;padding-top:0;&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;stats-strip reveal&quot;&gt;
+        &lt;div class=&quot;stat-item&quot;&gt;&lt;div class=&quot;stat-number&quot;&gt;&lt;span class=&quot;counter&quot; data-target=&quot;5&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;accent-text&quot;&gt;+&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;stat-label&quot;&gt;YEARS EXPERIENCE&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;stat-item&quot;&gt;&lt;div class=&quot;stat-number&quot;&gt;&lt;span class=&quot;counter&quot; data-target=&quot;100&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;accent-text&quot;&gt;+&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;stat-label&quot;&gt;WEBSITES BUILT&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;stat-item&quot;&gt;&lt;div class=&quot;stat-number&quot;&gt;&lt;span class=&quot;counter&quot; data-target=&quot;50&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;accent-text&quot;&gt;+&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;stat-label&quot;&gt;HAPPY CLIENTS&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;stat-item&quot;&gt;&lt;div class=&quot;stat-number&quot;&gt;&lt;span class=&quot;counter&quot; data-target=&quot;10&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;accent-text&quot;&gt;M+&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;stat-label&quot;&gt;TOTAL WEBSITE VISITS&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- WORK -->
-  <section class="section section-border-top" id="work">
-    <div class="container">
-      <div class="section-head reveal">
-        <div><div class="kicker">SELECTED WORK</div><h2>Recent projects</h2></div>
-        <p class="lede">A selection of websites I've designed and developed for businesses, brands and creators.</p>
-      </div>
+  &lt;!-- WORK --&gt;
+  &lt;section class=&quot;section section-border-top&quot; id=&quot;work&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;section-head reveal&quot;&gt;
+        &lt;div&gt;&lt;div class=&quot;kicker&quot;&gt;SELECTED WORK&lt;/div&gt;&lt;h2&gt;Recent projects&lt;/h2&gt;&lt;/div&gt;
+        &lt;p class=&quot;lede&quot;&gt;A selection of websites I&#39;ve designed and developed for businesses, brands and creators.&lt;/p&gt;
+      &lt;/div&gt;
 
-      <div class="filter-bar reveal" id="filter-bar" role="tablist" aria-label="Filter projects by category">
-        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">ALL</button>
-        <button class="filter-btn" data-filter="wordpress" role="tab" aria-selected="false">WORDPRESS</button>
-        <button class="filter-btn" data-filter="elementor" role="tab" aria-selected="false">ELEMENTOR</button>
-        <button class="filter-btn" data-filter="woocommerce" role="tab" aria-selected="false">WOOCOMMERCE</button>
-        <button class="filter-btn" data-filter="business" role="tab" aria-selected="false">BUSINESS</button>
-        <button class="filter-btn" data-filter="landing-page" role="tab" aria-selected="false">LANDING PAGE</button>
-        <button class="filter-btn" data-filter="ecommerce" role="tab" aria-selected="false">ECOMMERCE</button>
-        <button class="filter-btn" data-filter="portfolio" role="tab" aria-selected="false">PORTFOLIO</button>
-      </div>
+      &lt;div class=&quot;filter-bar reveal&quot; id=&quot;filter-bar&quot; role=&quot;tablist&quot; aria-label=&quot;Filter projects by category&quot;&gt;
+        &lt;button class=&quot;filter-btn active&quot; data-filter=&quot;all&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;ALL&lt;/button&gt;
+        &lt;button class=&quot;filter-btn&quot; data-filter=&quot;wordpress&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;WORDPRESS&lt;/button&gt;
+        &lt;button class=&quot;filter-btn&quot; data-filter=&quot;elementor&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;ELEMENTOR&lt;/button&gt;
+        &lt;button class=&quot;filter-btn&quot; data-filter=&quot;woocommerce&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;WOOCOMMERCE&lt;/button&gt;
+        &lt;button class=&quot;filter-btn&quot; data-filter=&quot;business&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;BUSINESS&lt;/button&gt;
+        &lt;button class=&quot;filter-btn&quot; data-filter=&quot;landing-page&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;LANDING PAGE&lt;/button&gt;
+        &lt;button class=&quot;filter-btn&quot; data-filter=&quot;ecommerce&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;ECOMMERCE&lt;/button&gt;
+        &lt;button class=&quot;filter-btn&quot; data-filter=&quot;portfolio&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;PORTFOLIO&lt;/button&gt;
+      &lt;/div&gt;
 
-      <div class="work-list" id="work-list"><!-- rendered by renderProjects() --></div>
-    </div>
-  </section>
+      &lt;div class=&quot;work-list&quot; id=&quot;work-list&quot;&gt;&lt;!-- rendered by renderProjects() --&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- SERVICES -->
-  <section class="section section-border-top" id="services">
-    <div class="container">
-      <div class="section-head reveal">
-        <div><div class="kicker">WHAT I DO</div><h2>Services</h2></div>
-        <p class="lede">From design to development, I build WordPress websites that are made to perform.</p>
-      </div>
-      <div class="services-grid reveal">
-        <div class="service-card"><span class="service-num">01</span><div><h3>WordPress Development</h3><p>Professional WordPress websites built with clean structure, responsive layouts and scalable functionality.</p></div></div>
-        <div class="service-card"><span class="service-num">02</span><div><h3>Elementor Development</h3><p>Pixel-perfect Elementor websites with custom layouts, responsive design and advanced styling.</p></div></div>
-        <div class="service-card"><span class="service-num">03</span><div><h3>WooCommerce Development</h3><p>Modern eCommerce stores with optimized product layouts and conversion-focused shopping experiences.</p></div></div>
-        <div class="service-card"><span class="service-num">04</span><div><h3>Custom Website Design</h3><p>Unique website designs tailored to your brand, audience and business goals.</p></div></div>
-        <div class="service-card"><span class="service-num">05</span><div><h3>Landing Page Design</h3><p>High-converting landing pages designed to communicate your offer and drive action.</p></div></div>
-        <div class="service-card"><span class="service-num">06</span><div><h3>Website Speed Optimization</h3><p>Performance-focused optimization to improve loading speed and overall user experience.</p></div></div>
-        <div class="service-card"><span class="service-num">07</span><div><h3>Responsive Web Design</h3><p>Websites that look and work beautifully across desktop, tablet and mobile devices.</p></div></div>
-        <div class="service-card"><span class="service-num">08</span><div><h3>Website Maintenance</h3><p>Reliable WordPress updates, content changes, bug fixes and ongoing website support.</p></div></div>
-      </div>
-    </div>
-  </section>
+  &lt;!-- SERVICES --&gt;
+  &lt;section class=&quot;section section-border-top&quot; id=&quot;services&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;section-head reveal&quot;&gt;
+        &lt;div&gt;&lt;div class=&quot;kicker&quot;&gt;WHAT I DO&lt;/div&gt;&lt;h2&gt;Services&lt;/h2&gt;&lt;/div&gt;
+        &lt;p class=&quot;lede&quot;&gt;From design to development, I build WordPress websites that are made to perform.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;services-grid reveal&quot;&gt;
+        &lt;div class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-num&quot;&gt;01&lt;/span&gt;&lt;div&gt;&lt;h3&gt;WordPress Development&lt;/h3&gt;&lt;p&gt;Professional WordPress websites built with clean structure, responsive layouts and scalable functionality.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-num&quot;&gt;02&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Elementor Development&lt;/h3&gt;&lt;p&gt;Pixel-perfect Elementor websites with custom layouts, responsive design and advanced styling.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-num&quot;&gt;03&lt;/span&gt;&lt;div&gt;&lt;h3&gt;WooCommerce Development&lt;/h3&gt;&lt;p&gt;Modern eCommerce stores with optimized product layouts and conversion-focused shopping experiences.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-num&quot;&gt;04&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Custom Website Design&lt;/h3&gt;&lt;p&gt;Unique website designs tailored to your brand, audience and business goals.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-num&quot;&gt;05&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Landing Page Design&lt;/h3&gt;&lt;p&gt;High-converting landing pages designed to communicate your offer and drive action.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-num&quot;&gt;06&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Website Speed Optimization&lt;/h3&gt;&lt;p&gt;Performance-focused optimization to improve loading speed and overall user experience.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-num&quot;&gt;07&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Responsive Web Design&lt;/h3&gt;&lt;p&gt;Websites that look and work beautifully across desktop, tablet and mobile devices.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;service-card&quot;&gt;&lt;span class=&quot;service-num&quot;&gt;08&lt;/span&gt;&lt;div&gt;&lt;h3&gt;Website Maintenance&lt;/h3&gt;&lt;p&gt;Reliable WordPress updates, content changes, bug fixes and ongoing website support.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- TECH STACK -->
-  <section class="section section-border-top">
-    <div class="container">
-      <div class="section-head reveal"><div><div class="kicker">TECH STACK</div><h2>Tools &amp; technologies</h2></div></div>
-      <div class="stack-cloud reveal">
-        <span class="stack-chip core">WordPress</span><span class="stack-chip core">Elementor</span><span class="stack-chip core">WooCommerce</span>
-        <span class="stack-chip core">HTML5</span><span class="stack-chip core">CSS3</span><span class="stack-chip core">JavaScript</span>
-        <span class="stack-chip">PHP</span><span class="stack-chip">MySQL</span><span class="stack-chip">Git</span><span class="stack-chip">Figma</span>
-        <span class="stack-chip">Photoshop</span><span class="stack-chip">Illustrator</span><span class="stack-chip">Responsive Design</span>
-        <span class="stack-chip">SEO</span><span class="stack-chip">Website Optimization</span><span class="stack-chip">Custom CSS</span><span class="stack-chip">UI/UX Design</span>
-      </div>
-    </div>
-  </section>
+  &lt;!-- TECH STACK --&gt;
+  &lt;section class=&quot;section section-border-top&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;section-head reveal&quot;&gt;&lt;div&gt;&lt;div class=&quot;kicker&quot;&gt;TECH STACK&lt;/div&gt;&lt;h2&gt;Tools &amp;amp; technologies&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;stack-cloud reveal&quot;&gt;
+        &lt;span class=&quot;stack-chip core&quot;&gt;WordPress&lt;/span&gt;&lt;span class=&quot;stack-chip core&quot;&gt;Elementor&lt;/span&gt;&lt;span class=&quot;stack-chip core&quot;&gt;WooCommerce&lt;/span&gt;
+        &lt;span class=&quot;stack-chip core&quot;&gt;HTML5&lt;/span&gt;&lt;span class=&quot;stack-chip core&quot;&gt;CSS3&lt;/span&gt;&lt;span class=&quot;stack-chip core&quot;&gt;JavaScript&lt;/span&gt;
+        &lt;span class=&quot;stack-chip&quot;&gt;PHP&lt;/span&gt;&lt;span class=&quot;stack-chip&quot;&gt;MySQL&lt;/span&gt;&lt;span class=&quot;stack-chip&quot;&gt;Git&lt;/span&gt;&lt;span class=&quot;stack-chip&quot;&gt;Figma&lt;/span&gt;
+        &lt;span class=&quot;stack-chip&quot;&gt;Photoshop&lt;/span&gt;&lt;span class=&quot;stack-chip&quot;&gt;Illustrator&lt;/span&gt;&lt;span class=&quot;stack-chip&quot;&gt;Responsive Design&lt;/span&gt;
+        &lt;span class=&quot;stack-chip&quot;&gt;SEO&lt;/span&gt;&lt;span class=&quot;stack-chip&quot;&gt;Website Optimization&lt;/span&gt;&lt;span class=&quot;stack-chip&quot;&gt;Custom CSS&lt;/span&gt;&lt;span class=&quot;stack-chip&quot;&gt;UI/UX Design&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- WHY WORDPRESS -->
-  <section class="section section-border-top">
-    <div class="container">
-      <div class="section-head reveal"><div><div class="kicker">WHY WORDPRESS?</div><h2>Built on a platform that scales</h2></div></div>
-      <div class="why-grid reveal reveal-stagger">
-        <div class="why-card" style="--i:0"><div class="why-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1v4M9 13v4M1 9h4M13 9h4M3.5 3.5l2.8 2.8M11.7 11.7l2.8 2.8M14.5 3.5l-2.8 2.8M6.3 11.7l-2.8 2.8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div><h3>Fast Development</h3><p>Build and launch professional websites efficiently without compromising quality.</p></div>
-        <div class="why-card" style="--i:1"><div class="why-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="3" stroke="currentColor" stroke-width="1.3"/><path d="M6 9h6M9 6v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div><h3>Easy Management</h3><p>Websites that clients can easily manage and update themselves.</p></div>
-        <div class="why-card" style="--i:2"><div class="why-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 15V9M7 15V5M12 15V11M17 15V2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div><h3>Scalable</h3><p>Flexible solutions that can grow with your business.</p></div>
-        <div class="why-card" style="--i:3"><div class="why-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2l7 3v4c0 4.5-3 7.5-7 8-4-0.5-7-3.5-7-8V5l7-3z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></div><h3>Business Ready</h3><p>Designed around usability, performance and real business goals.</p></div>
-      </div>
-    </div>
-  </section>
+  &lt;!-- WHY WORDPRESS --&gt;
+  &lt;section class=&quot;section section-border-top&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;section-head reveal&quot;&gt;&lt;div&gt;&lt;div class=&quot;kicker&quot;&gt;WHY WORDPRESS?&lt;/div&gt;&lt;h2&gt;Built on a platform that scales&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;why-grid reveal reveal-stagger&quot;&gt;
+        &lt;div class=&quot;why-card&quot; style=&quot;--i:0&quot;&gt;&lt;div class=&quot;why-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 18 18&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M9 1v4M9 13v4M1 9h4M13 9h4M3.5 3.5l2.8 2.8M11.7 11.7l2.8 2.8M14.5 3.5l-2.8 2.8M6.3 11.7l-2.8 2.8&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;h3&gt;Fast Development&lt;/h3&gt;&lt;p&gt;Build and launch professional websites efficiently without compromising quality.&lt;/p&gt;&lt;/div&gt;
+        &lt;div class=&quot;why-card&quot; style=&quot;--i:1&quot;&gt;&lt;div class=&quot;why-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 18 18&quot; fill=&quot;none&quot;&gt;&lt;rect x=&quot;2&quot; y=&quot;2&quot; width=&quot;14&quot; height=&quot;14&quot; rx=&quot;3&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;path d=&quot;M6 9h6M9 6v6&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;h3&gt;Easy Management&lt;/h3&gt;&lt;p&gt;Websites that clients can easily manage and update themselves.&lt;/p&gt;&lt;/div&gt;
+        &lt;div class=&quot;why-card&quot; style=&quot;--i:2&quot;&gt;&lt;div class=&quot;why-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 18 18&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M2 15V9M7 15V5M12 15V11M17 15V2&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;h3&gt;Scalable&lt;/h3&gt;&lt;p&gt;Flexible solutions that can grow with your business.&lt;/p&gt;&lt;/div&gt;
+        &lt;div class=&quot;why-card&quot; style=&quot;--i:3&quot;&gt;&lt;div class=&quot;why-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 18 18&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M9 2l7 3v4c0 4.5-3 7.5-7 8-4-0.5-7-3.5-7-8V5l7-3z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;&lt;/div&gt;&lt;h3&gt;Business Ready&lt;/h3&gt;&lt;p&gt;Designed around usability, performance and real business goals.&lt;/p&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- EXPERIENCE -->
-  <section class="section section-border-top" id="experience">
-    <div class="container">
-      <div class="section-head reveal"><div><div class="kicker">EXPERIENCE</div><h2>Where I've worked</h2></div></div>
-      <div class="timeline reveal">
-        <div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-year">2026</div><h3>WordPress Web Developer</h3><div class="timeline-org">FREELANCE / REMOTE</div><p>Designing and developing modern WordPress websites for businesses, brands and entrepreneurs.</p><div class="timeline-tags"><span class="tag">WordPress</span><span class="tag">Elementor</span><span class="tag">WooCommerce</span></div></div>
-        <div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-year">2025</div><h3>WordPress &amp; Elementor Specialist</h3><div class="timeline-org">FREELANCE</div><p>Built responsive websites, landing pages and eCommerce solutions using WordPress and Elementor.</p><div class="timeline-tags"><span class="tag">WordPress</span><span class="tag">Elementor</span><span class="tag">Responsive Design</span></div></div>
-        <div class="timeline-item"><span class="timeline-dot" aria-hidden="true"></span><div class="timeline-year">2024</div><h3>Web Designer &amp; Developer</h3><div class="timeline-org">FREELANCE</div><p>Worked on website design, development, responsive layouts and performance optimization.</p><div class="timeline-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Performance</span></div></div>
-      </div>
-    </div>
-  </section>
+  &lt;!-- EXPERIENCE --&gt;
+  &lt;section class=&quot;section section-border-top&quot; id=&quot;experience&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;section-head reveal&quot;&gt;&lt;div&gt;&lt;div class=&quot;kicker&quot;&gt;EXPERIENCE&lt;/div&gt;&lt;h2&gt;Where I&#39;ve worked&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;timeline reveal&quot;&gt;
+        &lt;div class=&quot;timeline-item&quot;&gt;&lt;span class=&quot;timeline-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div class=&quot;timeline-year&quot;&gt;2026&lt;/div&gt;&lt;h3&gt;WordPress Web Developer&lt;/h3&gt;&lt;div class=&quot;timeline-org&quot;&gt;FREELANCE / REMOTE&lt;/div&gt;&lt;p&gt;Designing and developing modern WordPress websites for businesses, brands and entrepreneurs.&lt;/p&gt;&lt;div class=&quot;timeline-tags&quot;&gt;&lt;span class=&quot;tag&quot;&gt;WordPress&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;Elementor&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;WooCommerce&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;timeline-item&quot;&gt;&lt;span class=&quot;timeline-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div class=&quot;timeline-year&quot;&gt;2025&lt;/div&gt;&lt;h3&gt;WordPress &amp;amp; Elementor Specialist&lt;/h3&gt;&lt;div class=&quot;timeline-org&quot;&gt;FREELANCE&lt;/div&gt;&lt;p&gt;Built responsive websites, landing pages and eCommerce solutions using WordPress and Elementor.&lt;/p&gt;&lt;div class=&quot;timeline-tags&quot;&gt;&lt;span class=&quot;tag&quot;&gt;WordPress&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;Elementor&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;Responsive Design&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;timeline-item&quot;&gt;&lt;span class=&quot;timeline-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div class=&quot;timeline-year&quot;&gt;2024&lt;/div&gt;&lt;h3&gt;Web Designer &amp;amp; Developer&lt;/h3&gt;&lt;div class=&quot;timeline-org&quot;&gt;FREELANCE&lt;/div&gt;&lt;p&gt;Worked on website design, development, responsive layouts and performance optimization.&lt;/p&gt;&lt;div class=&quot;timeline-tags&quot;&gt;&lt;span class=&quot;tag&quot;&gt;HTML&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;CSS&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;Performance&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- PROCESS -->
-  <section class="section section-border-top" style="padding-bottom:0;">
-    <div class="container"><div class="section-head reveal"><div><div class="kicker">MY PROCESS</div><h2>How a project comes together</h2></div></div></div>
-    <div class="process-row reveal reveal-stagger">
-      <div class="process-step" style="--i:0"><span class="process-num">01</span><h3>DISCOVERY</h3><p>Understand the business, audience and project goals.</p></div>
-      <div class="process-step" style="--i:1"><span class="process-num">02</span><h3>PLANNING</h3><p>Create the structure, content hierarchy and technical roadmap.</p></div>
-      <div class="process-step" style="--i:2"><span class="process-num">03</span><h3>DESIGN</h3><p>Build a clean, modern and conversion-focused visual direction.</p></div>
-      <div class="process-step" style="--i:3"><span class="process-num">04</span><h3>DEVELOPMENT</h3><p>Develop the website using WordPress and modern web technologies.</p></div>
-      <div class="process-step" style="--i:4"><span class="process-num">05</span><h3>LAUNCH</h3><p>Test, optimize and launch a fast, responsive and reliable website.</p></div>
-    </div>
-  </section>
+  &lt;!-- PROCESS --&gt;
+  &lt;section class=&quot;section section-border-top&quot; style=&quot;padding-bottom:0;&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;&lt;div class=&quot;section-head reveal&quot;&gt;&lt;div&gt;&lt;div class=&quot;kicker&quot;&gt;MY PROCESS&lt;/div&gt;&lt;h2&gt;How a project comes together&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;process-row reveal reveal-stagger&quot;&gt;
+      &lt;div class=&quot;process-step&quot; style=&quot;--i:0&quot;&gt;&lt;span class=&quot;process-num&quot;&gt;01&lt;/span&gt;&lt;h3&gt;DISCOVERY&lt;/h3&gt;&lt;p&gt;Understand the business, audience and project goals.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class=&quot;process-step&quot; style=&quot;--i:1&quot;&gt;&lt;span class=&quot;process-num&quot;&gt;02&lt;/span&gt;&lt;h3&gt;PLANNING&lt;/h3&gt;&lt;p&gt;Create the structure, content hierarchy and technical roadmap.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class=&quot;process-step&quot; style=&quot;--i:2&quot;&gt;&lt;span class=&quot;process-num&quot;&gt;03&lt;/span&gt;&lt;h3&gt;DESIGN&lt;/h3&gt;&lt;p&gt;Build a clean, modern and conversion-focused visual direction.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class=&quot;process-step&quot; style=&quot;--i:3&quot;&gt;&lt;span class=&quot;process-num&quot;&gt;04&lt;/span&gt;&lt;h3&gt;DEVELOPMENT&lt;/h3&gt;&lt;p&gt;Develop the website using WordPress and modern web technologies.&lt;/p&gt;&lt;/div&gt;
+      &lt;div class=&quot;process-step&quot; style=&quot;--i:4&quot;&gt;&lt;span class=&quot;process-num&quot;&gt;05&lt;/span&gt;&lt;h3&gt;LAUNCH&lt;/h3&gt;&lt;p&gt;Test, optimize and launch a fast, responsive and reliable website.&lt;/p&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- SHOWCASE -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head reveal"><div><div class="kicker">BUILT FOR THE WEB</div><h2>Made to look right, everywhere</h2></div></div>
-      <div class="showcase-wrap reveal">
-        <div class="browser-mock">
-          <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">yourwebsite.com</div></div>
-          <div class="browser-body">
-            <span class="preview-tag">WEBSITE PREVIEW</span>
-            <h3>Clean layout. Fast load. Built to convert.</h3>
-            <div class="browser-skel"><div></div><div></div><div></div></div>
-          </div>
-        </div>
-        <div class="showcase-feats">
-          <div class="feat-pill"><i></i>RESPONSIVE</div><div class="feat-pill"><i></i>FAST</div>
-          <div class="feat-pill"><i></i>SEO READY</div><div class="feat-pill"><i></i>MOBILE FRIENDLY</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  &lt;!-- SHOWCASE --&gt;
+  &lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;section-head reveal&quot;&gt;&lt;div&gt;&lt;div class=&quot;kicker&quot;&gt;BUILT FOR THE WEB&lt;/div&gt;&lt;h2&gt;Made to look right, everywhere&lt;/h2&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;div class=&quot;showcase-wrap reveal&quot;&gt;
+        &lt;div class=&quot;browser-mock&quot;&gt;
+          &lt;div class=&quot;browser-bar&quot;&gt;&lt;div class=&quot;browser-dots&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;browser-url&quot;&gt;yourwebsite.com&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;browser-body&quot;&gt;
+            &lt;span class=&quot;preview-tag&quot;&gt;WEBSITE PREVIEW&lt;/span&gt;
+            &lt;h3&gt;Clean layout. Fast load. Built to convert.&lt;/h3&gt;
+            &lt;div class=&quot;browser-skel&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;showcase-feats&quot;&gt;
+          &lt;div class=&quot;feat-pill&quot;&gt;&lt;i&gt;&lt;/i&gt;RESPONSIVE&lt;/div&gt;&lt;div class=&quot;feat-pill&quot;&gt;&lt;i&gt;&lt;/i&gt;FAST&lt;/div&gt;
+          &lt;div class=&quot;feat-pill&quot;&gt;&lt;i&gt;&lt;/i&gt;SEO READY&lt;/div&gt;&lt;div class=&quot;feat-pill&quot;&gt;&lt;i&gt;&lt;/i&gt;MOBILE FRIENDLY&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- STATEMENT -->
-  <section class="section">
-    <div class="container statement reveal">
-      <h2>Good design gets attention.<br><em>Great development makes it work.</em></h2>
-      <p>The best websites bring design, development, performance and usability together — a site that looks professional, loads fast and gives visitors a reason to stay.</p>
-    </div>
-  </section>
+  &lt;!-- STATEMENT --&gt;
+  &lt;section class=&quot;section&quot;&gt;
+    &lt;div class=&quot;container statement reveal&quot;&gt;
+      &lt;h2&gt;Good design gets attention.&lt;br&gt;&lt;em&gt;Great development makes it work.&lt;/em&gt;&lt;/h2&gt;
+      &lt;p&gt;The best websites bring design, development, performance and usability together — a site that looks professional, loads fast and gives visitors a reason to stay.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-  <!-- CONTACT -->
-  <section class="section section-border-top" id="contact">
-    <div class="container">
-      <div class="contact-inner reveal">
-        <div class="sub">YOUR NEXT WEBSITE STARTS HERE.</div>
-        <h2>Let's build something great.</h2>
-        <p class="desc">Have a project in mind? Let's turn your idea into a modern, professional and high-performing WordPress website.</p>
-        <div class="contact-ctas">
-          <a href="mailto:mdsaifislam790@gmail.com" class="btn btn-primary">START A PROJECT</a>
-          <a href="mailto:mdsaifislam790@gmail.com" class="btn btn-ghost">EMAIL ME</a>
-          <button class="btn btn-ghost" id="contact-chat-btn">CHAT WITH SAIF</button>
-          <a href="https://wa.me/8801516549964" target="_blank" rel="noopener" class="btn btn-whatsapp">CHAT ON WHATSAPP</a>
-        </div>
-        <div class="contact-availability"><span class="status-dot" aria-hidden="true"></span>CURRENTLY AVAILABLE FOR NEW PROJECTS</div>
-        <div class="contact-details">
-          <div class="contact-detail-item"><div class="contact-detail-label">WHATSAPP</div><div class="contact-detail-value"><a href="https://wa.me/8801516549964" target="_blank" rel="noopener">01516549964</a></div></div>
-          <div class="contact-detail-item"><div class="contact-detail-label">EMAIL</div><div class="contact-detail-value"><a href="mailto:mdsaifislam790@gmail.com">mdsaifislam790@gmail.com</a></div></div>
-        </div>
-        <div class="social-row">
-          <a href="#" target="_blank" rel="noopener">Instagram</a>
-          <a href="#" target="_blank" rel="noopener">Facebook</a>
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="#" target="_blank" rel="noopener">Behance</a>
-          <a href="#" target="_blank" rel="noopener">GitHub</a>
-          <a href="#" target="_blank" rel="noopener">YouTube</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  &lt;!-- CONTACT --&gt;
+  &lt;section class=&quot;section section-border-top&quot; id=&quot;contact&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;div class=&quot;contact-inner reveal&quot;&gt;
+        &lt;div class=&quot;sub&quot;&gt;YOUR NEXT WEBSITE STARTS HERE.&lt;/div&gt;
+        &lt;h2&gt;Let&#39;s build something great.&lt;/h2&gt;
+        &lt;p class=&quot;desc&quot;&gt;Have a project in mind? Let&#39;s turn your idea into a modern, professional and high-performing WordPress website.&lt;/p&gt;
+        &lt;div class=&quot;contact-ctas&quot;&gt;
+          &lt;a href=&quot;mailto:mdsaifislam790@gmail.com&quot; class=&quot;btn btn-primary&quot;&gt;START A PROJECT&lt;/a&gt;
+          &lt;a href=&quot;mailto:mdsaifislam790@gmail.com&quot; class=&quot;btn btn-ghost&quot;&gt;EMAIL ME&lt;/a&gt;
+          &lt;button class=&quot;btn btn-ghost&quot; id=&quot;contact-chat-btn&quot;&gt;CHAT WITH SAIF&lt;/button&gt;
+          &lt;a href=&quot;https://wa.me/8801516549964&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; class=&quot;btn btn-whatsapp&quot;&gt;CHAT ON WHATSAPP&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;contact-availability&quot;&gt;&lt;span class=&quot;status-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;CURRENTLY AVAILABLE FOR NEW PROJECTS&lt;/div&gt;
+        &lt;div class=&quot;contact-details&quot;&gt;
+          &lt;div class=&quot;contact-detail-item&quot;&gt;&lt;div class=&quot;contact-detail-label&quot;&gt;WHATSAPP&lt;/div&gt;&lt;div class=&quot;contact-detail-value&quot;&gt;&lt;a href=&quot;https://wa.me/8801516549964&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;01516549964&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;contact-detail-item&quot;&gt;&lt;div class=&quot;contact-detail-label&quot;&gt;EMAIL&lt;/div&gt;&lt;div class=&quot;contact-detail-value&quot;&gt;&lt;a href=&quot;mailto:mdsaifislam790@gmail.com&quot;&gt;mdsaifislam790@gmail.com&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;social-row&quot;&gt;
+          &lt;a href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Instagram&lt;/a&gt;
+          &lt;a href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Facebook&lt;/a&gt;
+          &lt;a href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;LinkedIn&lt;/a&gt;
+          &lt;a href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Behance&lt;/a&gt;
+          &lt;a href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;
+          &lt;a href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;YouTube&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-</main>
+&lt;/main&gt;
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="footer-top">
-      <div>
-        <div class="footer-brand">MD. SAIF<span>.</span>ISLAM</div>
-        <div class="footer-sub">WordPress Web Developer &amp; Web Designer</div>
-        <div class="footer-contact">
-          <a href="https://wa.me/8801516549964" target="_blank" rel="noopener">01516549964</a>
-          <a href="mailto:mdsaifislam790@gmail.com">mdsaifislam790@gmail.com</a>
-        </div>
-      </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 MD. Saif Islam. All rights reserved. — Designed &amp; developed with precision.</span>
-      <button class="admin-link" id="open-admin-btn" style="background:none;border:none;font-family:inherit;">Admin Dashboard</button>
-    </div>
-  </div>
-</footer>
+&lt;!-- FOOTER --&gt;
+&lt;footer&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;footer-top&quot;&gt;
+      &lt;div&gt;
+        &lt;div class=&quot;footer-brand&quot;&gt;MD. SAIF&lt;span&gt;.&lt;/span&gt;ISLAM&lt;/div&gt;
+        &lt;div class=&quot;footer-sub&quot;&gt;WordPress Web Developer &amp;amp; Web Designer&lt;/div&gt;
+        &lt;div class=&quot;footer-contact&quot;&gt;
+          &lt;a href=&quot;https://wa.me/8801516549964&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;01516549964&lt;/a&gt;
+          &lt;a href=&quot;mailto:mdsaifislam790@gmail.com&quot;&gt;mdsaifislam790@gmail.com&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;nav class=&quot;footer-nav&quot; aria-label=&quot;Footer&quot;&gt;
+        &lt;a href=&quot;#work&quot;&gt;Work&lt;/a&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;a href=&quot;#services&quot;&gt;Services&lt;/a&gt;&lt;a href=&quot;#experience&quot;&gt;Experience&lt;/a&gt;&lt;a href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;
+      &lt;/nav&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;footer-bottom&quot;&gt;
+      &lt;span&gt;© 2026 MD. Saif Islam. All rights reserved. — Designed &amp;amp; developed with precision.&lt;/span&gt;
+      &lt;button class=&quot;admin-link&quot; id=&quot;open-admin-btn&quot; style=&quot;background:none;border:none;font-family:inherit;&quot;&gt;Admin Dashboard&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
 
-<button id="back-to-top" aria-label="Back to top">
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 14V4M4 9l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</button>
+&lt;button id=&quot;back-to-top&quot; aria-label=&quot;Back to top&quot;&gt;
+  &lt;svg width=&quot;18&quot; height=&quot;18&quot; viewBox=&quot;0 0 18 18&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M9 14V4M4 9l5-5 5 5&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;
+&lt;/button&gt;
 
-<!-- ============================================================
+&lt;!-- ============================================================
      CHAT WIDGET (visitor-facing demo)
-============================================================ -->
-<button id="chat-launcher" aria-haspopup="dialog" aria-controls="chat-window" aria-expanded="false">
-  <span class="chat-launcher-icon" aria-hidden="true">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v12H7l-3 3V4Z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
-    <span class="chat-dot" aria-hidden="true"></span>
-  </span>
-  <span class="chat-launcher-label">CHAT WITH SAIF</span>
-  <span class="chat-unread" id="chat-unread-badge" hidden>0</span>
-</button>
+============================================================ --&gt;
+&lt;button id=&quot;chat-launcher&quot; aria-haspopup=&quot;dialog&quot; aria-controls=&quot;chat-window&quot; aria-expanded=&quot;false&quot;&gt;
+  &lt;span class=&quot;chat-launcher-icon&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M4 4h16v12H7l-3 3V4Z&quot; stroke=&quot;#fff&quot; stroke-width=&quot;1.6&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;
+    &lt;span class=&quot;chat-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;span class=&quot;chat-launcher-label&quot;&gt;CHAT WITH SAIF&lt;/span&gt;
+  &lt;span class=&quot;chat-unread&quot; id=&quot;chat-unread-badge&quot; hidden&gt;0&lt;/span&gt;
+&lt;/button&gt;
 
-<div id="chat-window" role="dialog" aria-label="Chat with Saif" aria-hidden="true">
-  <div class="chat-header">
-    <div class="chat-header-info">
-      <div class="chat-avatar">S</div>
-      <div>
-        <div class="chat-header-name">SAIF.DEV</div>
-        <div class="chat-header-status"><i></i>ONLINE</div>
-        <div class="chat-header-sub">Usually replies within a few minutes</div>
-      </div>
-    </div>
-    <div class="chat-header-actions">
-      <button class="chat-icon-btn" id="chat-minimize-btn" aria-label="Minimize chat">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </button>
-      <button class="chat-icon-btn" id="chat-close-btn" aria-label="Close chat">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 2l10 10M12 2 2 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-      </button>
-    </div>
-  </div>
-  <div class="chat-body" id="chat-body" aria-live="polite"></div>
-  <div class="chat-quick-replies" id="chat-quick-replies">
-    <button class="chat-quick-btn" data-reply="I need a website">I NEED A WEBSITE</button>
-    <button class="chat-quick-btn" data-reply="I need a WooCommerce store">I NEED A WOOCOMMERCE STORE</button>
-    <button class="chat-quick-btn" data-reply="I need a landing page">I NEED A LANDING PAGE</button>
-    <button class="chat-quick-btn" data-reply="I need website support">I NEED WEBSITE SUPPORT</button>
-  </div>
-  <div class="chat-input-row">
-    <label for="chat-input" class="visually-hidden" style="position:absolute;left:-9999px;">Type a message</label>
-    <input type="text" id="chat-input" placeholder="Type your message…" autocomplete="off">
-    <button class="chat-send-btn" id="chat-send-btn" aria-label="Send message">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8l12-6-4 12-2-5-6-1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" fill="currentColor" fill-opacity=".08"/></svg>
-    </button>
-  </div>
-  <div class="chat-whatsapp-row">
-    Prefer WhatsApp? <a href="https://wa.me/8801516549964" target="_blank" rel="noopener">Chat on WhatsApp →</a>
-  </div>
-</div>
+&lt;div id=&quot;chat-window&quot; role=&quot;dialog&quot; aria-label=&quot;Chat with Saif&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;div class=&quot;chat-header&quot;&gt;
+    &lt;div class=&quot;chat-header-info&quot;&gt;
+      &lt;div class=&quot;chat-avatar&quot;&gt;S&lt;/div&gt;
+      &lt;div&gt;
+        &lt;div class=&quot;chat-header-name&quot;&gt;SAIF.DEV&lt;/div&gt;
+        &lt;div class=&quot;chat-header-status&quot;&gt;&lt;i&gt;&lt;/i&gt;ONLINE&lt;/div&gt;
+        &lt;div class=&quot;chat-header-sub&quot;&gt;Usually replies within a few minutes&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;chat-header-actions&quot;&gt;
+      &lt;button class=&quot;chat-icon-btn&quot; id=&quot;chat-minimize-btn&quot; aria-label=&quot;Minimize chat&quot;&gt;
+        &lt;svg width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 14 14&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M2 7h10&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;/svg&gt;
+      &lt;/button&gt;
+      &lt;button class=&quot;chat-icon-btn&quot; id=&quot;chat-close-btn&quot; aria-label=&quot;Close chat&quot;&gt;
+        &lt;svg width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 14 14&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M2 2l10 10M12 2 2 12&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.6&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;/svg&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;chat-body&quot; id=&quot;chat-body&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;chat-quick-replies&quot; id=&quot;chat-quick-replies&quot;&gt;
+    &lt;button class=&quot;chat-quick-btn&quot; data-reply=&quot;I need a website&quot;&gt;I NEED A WEBSITE&lt;/button&gt;
+    &lt;button class=&quot;chat-quick-btn&quot; data-reply=&quot;I need a WooCommerce store&quot;&gt;I NEED A WOOCOMMERCE STORE&lt;/button&gt;
+    &lt;button class=&quot;chat-quick-btn&quot; data-reply=&quot;I need a landing page&quot;&gt;I NEED A LANDING PAGE&lt;/button&gt;
+    &lt;button class=&quot;chat-quick-btn&quot; data-reply=&quot;I need website support&quot;&gt;I NEED WEBSITE SUPPORT&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;chat-input-row&quot;&gt;
+    &lt;label for=&quot;chat-input&quot; class=&quot;visually-hidden&quot; style=&quot;position:absolute;left:-9999px;&quot;&gt;Type a message&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;chat-input&quot; placeholder=&quot;Type your message…&quot; autocomplete=&quot;off&quot;&gt;
+    &lt;button class=&quot;chat-send-btn&quot; id=&quot;chat-send-btn&quot; aria-label=&quot;Send message&quot;&gt;
+      &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M2 8l12-6-4 12-2-5-6-1Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot; stroke-linejoin=&quot;round&quot; fill=&quot;currentColor&quot; fill-opacity=&quot;.08&quot;/&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;chat-whatsapp-row&quot;&gt;
+    Prefer WhatsApp? &lt;a href=&quot;https://wa.me/8801516549964&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Chat on WhatsApp →&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-<!-- ============================================================
+&lt;!-- ============================================================
      PROJECT PREVIEW MODAL
-============================================================ -->
-<div class="modal-overlay" id="preview-modal-overlay">
-  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="preview-modal-title">
-    <div class="modal-head"><h3 id="preview-modal-title">Project Preview</h3><button class="modal-close" id="preview-modal-close" aria-label="Close preview">✕</button></div>
-    <div id="preview-modal-body"></div>
-  </div>
-</div>
+============================================================ --&gt;
+&lt;div class=&quot;modal-overlay&quot; id=&quot;preview-modal-overlay&quot;&gt;
+  &lt;div class=&quot;modal-box&quot; role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;preview-modal-title&quot;&gt;
+    &lt;div class=&quot;modal-head&quot;&gt;&lt;h3 id=&quot;preview-modal-title&quot;&gt;Project Preview&lt;/h3&gt;&lt;button class=&quot;modal-close&quot; id=&quot;preview-modal-close&quot; aria-label=&quot;Close preview&quot;&gt;✕&lt;/button&gt;&lt;/div&gt;
+    &lt;div id=&quot;preview-modal-body&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-<!-- ============================================================
+&lt;!-- ============================================================
      DELETE CONFIRM MODAL
-============================================================ -->
-<div class="modal-overlay" id="delete-modal-overlay">
-  <div class="modal-box" style="max-width:400px;" role="dialog" aria-modal="true" aria-labelledby="delete-modal-title">
-    <div class="modal-head"><h3 id="delete-modal-title">Delete project?</h3><button class="modal-close" id="delete-modal-close" aria-label="Close">✕</button></div>
-    <p class="muted" style="font-size:14px;">Are you sure you want to delete this project? This can't be undone.</p>
-    <div class="modal-actions">
-      <button class="btn btn-ghost btn-sm" id="delete-cancel-btn">CANCEL</button>
-      <button class="btn btn-danger btn-sm" id="delete-confirm-btn">DELETE</button>
-    </div>
-  </div>
-</div>
+============================================================ --&gt;
+&lt;div class=&quot;modal-overlay&quot; id=&quot;delete-modal-overlay&quot;&gt;
+  &lt;div class=&quot;modal-box&quot; style=&quot;max-width:400px;&quot; role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;delete-modal-title&quot;&gt;
+    &lt;div class=&quot;modal-head&quot;&gt;&lt;h3 id=&quot;delete-modal-title&quot;&gt;Delete project?&lt;/h3&gt;&lt;button class=&quot;modal-close&quot; id=&quot;delete-modal-close&quot; aria-label=&quot;Close&quot;&gt;✕&lt;/button&gt;&lt;/div&gt;
+    &lt;p class=&quot;muted&quot; style=&quot;font-size:14px;&quot;&gt;Are you sure you want to delete this project? This can&#39;t be undone.&lt;/p&gt;
+    &lt;div class=&quot;modal-actions&quot;&gt;
+      &lt;button class=&quot;btn btn-ghost btn-sm&quot; id=&quot;delete-cancel-btn&quot;&gt;CANCEL&lt;/button&gt;
+      &lt;button class=&quot;btn btn-danger btn-sm&quot; id=&quot;delete-confirm-btn&quot;&gt;DELETE&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-<!-- ============================================================
+&lt;!-- ============================================================
      ADD / EDIT PROJECT MODAL
-============================================================ -->
-<div class="modal-overlay" id="project-modal-overlay">
-  <div class="modal-box modal-lg" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
-    <div class="modal-head"><h3 id="project-modal-title">Add New Project</h3><button class="modal-close" id="project-modal-close" aria-label="Close">✕</button></div>
-    <form id="project-form">
-      <input type="hidden" id="pf-id">
-      <div class="form-row">
-        <label for="pf-title">PROJECT TITLE</label>
-        <input type="text" id="pf-title" required placeholder="e.g. Modern Business Website">
-      </div>
-      <div class="form-grid-2">
-        <div class="form-row">
-          <label for="pf-category">PROJECT CATEGORY</label>
-          <select id="pf-category" required>
-            <option value="business">Business</option>
-            <option value="ecommerce">Ecommerce / WooCommerce</option>
-            <option value="agency">Agency</option>
-            <option value="landing-page">Landing Page</option>
-            <option value="portfolio">Personal Brand / Portfolio</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label for="pf-year">PROJECT YEAR</label>
-          <input type="number" id="pf-year" min="2015" max="2100" value="2026" required>
-        </div>
-      </div>
-      <div class="form-row">
-        <label>PROJECT IMAGE</label>
-        <div class="image-drop" id="pf-image-drop">
-          <div id="pf-image-placeholder">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><rect x="2" y="4" width="22" height="18" rx="2" stroke="currentColor" stroke-width="1.3"/><circle cx="9" cy="11" r="2" stroke="currentColor" stroke-width="1.3"/><path d="M4 19l6-6 4 4 4-5 4 5" stroke="currentColor" stroke-width="1.3"/></svg>
-            <div>Click or drop an image to upload</div>
-          </div>
-          <img id="pf-image-preview" style="display:none;" alt="Project image preview">
-          <input type="file" id="pf-image-input" accept="image/*">
-        </div>
-        <button type="button" class="image-remove-btn" id="pf-image-remove" style="display:none;">Remove image</button>
-      </div>
-      <div class="form-row">
-        <label for="pf-description">PROJECT DESCRIPTION</label>
-        <textarea id="pf-description" required placeholder="Short description of the project"></textarea>
-      </div>
-      <div class="form-row">
-        <label for="pf-tech-input">TECHNOLOGIES USED</label>
-        <div class="tag-input-wrap" id="pf-tag-wrap">
-          <input type="text" id="pf-tech-input" placeholder="Type a technology and press Enter">
-        </div>
-      </div>
-      <div class="form-grid-2">
-        <div class="form-row">
-          <label for="pf-url">PROJECT URL</label>
-          <input type="url" id="pf-url" placeholder="https://example.com">
-        </div>
-        <div class="form-row">
-          <label for="pf-status">PROJECT STATUS</label>
-          <select id="pf-status">
-            <option value="published">Published</option>
-            <option value="draft">Draft</option>
-          </select>
-        </div>
-      </div>
-      <div class="modal-actions">
-        <button type="button" class="btn btn-ghost btn-sm" id="project-cancel-btn">CANCEL</button>
-        <button type="submit" class="btn btn-primary btn-sm" id="project-save-btn">SAVE PROJECT</button>
-      </div>
-    </form>
-  </div>
-</div>
+============================================================ --&gt;
+&lt;div class=&quot;modal-overlay&quot; id=&quot;project-modal-overlay&quot;&gt;
+  &lt;div class=&quot;modal-box modal-lg&quot; role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;project-modal-title&quot;&gt;
+    &lt;div class=&quot;modal-head&quot;&gt;&lt;h3 id=&quot;project-modal-title&quot;&gt;Add New Project&lt;/h3&gt;&lt;button class=&quot;modal-close&quot; id=&quot;project-modal-close&quot; aria-label=&quot;Close&quot;&gt;✕&lt;/button&gt;&lt;/div&gt;
+    &lt;form id=&quot;project-form&quot;&gt;
+      &lt;input type=&quot;hidden&quot; id=&quot;pf-id&quot;&gt;
+      &lt;div class=&quot;form-row&quot;&gt;
+        &lt;label for=&quot;pf-title&quot;&gt;PROJECT TITLE&lt;/label&gt;
+        &lt;input type=&quot;text&quot; id=&quot;pf-title&quot; required placeholder=&quot;e.g. Modern Business Website&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-grid-2&quot;&gt;
+        &lt;div class=&quot;form-row&quot;&gt;
+          &lt;label for=&quot;pf-category&quot;&gt;PROJECT CATEGORY&lt;/label&gt;
+          &lt;select id=&quot;pf-category&quot; required&gt;
+            &lt;option value=&quot;business&quot;&gt;Business&lt;/option&gt;
+            &lt;option value=&quot;ecommerce&quot;&gt;Ecommerce / WooCommerce&lt;/option&gt;
+            &lt;option value=&quot;agency&quot;&gt;Agency&lt;/option&gt;
+            &lt;option value=&quot;landing-page&quot;&gt;Landing Page&lt;/option&gt;
+            &lt;option value=&quot;portfolio&quot;&gt;Personal Brand / Portfolio&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-row&quot;&gt;
+          &lt;label for=&quot;pf-year&quot;&gt;PROJECT YEAR&lt;/label&gt;
+          &lt;input type=&quot;number&quot; id=&quot;pf-year&quot; min=&quot;2015&quot; max=&quot;2100&quot; value=&quot;2026&quot; required&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-row&quot;&gt;
+        &lt;label&gt;PROJECT IMAGE&lt;/label&gt;
+        &lt;div class=&quot;image-drop&quot; id=&quot;pf-image-drop&quot;&gt;
+          &lt;div id=&quot;pf-image-placeholder&quot;&gt;
+            &lt;svg width=&quot;26&quot; height=&quot;26&quot; viewBox=&quot;0 0 26 26&quot; fill=&quot;none&quot; aria-hidden=&quot;true&quot;&gt;&lt;rect x=&quot;2&quot; y=&quot;4&quot; width=&quot;22&quot; height=&quot;18&quot; rx=&quot;2&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;circle cx=&quot;9&quot; cy=&quot;11&quot; r=&quot;2&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;path d=&quot;M4 19l6-6 4 4 4-5 4 5&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;/svg&gt;
+            &lt;div&gt;Click or drop an image to upload&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;img id=&quot;pf-image-preview&quot; style=&quot;display:none;&quot; alt=&quot;Project image preview&quot;&gt;
+          &lt;input type=&quot;file&quot; id=&quot;pf-image-input&quot; accept=&quot;image/*&quot;&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;button&quot; class=&quot;image-remove-btn&quot; id=&quot;pf-image-remove&quot; style=&quot;display:none;&quot;&gt;Remove image&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-row&quot;&gt;
+        &lt;label for=&quot;pf-description&quot;&gt;PROJECT DESCRIPTION&lt;/label&gt;
+        &lt;textarea id=&quot;pf-description&quot; required placeholder=&quot;Short description of the project&quot;&gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-row&quot;&gt;
+        &lt;label for=&quot;pf-tech-input&quot;&gt;TECHNOLOGIES USED&lt;/label&gt;
+        &lt;div class=&quot;tag-input-wrap&quot; id=&quot;pf-tag-wrap&quot;&gt;
+          &lt;input type=&quot;text&quot; id=&quot;pf-tech-input&quot; placeholder=&quot;Type a technology and press Enter&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-grid-2&quot;&gt;
+        &lt;div class=&quot;form-row&quot;&gt;
+          &lt;label for=&quot;pf-url&quot;&gt;PROJECT URL&lt;/label&gt;
+          &lt;input type=&quot;url&quot; id=&quot;pf-url&quot; placeholder=&quot;https://example.com&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-row&quot;&gt;
+          &lt;label for=&quot;pf-status&quot;&gt;PROJECT STATUS&lt;/label&gt;
+          &lt;select id=&quot;pf-status&quot;&gt;
+            &lt;option value=&quot;published&quot;&gt;Published&lt;/option&gt;
+            &lt;option value=&quot;draft&quot;&gt;Draft&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-actions&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost btn-sm&quot; id=&quot;project-cancel-btn&quot;&gt;CANCEL&lt;/button&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary btn-sm&quot; id=&quot;project-save-btn&quot;&gt;SAVE PROJECT&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-<!-- ============================================================
+&lt;!-- ============================================================
      ADMIN DASHBOARD (DEMO)
-============================================================ -->
-<div id="admin-app" role="application" aria-label="Admin Dashboard Demo">
-  <div class="admin-shell">
-    <aside class="admin-sidebar" id="admin-sidebar">
-      <div class="admin-brand"><span class="brand-dot" style="width:6px;height:6px;border-radius:50%;background:var(--accent-light);"></span>SAIF<span>.DEV</span><span class="admin-badge">DEMO</span></div>
-      <nav class="admin-nav">
-        <button data-view="dashboard" class="active"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="9" y="1" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="1" y="9" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="9" y="9" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.3"/></svg>DASHBOARD</button>
-        <button data-view="projects"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M1 6h14" stroke="currentColor" stroke-width="1.3"/></svg>PROJECTS</button>
-        <button data-view="add-project"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>ADD PROJECT</button>
-        <button data-view="messages"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 3h12v8H5l-3 3V3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>MESSAGES <span class="conv-unread" id="admin-nav-unread" style="position:static;margin-left:auto;display:none;"></span></button>
-        <button data-view="settings"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="2.4" stroke="currentColor" stroke-width="1.3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M13 3l-1.4 1.4M4.4 11.6 3 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>SETTINGS</button>
-      </nav>
-      <div class="admin-sidebar-foot">
-        <button class="admin-back-site" id="admin-back-btn" style="background:none;border:none;width:100%;">
-          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M9 3 4 7.5 9 12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+============================================================ --&gt;
+&lt;div id=&quot;admin-app&quot; role=&quot;application&quot; aria-label=&quot;Admin Dashboard Demo&quot;&gt;
+  &lt;div class=&quot;admin-shell&quot;&gt;
+    &lt;aside class=&quot;admin-sidebar&quot; id=&quot;admin-sidebar&quot;&gt;
+      &lt;div class=&quot;admin-brand&quot;&gt;&lt;span class=&quot;brand-dot&quot; style=&quot;width:6px;height:6px;border-radius:50%;background:var(--accent-light);&quot;&gt;&lt;/span&gt;SAIF&lt;span&gt;.DEV&lt;/span&gt;&lt;span class=&quot;admin-badge&quot;&gt;DEMO&lt;/span&gt;&lt;/div&gt;
+      &lt;nav class=&quot;admin-nav&quot;&gt;
+        &lt;button data-view=&quot;dashboard&quot; class=&quot;active&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot;&gt;&lt;rect x=&quot;1&quot; y=&quot;1&quot; width=&quot;6&quot; height=&quot;6&quot; rx=&quot;1&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;rect x=&quot;9&quot; y=&quot;1&quot; width=&quot;6&quot; height=&quot;6&quot; rx=&quot;1&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;rect x=&quot;1&quot; y=&quot;9&quot; width=&quot;6&quot; height=&quot;6&quot; rx=&quot;1&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;rect x=&quot;9&quot; y=&quot;9&quot; width=&quot;6&quot; height=&quot;6&quot; rx=&quot;1&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;/svg&gt;DASHBOARD&lt;/button&gt;
+        &lt;button data-view=&quot;projects&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot;&gt;&lt;rect x=&quot;1&quot; y=&quot;3&quot; width=&quot;14&quot; height=&quot;10&quot; rx=&quot;1.5&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;path d=&quot;M1 6h14&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;/svg&gt;PROJECTS&lt;/button&gt;
+        &lt;button data-view=&quot;add-project&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M8 2v12M2 8h12&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;/svg&gt;ADD PROJECT&lt;/button&gt;
+        &lt;button data-view=&quot;messages&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M2 3h12v8H5l-3 3V3Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;MESSAGES &lt;span class=&quot;conv-unread&quot; id=&quot;admin-nav-unread&quot; style=&quot;position:static;margin-left:auto;display:none;&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;button data-view=&quot;settings&quot;&gt;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot;&gt;&lt;circle cx=&quot;8&quot; cy=&quot;8&quot; r=&quot;2.4&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.3&quot;/&gt;&lt;path d=&quot;M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M13 3l-1.4 1.4M4.4 11.6 3 13&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.2&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;/svg&gt;SETTINGS&lt;/button&gt;
+      &lt;/nav&gt;
+      &lt;div class=&quot;admin-sidebar-foot&quot;&gt;
+        &lt;button class=&quot;admin-back-site&quot; id=&quot;admin-back-btn&quot; style=&quot;background:none;border:none;width:100%;&quot;&gt;
+          &lt;svg width=&quot;15&quot; height=&quot;15&quot; viewBox=&quot;0 0 15 15&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M9 3 4 7.5 9 12&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;
           Back to site
-        </button>
-      </div>
-    </aside>
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;
 
-    <main class="admin-main">
-      <button class="admin-mobile-toggle" id="admin-mobile-toggle" aria-label="Toggle sidebar">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 4h14M1 8h14M1 12h14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-      </button>
+    &lt;main class=&quot;admin-main&quot;&gt;
+      &lt;button class=&quot;admin-mobile-toggle&quot; id=&quot;admin-mobile-toggle&quot; aria-label=&quot;Toggle sidebar&quot;&gt;
+        &lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M1 4h14M1 8h14M1 12h14&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot; stroke-linecap=&quot;round&quot;/&gt;&lt;/svg&gt;
+      &lt;/button&gt;
 
-      <!-- DASHBOARD VIEW -->
-      <section class="admin-view active" id="view-dashboard">
-        <div class="admin-topbar">
-          <div><h2>Dashboard</h2><div class="muted-line">ADMIN DASHBOARD — DEMO. Overview of your portfolio content.</div></div>
-        </div>
-        <div class="admin-stats-grid">
-          <div class="admin-stat-card"><div class="num" id="stat-total">0</div><div class="lbl">TOTAL PROJECTS</div></div>
-          <div class="admin-stat-card"><div class="num" id="stat-published">0</div><div class="lbl">PUBLISHED</div></div>
-          <div class="admin-stat-card"><div class="num" id="stat-drafts">0</div><div class="lbl">DRAFTS</div></div>
-          <div class="admin-stat-card"><div class="num" id="stat-messages">0</div><div class="lbl">MESSAGES</div></div>
-        </div>
-        <div class="admin-panel">
-          <h3>Recent projects</h3>
-          <div id="admin-recent-projects"></div>
-        </div>
-        <div class="admin-panel">
-          <h3>Recent messages</h3>
-          <div id="admin-recent-messages"></div>
-        </div>
-      </section>
+      &lt;!-- DASHBOARD VIEW --&gt;
+      &lt;section class=&quot;admin-view active&quot; id=&quot;view-dashboard&quot;&gt;
+        &lt;div class=&quot;admin-topbar&quot;&gt;
+          &lt;div&gt;&lt;h2&gt;Dashboard&lt;/h2&gt;&lt;div class=&quot;muted-line&quot;&gt;ADMIN DASHBOARD — DEMO. Overview of your portfolio content.&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;admin-stats-grid&quot;&gt;
+          &lt;div class=&quot;admin-stat-card&quot;&gt;&lt;div class=&quot;num&quot; id=&quot;stat-total&quot;&gt;0&lt;/div&gt;&lt;div class=&quot;lbl&quot;&gt;TOTAL PROJECTS&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;admin-stat-card&quot;&gt;&lt;div class=&quot;num&quot; id=&quot;stat-published&quot;&gt;0&lt;/div&gt;&lt;div class=&quot;lbl&quot;&gt;PUBLISHED&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;admin-stat-card&quot;&gt;&lt;div class=&quot;num&quot; id=&quot;stat-drafts&quot;&gt;0&lt;/div&gt;&lt;div class=&quot;lbl&quot;&gt;DRAFTS&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;admin-stat-card&quot;&gt;&lt;div class=&quot;num&quot; id=&quot;stat-messages&quot;&gt;0&lt;/div&gt;&lt;div class=&quot;lbl&quot;&gt;MESSAGES&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;admin-panel&quot;&gt;
+          &lt;h3&gt;Recent projects&lt;/h3&gt;
+          &lt;div id=&quot;admin-recent-projects&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;admin-panel&quot;&gt;
+          &lt;h3&gt;Recent messages&lt;/h3&gt;
+          &lt;div id=&quot;admin-recent-messages&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
 
-      <!-- PROJECTS VIEW -->
-      <section class="admin-view" id="view-projects">
-        <div class="admin-topbar">
-          <div><h2>Projects</h2><div class="muted-line">Manage everything shown in your public Selected Work section.</div></div>
-          <button class="btn btn-primary btn-sm" id="projects-add-btn">+ ADD NEW PROJECT</button>
-        </div>
-        <div class="admin-toolbar">
-          <div class="admin-toolbar-left">
-            <input type="text" class="admin-search-input" id="admin-search-input" placeholder="Search projects…">
-            <select class="admin-select" id="admin-status-filter">
-              <option value="all">All statuses</option>
-              <option value="published">Published</option>
-              <option value="draft">Draft</option>
-            </select>
-          </div>
-          <select class="admin-select" id="admin-sort-select">
-            <option value="newest">Newest</option>
-            <option value="oldest">Oldest</option>
-            <option value="az">A–Z</option>
-            <option value="za">Z–A</option>
-          </select>
-        </div>
-        <div class="admin-table-wrap">
-          <table class="admin-table">
-            <thead><tr><th>Thumbnail</th><th>Title</th><th>Category</th><th>Year</th><th>Status</th><th>Date added</th><th>Actions</th></tr></thead>
-            <tbody id="admin-projects-tbody"></tbody>
-          </table>
-        </div>
-      </section>
+      &lt;!-- PROJECTS VIEW --&gt;
+      &lt;section class=&quot;admin-view&quot; id=&quot;view-projects&quot;&gt;
+        &lt;div class=&quot;admin-topbar&quot;&gt;
+          &lt;div&gt;&lt;h2&gt;Projects&lt;/h2&gt;&lt;div class=&quot;muted-line&quot;&gt;Manage everything shown in your public Selected Work section.&lt;/div&gt;&lt;/div&gt;
+          &lt;button class=&quot;btn btn-primary btn-sm&quot; id=&quot;projects-add-btn&quot;&gt;+ ADD NEW PROJECT&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;admin-toolbar&quot;&gt;
+          &lt;div class=&quot;admin-toolbar-left&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;admin-search-input&quot; id=&quot;admin-search-input&quot; placeholder=&quot;Search projects…&quot;&gt;
+            &lt;select class=&quot;admin-select&quot; id=&quot;admin-status-filter&quot;&gt;
+              &lt;option value=&quot;all&quot;&gt;All statuses&lt;/option&gt;
+              &lt;option value=&quot;published&quot;&gt;Published&lt;/option&gt;
+              &lt;option value=&quot;draft&quot;&gt;Draft&lt;/option&gt;
+            &lt;/select&gt;
+          &lt;/div&gt;
+          &lt;select class=&quot;admin-select&quot; id=&quot;admin-sort-select&quot;&gt;
+            &lt;option value=&quot;newest&quot;&gt;Newest&lt;/option&gt;
+            &lt;option value=&quot;oldest&quot;&gt;Oldest&lt;/option&gt;
+            &lt;option value=&quot;az&quot;&gt;A–Z&lt;/option&gt;
+            &lt;option value=&quot;za&quot;&gt;Z–A&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;admin-table-wrap&quot;&gt;
+          &lt;table class=&quot;admin-table&quot;&gt;
+            &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Thumbnail&lt;/th&gt;&lt;th&gt;Title&lt;/th&gt;&lt;th&gt;Category&lt;/th&gt;&lt;th&gt;Year&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;th&gt;Date added&lt;/th&gt;&lt;th&gt;Actions&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+            &lt;tbody id=&quot;admin-projects-tbody&quot;&gt;&lt;/tbody&gt;
+          &lt;/table&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
 
-      <!-- ADD PROJECT VIEW (shortcut) -->
-      <section class="admin-view" id="view-add-project">
-        <div class="admin-topbar"><div><h2>Add Project</h2><div class="muted-line">Publish a new project to your portfolio.</div></div></div>
-        <div class="admin-panel">
-          <p class="muted" style="font-size:14px;margin-bottom:18px;">Use the project form to add a new website to your Selected Work section.</p>
-          <button class="btn btn-primary btn-sm" id="add-project-shortcut-btn">+ OPEN PROJECT FORM</button>
-        </div>
-      </section>
+      &lt;!-- ADD PROJECT VIEW (shortcut) --&gt;
+      &lt;section class=&quot;admin-view&quot; id=&quot;view-add-project&quot;&gt;
+        &lt;div class=&quot;admin-topbar&quot;&gt;&lt;div&gt;&lt;h2&gt;Add Project&lt;/h2&gt;&lt;div class=&quot;muted-line&quot;&gt;Publish a new project to your portfolio.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;admin-panel&quot;&gt;
+          &lt;p class=&quot;muted&quot; style=&quot;font-size:14px;margin-bottom:18px;&quot;&gt;Use the project form to add a new website to your Selected Work section.&lt;/p&gt;
+          &lt;button class=&quot;btn btn-primary btn-sm&quot; id=&quot;add-project-shortcut-btn&quot;&gt;+ OPEN PROJECT FORM&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
 
-      <!-- MESSAGES VIEW -->
-      <section class="admin-view" id="view-messages">
-        <div class="admin-topbar"><div><h2>Messages</h2><div class="muted-line">Conversations started from the website chat widget.</div></div></div>
-        <div class="admin-messages-shell">
-          <div class="conv-list">
-            <div class="conv-filter-tabs">
-              <button class="active" data-conv-filter="all">ALL</button>
-              <button data-conv-filter="new">NEW</button>
-              <button data-conv-filter="active">ACTIVE</button>
-              <button data-conv-filter="closed">CLOSED</button>
-            </div>
-            <div id="conv-list-items"></div>
-          </div>
-          <div class="conv-panel" id="conv-panel">
-            <div class="conv-empty-state">Select a conversation to view messages</div>
-          </div>
-        </div>
-      </section>
+      &lt;!-- MESSAGES VIEW --&gt;
+      &lt;section class=&quot;admin-view&quot; id=&quot;view-messages&quot;&gt;
+        &lt;div class=&quot;admin-topbar&quot;&gt;&lt;div&gt;&lt;h2&gt;Messages&lt;/h2&gt;&lt;div class=&quot;muted-line&quot;&gt;Conversations started from the website chat widget.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;admin-messages-shell&quot;&gt;
+          &lt;div class=&quot;conv-list&quot;&gt;
+            &lt;div class=&quot;conv-filter-tabs&quot;&gt;
+              &lt;button class=&quot;active&quot; data-conv-filter=&quot;all&quot;&gt;ALL&lt;/button&gt;
+              &lt;button data-conv-filter=&quot;new&quot;&gt;NEW&lt;/button&gt;
+              &lt;button data-conv-filter=&quot;active&quot;&gt;ACTIVE&lt;/button&gt;
+              &lt;button data-conv-filter=&quot;closed&quot;&gt;CLOSED&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div id=&quot;conv-list-items&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;conv-panel&quot; id=&quot;conv-panel&quot;&gt;
+            &lt;div class=&quot;conv-empty-state&quot;&gt;Select a conversation to view messages&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
 
-      <!-- SETTINGS VIEW -->
-      <section class="admin-view" id="view-settings">
-        <div class="admin-topbar"><div><h2>Settings</h2><div class="muted-line">Demo settings panel.</div></div></div>
-        <div class="admin-panel">
-          <h3>About this demo</h3>
-          <p class="muted" style="font-size:13.5px;line-height:1.7;">
-            This Admin Dashboard is a frontend prototype. Project and message data is stored in your browser's <code>localStorage</code> so it persists across refreshes on this device only. In a production WordPress setup, this panel would be replaced by the real WordPress Admin, with projects stored as a <code>portfolio_project</code> Custom Post Type and messages handled via the REST API, a custom plugin, or a service like Firebase/Supabase for real-time chat.
-          </p>
-        </div>
-        <div class="admin-panel">
-          <h3>Danger zone</h3>
-          <p class="muted" style="font-size:13.5px;margin-bottom:14px;">Reset all demo data (projects and messages) back to the original defaults.</p>
-          <button class="btn btn-danger btn-sm" id="reset-demo-btn">RESET DEMO DATA</button>
-        </div>
-      </section>
-    </main>
-  </div>
-</div>
+      &lt;!-- SETTINGS VIEW --&gt;
+      &lt;section class=&quot;admin-view&quot; id=&quot;view-settings&quot;&gt;
+        &lt;div class=&quot;admin-topbar&quot;&gt;&lt;div&gt;&lt;h2&gt;Settings&lt;/h2&gt;&lt;div class=&quot;muted-line&quot;&gt;Demo settings panel.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;admin-panel&quot;&gt;
+          &lt;h3&gt;About this demo&lt;/h3&gt;
+          &lt;p class=&quot;muted&quot; style=&quot;font-size:13.5px;line-height:1.7;&quot;&gt;
+            This Admin Dashboard is a frontend prototype. Project and message data is stored in your browser&#39;s &lt;code&gt;localStorage&lt;/code&gt; so it persists across refreshes on this device only. In a production WordPress setup, this panel would be replaced by the real WordPress Admin, with projects stored as a &lt;code&gt;portfolio_project&lt;/code&gt; Custom Post Type and messages handled via the REST API, a custom plugin, or a service like Firebase/Supabase for real-time chat.
+          &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;admin-panel&quot;&gt;
+          &lt;h3&gt;Danger zone&lt;/h3&gt;
+          &lt;p class=&quot;muted&quot; style=&quot;font-size:13.5px;margin-bottom:14px;&quot;&gt;Reset all demo data (projects and messages) back to the original defaults.&lt;/p&gt;
+          &lt;button class=&quot;btn btn-danger btn-sm&quot; id=&quot;reset-demo-btn&quot;&gt;RESET DEMO DATA&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+    &lt;/main&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
-<script>
-"use strict";
+&lt;script&gt;
+&quot;use strict&quot;;
 /* ============================================================
    GLOBAL STATE / CONSTANTS
 ============================================================ */
-var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var LS_PROJECTS = 'saifdev_projects_v1';
-var LS_CONVERSATIONS = 'saifdev_conversations_v1';
-var LS_VISITOR_ID = 'saifdev_visitor_id_v1';
+var prefersReducedMotion = window.matchMedia(&#39;(prefers-reduced-motion: reduce)&#39;).matches;
+var LS_PROJECTS = &#39;saifdev_projects_v1&#39;;
+var LS_CONVERSATIONS = &#39;saifdev_conversations_v1&#39;;
+var LS_VISITOR_ID = &#39;saifdev_visitor_id_v1&#39;;
 
 /*
   WORDPRESS BACKEND READY — INTEGRATION NOTE
@@ -1291,7 +1291,7 @@ var LS_VISITOR_ID = 'saifdev_visitor_id_v1';
       polling, a custom plugin, WebSockets, or Firebase/Supabase)
       since a static file cannot sync two separate browsers.
   The function names/signatures below are kept stable so swapping
-  the storage layer later doesn't require rewriting the UI code.
+  the storage layer later doesn&#39;t require rewriting the UI code.
 */
 
 /* ============================================================
@@ -1299,36 +1299,36 @@ var LS_VISITOR_ID = 'saifdev_visitor_id_v1';
 ============================================================ */
 function seedProjects(){
   return [
-    { id:1, title:"Business Website", category:"business", year:"2026",
-      image:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=60",
-      description:"A modern business website designed to establish a strong digital presence and convert visitors into customers.",
-      technologies:["WordPress","Elementor","CSS"], url:"", status:"published", createdAt:"2026-01-05T09:00:00.000Z" },
-    { id:2, title:"Ecommerce Store", category:"ecommerce", year:"2026",
-      image:"https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=1200&q=60",
-      description:"A conversion-focused online store with a clean shopping experience and optimized product presentation.",
-      technologies:["WordPress","WooCommerce","Elementor"], url:"", status:"published", createdAt:"2026-02-10T09:00:00.000Z" },
-    { id:3, title:"Creative Agency Website", category:"agency", year:"2026",
-      image:"https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=60",
-      description:"A premium agency website with a strong visual identity, modern interactions and professional content structure.",
-      technologies:["WordPress","Elementor","Custom CSS"], url:"", status:"published", createdAt:"2026-03-18T09:00:00.000Z" },
-    { id:4, title:"Landing Page", category:"landing-page", year:"2026",
-      image:"https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&fit=crop&w=1200&q=60",
-      description:"A high-converting landing page designed to communicate the offer clearly and guide visitors toward action.",
-      technologies:["WordPress","Elementor","CSS"], url:"", status:"published", createdAt:"2026-04-22T09:00:00.000Z" },
-    { id:5, title:"Personal Brand Website", category:"portfolio", year:"2026",
-      image:"https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1200&q=60",
-      description:"A modern personal brand website designed to showcase expertise, services, projects and credibility.",
-      technologies:["WordPress","Elementor","Custom Design"], url:"", status:"published", createdAt:"2026-05-30T09:00:00.000Z" }
+    { id:1, title:&quot;Business Website&quot;, category:&quot;business&quot;, year:&quot;2026&quot;,
+      image:&quot;https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=1200&amp;q=60&quot;,
+      description:&quot;A modern business website designed to establish a strong digital presence and convert visitors into customers.&quot;,
+      technologies:[&quot;WordPress&quot;,&quot;Elementor&quot;,&quot;CSS&quot;], url:&quot;&quot;, status:&quot;published&quot;, createdAt:&quot;2026-01-05T09:00:00.000Z&quot; },
+    { id:2, title:&quot;Ecommerce Store&quot;, category:&quot;ecommerce&quot;, year:&quot;2026&quot;,
+      image:&quot;https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&amp;fit=crop&amp;w=1200&amp;q=60&quot;,
+      description:&quot;A conversion-focused online store with a clean shopping experience and optimized product presentation.&quot;,
+      technologies:[&quot;WordPress&quot;,&quot;WooCommerce&quot;,&quot;Elementor&quot;], url:&quot;&quot;, status:&quot;published&quot;, createdAt:&quot;2026-02-10T09:00:00.000Z&quot; },
+    { id:3, title:&quot;Creative Agency Website&quot;, category:&quot;agency&quot;, year:&quot;2026&quot;,
+      image:&quot;https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&amp;fit=crop&amp;w=1200&amp;q=60&quot;,
+      description:&quot;A premium agency website with a strong visual identity, modern interactions and professional content structure.&quot;,
+      technologies:[&quot;WordPress&quot;,&quot;Elementor&quot;,&quot;Custom CSS&quot;], url:&quot;&quot;, status:&quot;published&quot;, createdAt:&quot;2026-03-18T09:00:00.000Z&quot; },
+    { id:4, title:&quot;Landing Page&quot;, category:&quot;landing-page&quot;, year:&quot;2026&quot;,
+      image:&quot;https://images.unsplash.com/photo-1487014679447-9f8336841d58?auto=format&amp;fit=crop&amp;w=1200&amp;q=60&quot;,
+      description:&quot;A high-converting landing page designed to communicate the offer clearly and guide visitors toward action.&quot;,
+      technologies:[&quot;WordPress&quot;,&quot;Elementor&quot;,&quot;CSS&quot;], url:&quot;&quot;, status:&quot;published&quot;, createdAt:&quot;2026-04-22T09:00:00.000Z&quot; },
+    { id:5, title:&quot;Personal Brand Website&quot;, category:&quot;portfolio&quot;, year:&quot;2026&quot;,
+      image:&quot;https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&amp;fit=crop&amp;w=1200&amp;q=60&quot;,
+      description:&quot;A modern personal brand website designed to showcase expertise, services, projects and credibility.&quot;,
+      technologies:[&quot;WordPress&quot;,&quot;Elementor&quot;,&quot;Custom Design&quot;], url:&quot;&quot;, status:&quot;published&quot;, createdAt:&quot;2026-05-30T09:00:00.000Z&quot; }
   ];
 }
 
-/* Map a project's stored category to the filter buttons it should match */
+/* Map a project&#39;s stored category to the filter buttons it should match */
 function categoryFilterTags(project){
-  var tags = ['wordpress', project.category];
+  var tags = [&#39;wordpress&#39;, project.category];
   var t = (project.technologies || []).map(function(x){ return x.toLowerCase(); });
-  if(t.indexOf('elementor') > -1) tags.push('elementor');
-  if(t.indexOf('woocommerce') > -1) tags.push('woocommerce');
-  if(project.category === 'ecommerce') tags.push('woocommerce');
+  if(t.indexOf(&#39;elementor&#39;) &gt; -1) tags.push(&#39;elementor&#39;);
+  if(t.indexOf(&#39;woocommerce&#39;) &gt; -1) tags.push(&#39;woocommerce&#39;);
+  if(project.category === &#39;ecommerce&#39;) tags.push(&#39;woocommerce&#39;);
   return tags;
 }
 
@@ -1346,7 +1346,7 @@ function loadProjects(){
     var parsed = JSON.parse(raw);
     return Array.isArray(parsed) ? parsed : seedProjects();
   }catch(e){
-    console.warn('loadProjects failed, falling back to seed data', e);
+    console.warn(&#39;loadProjects failed, falling back to seed data&#39;, e);
     return seedProjects();
   }
 }
@@ -1355,16 +1355,16 @@ function saveProjects(list){
   try{
     localStorage.setItem(LS_PROJECTS, JSON.stringify(list));
   }catch(e){
-    console.warn('saveProjects failed (localStorage unavailable/full)', e);
+    console.warn(&#39;saveProjects failed (localStorage unavailable/full)&#39;, e);
   }
 }
 
 var STATE = {
   projects: loadProjects(),
-  activeFilter: 'all',
-  searchTerm: '',
-  statusFilter: 'all',
-  sortBy: 'newest',
+  activeFilter: &#39;all&#39;,
+  searchTerm: &#39;&#39;,
+  statusFilter: &#39;all&#39;,
+  sortBy: &#39;newest&#39;,
   editingId: null,
   pendingDeleteId: null,
   pfTechTags: []
@@ -1372,7 +1372,7 @@ var STATE = {
 
 function nextProjectId(){
   var max = 0;
-  STATE.projects.forEach(function(p){ if(p.id > max) max = p.id; });
+  STATE.projects.forEach(function(p){ if(p.id &gt; max) max = p.id; });
   return max + 1;
 }
 
@@ -1405,27 +1405,27 @@ function deleteProject(id){
 }
 
 function filterProjects(list, filterKey){
-  if(!filterKey || filterKey === 'all') return list;
-  return list.filter(function(p){ return categoryFilterTags(p).indexOf(filterKey) > -1; });
+  if(!filterKey || filterKey === &#39;all&#39;) return list;
+  return list.filter(function(p){ return categoryFilterTags(p).indexOf(filterKey) &gt; -1; });
 }
 
 function searchProjects(list, term){
   if(!term) return list;
   term = term.toLowerCase();
   return list.filter(function(p){
-    return p.title.toLowerCase().indexOf(term) > -1 ||
-      p.category.toLowerCase().indexOf(term) > -1 ||
-      String(p.year).indexOf(term) > -1 ||
-      (p.technologies||[]).join(' ').toLowerCase().indexOf(term) > -1;
+    return p.title.toLowerCase().indexOf(term) &gt; -1 ||
+      p.category.toLowerCase().indexOf(term) &gt; -1 ||
+      String(p.year).indexOf(term) &gt; -1 ||
+      (p.technologies||[]).join(&#39; &#39;).toLowerCase().indexOf(term) &gt; -1;
   });
 }
 
 function sortProjects(list, sortBy){
   var arr = list.slice();
   switch(sortBy){
-    case 'oldest': arr.sort(function(a,b){ return new Date(a.createdAt) - new Date(b.createdAt); }); break;
-    case 'az': arr.sort(function(a,b){ return a.title.localeCompare(b.title); }); break;
-    case 'za': arr.sort(function(a,b){ return b.title.localeCompare(a.title); }); break;
+    case &#39;oldest&#39;: arr.sort(function(a,b){ return new Date(a.createdAt) - new Date(b.createdAt); }); break;
+    case &#39;az&#39;: arr.sort(function(a,b){ return a.title.localeCompare(b.title); }); break;
+    case &#39;za&#39;: arr.sort(function(a,b){ return b.title.localeCompare(a.title); }); break;
     default: arr.sort(function(a,b){ return new Date(b.createdAt) - new Date(a.createdAt); });
   }
   return arr;
@@ -1434,174 +1434,174 @@ function sortProjects(list, sortBy){
 /* ============================================================
    PUBLIC PORTFOLIO RENDERING
 ============================================================ */
-var workListEl = document.getElementById('work-list');
+var workListEl = document.getElementById(&#39;work-list&#39;);
 
 function renderProjects(){
-  var published = STATE.projects.filter(function(p){ return p.status === 'published'; });
+  var published = STATE.projects.filter(function(p){ return p.status === &#39;published&#39;; });
   var filtered = filterProjects(published, STATE.activeFilter);
-  filtered = sortProjects(filtered, 'newest');
+  filtered = sortProjects(filtered, &#39;newest&#39;);
 
-  workListEl.innerHTML = '';
+  workListEl.innerHTML = &#39;&#39;;
 
   if(filtered.length === 0){
     workListEl.innerHTML =
-      '<div class="work-empty reveal in-view">' +
-        '<h3>NO PROJECTS YET</h3>' +
-        '<p>' + (published.length === 0 ? "Start building your portfolio by adding your first project." : "No projects match this filter yet.") + '</p>' +
-        (published.length === 0 ? '<button class="btn btn-primary btn-sm" id="add-first-project-btn">ADD FIRST PROJECT</button>' : '') +
-      '</div>';
-    var addFirstBtn = document.getElementById('add-first-project-btn');
-    if(addFirstBtn) addFirstBtn.addEventListener('click', function(){ openAdmin(); switchAdminView('add-project'); });
+      &#39;&lt;div class=&quot;work-empty reveal in-view&quot;&gt;&#39; +
+        &#39;&lt;h3&gt;NO PROJECTS YET&lt;/h3&gt;&#39; +
+        &#39;&lt;p&gt;&#39; + (published.length === 0 ? &quot;Start building your portfolio by adding your first project.&quot; : &quot;No projects match this filter yet.&quot;) + &#39;&lt;/p&gt;&#39; +
+        (published.length === 0 ? &#39;&lt;button class=&quot;btn btn-primary btn-sm&quot; id=&quot;add-first-project-btn&quot;&gt;ADD FIRST PROJECT&lt;/button&gt;&#39; : &#39;&#39;) +
+      &#39;&lt;/div&gt;&#39;;
+    var addFirstBtn = document.getElementById(&#39;add-first-project-btn&#39;);
+    if(addFirstBtn) addFirstBtn.addEventListener(&#39;click&#39;, function(){ openAdmin(); switchAdminView(&#39;add-project&#39;); });
     return;
   }
 
   filtered.forEach(function(p, i){
-    var num = String(i+1).padStart(2,'0');
-    var article = document.createElement('article');
-    article.className = 'work-card reveal';
+    var num = String(i+1).padStart(2,&#39;0&#39;);
+    var article = document.createElement(&#39;article&#39;);
+    article.className = &#39;work-card reveal&#39;;
     article.innerHTML =
-      '<div class="work-media">' +
-        '<span class="work-number">' + num + '</span>' +
-        '<img src="' + escapeAttr(p.image || '') + '" alt="Screenshot of the ' + escapeAttr(p.title) + ' project" loading="lazy" width="1200" height="800">' +
-        '<div class="work-media-overlay" aria-hidden="true"></div>' +
-      '</div>' +
-      '<div class="work-body">' +
-        '<div class="work-meta-row"><span>' + escapeHtml(prettyCategory(p.category)) + '</span><span class="dot-sep"></span><span>' + escapeHtml(String(p.year)) + '</span></div>' +
-        '<h3>' + escapeHtml(p.title) + '</h3>' +
-        '<p>' + escapeHtml(p.description) + '</p>' +
-        '<div class="work-tags">' + (p.technologies||[]).map(function(t){ return '<span class="tag">'+escapeHtml(t)+'</span>'; }).join('') + '</div>' +
-        '<a href="' + (p.url ? escapeAttr(p.url) : '#') + '" ' + (p.url ? 'target="_blank" rel="noopener"' : '') + ' class="link-arrow work-cta" aria-label="View ' + escapeAttr(p.title) + ' project">VIEW PROJECT' +
-          '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-        '</a>' +
-      '</div>';
+      &#39;&lt;div class=&quot;work-media&quot;&gt;&#39; +
+        &#39;&lt;span class=&quot;work-number&quot;&gt;&#39; + num + &#39;&lt;/span&gt;&#39; +
+        &#39;&lt;img src=&quot;&#39; + escapeAttr(p.image || &#39;&#39;) + &#39;&quot; alt=&quot;Screenshot of the &#39; + escapeAttr(p.title) + &#39; project&quot; loading=&quot;lazy&quot; width=&quot;1200&quot; height=&quot;800&quot;&gt;&#39; +
+        &#39;&lt;div class=&quot;work-media-overlay&quot; aria-hidden=&quot;true&quot;&gt;&lt;/div&gt;&#39; +
+      &#39;&lt;/div&gt;&#39; +
+      &#39;&lt;div class=&quot;work-body&quot;&gt;&#39; +
+        &#39;&lt;div class=&quot;work-meta-row&quot;&gt;&lt;span&gt;&#39; + escapeHtml(prettyCategory(p.category)) + &#39;&lt;/span&gt;&lt;span class=&quot;dot-sep&quot;&gt;&lt;/span&gt;&lt;span&gt;&#39; + escapeHtml(String(p.year)) + &#39;&lt;/span&gt;&lt;/div&gt;&#39; +
+        &#39;&lt;h3&gt;&#39; + escapeHtml(p.title) + &#39;&lt;/h3&gt;&#39; +
+        &#39;&lt;p&gt;&#39; + escapeHtml(p.description) + &#39;&lt;/p&gt;&#39; +
+        &#39;&lt;div class=&quot;work-tags&quot;&gt;&#39; + (p.technologies||[]).map(function(t){ return &#39;&lt;span class=&quot;tag&quot;&gt;&#39;+escapeHtml(t)+&#39;&lt;/span&gt;&#39;; }).join(&#39;&#39;) + &#39;&lt;/div&gt;&#39; +
+        &#39;&lt;a href=&quot;&#39; + (p.url ? escapeAttr(p.url) : &#39;#&#39;) + &#39;&quot; &#39; + (p.url ? &#39;target=&quot;_blank&quot; rel=&quot;noopener&quot;&#39; : &#39;&#39;) + &#39; class=&quot;link-arrow work-cta&quot; aria-label=&quot;View &#39; + escapeAttr(p.title) + &#39; project&quot;&gt;VIEW PROJECT&#39; +
+          &#39;&lt;svg width=&quot;16&quot; height=&quot;16&quot; viewBox=&quot;0 0 16 16&quot; fill=&quot;none&quot; aria-hidden=&quot;true&quot;&gt;&lt;path d=&quot;M3 8h10M9 4l4 4-4 4&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.4&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;&#39; +
+        &#39;&lt;/a&gt;&#39; +
+      &#39;&lt;/div&gt;&#39;;
     workListEl.appendChild(article);
   });
 
-  observeReveal(workListEl.querySelectorAll('.reveal'));
+  observeReveal(workListEl.querySelectorAll(&#39;.reveal&#39;));
 }
 
 function prettyCategory(cat){
-  var map = { business:'WordPress / Business', ecommerce:'WordPress / WooCommerce', agency:'WordPress / Agency', 'landing-page':'Landing Page / Conversion', portfolio:'WordPress / Personal Brand' };
+  var map = { business:&#39;WordPress / Business&#39;, ecommerce:&#39;WordPress / WooCommerce&#39;, agency:&#39;WordPress / Agency&#39;, &#39;landing-page&#39;:&#39;Landing Page / Conversion&#39;, portfolio:&#39;WordPress / Personal Brand&#39; };
   return map[cat] || cat;
 }
 
 function escapeHtml(str){
-  return String(str).replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; });
+  return String(str).replace(/[&amp;&lt;&gt;&quot;&#39;]/g, function(c){ return ({&#39;&amp;&#39;:&#39;&amp;amp;&#39;,&#39;&lt;&#39;:&#39;&amp;lt;&#39;,&#39;&gt;&#39;:&#39;&amp;gt;&#39;,&#39;&quot;&#39;:&#39;&amp;quot;&#39;,&quot;&#39;&quot;:&#39;&amp;#39;&#39;})[c]; });
 }
 function escapeAttr(str){ return escapeHtml(str); }
 
 /* Filter bar wiring */
-document.getElementById('filter-bar').addEventListener('click', function(e){
-  var btn = e.target.closest('.filter-btn');
+document.getElementById(&#39;filter-bar&#39;).addEventListener(&#39;click&#39;, function(e){
+  var btn = e.target.closest(&#39;.filter-btn&#39;);
   if(!btn) return;
-  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
-  btn.classList.add('active');
-  btn.setAttribute('aria-selected','true');
-  STATE.activeFilter = btn.getAttribute('data-filter');
+  document.querySelectorAll(&#39;.filter-btn&#39;).forEach(function(b){ b.classList.remove(&#39;active&#39;); b.setAttribute(&#39;aria-selected&#39;,&#39;false&#39;); });
+  btn.classList.add(&#39;active&#39;);
+  btn.setAttribute(&#39;aria-selected&#39;,&#39;true&#39;);
+  STATE.activeFilter = btn.getAttribute(&#39;data-filter&#39;);
   renderProjects();
 });
 
 /* ============================================================
-   PROJECT PREVIEW (shared by public "view" & admin "preview")
+   PROJECT PREVIEW (shared by public &quot;view&quot; &amp; admin &quot;preview&quot;)
 ============================================================ */
 function previewProject(id){
   var p = STATE.projects.find(function(x){ return x.id === id; });
   if(!p) return;
-  var body = document.getElementById('preview-modal-body');
+  var body = document.getElementById(&#39;preview-modal-body&#39;);
   body.innerHTML =
-    '<div class="work-media" style="border-radius:12px;min-height:200px;margin-bottom:20px;">' +
-      '<img src="' + escapeAttr(p.image||'') + '" alt="' + escapeAttr(p.title) + '" style="position:static;width:100%;height:220px;object-fit:cover;border-radius:12px;">' +
-    '</div>' +
-    '<div class="work-meta-row" style="margin-bottom:10px;"><span>' + escapeHtml(prettyCategory(p.category)) + '</span><span class="dot-sep"></span><span>' + escapeHtml(String(p.year)) + '</span><span class="dot-sep"></span><span class="status-pill ' + p.status + '">' + p.status.toUpperCase() + '</span></div>' +
-    '<h3 style="font-size:22px;margin-bottom:10px;">' + escapeHtml(p.title) + '</h3>' +
-    '<p class="muted" style="margin-bottom:16px;">' + escapeHtml(p.description) + '</p>' +
-    '<div class="work-tags" style="margin-bottom:20px;">' + (p.technologies||[]).map(function(t){ return '<span class="tag">'+escapeHtml(t)+'</span>'; }).join('') + '</div>' +
-    (p.url ? '<a href="'+escapeAttr(p.url)+'" target="_blank" rel="noopener" class="btn btn-primary btn-sm">VIEW PROJECT →</a>' : '<span class="muted" style="font-size:13px;">No live URL set for this project.</span>');
-  openModal('preview-modal-overlay');
+    &#39;&lt;div class=&quot;work-media&quot; style=&quot;border-radius:12px;min-height:200px;margin-bottom:20px;&quot;&gt;&#39; +
+      &#39;&lt;img src=&quot;&#39; + escapeAttr(p.image||&#39;&#39;) + &#39;&quot; alt=&quot;&#39; + escapeAttr(p.title) + &#39;&quot; style=&quot;position:static;width:100%;height:220px;object-fit:cover;border-radius:12px;&quot;&gt;&#39; +
+    &#39;&lt;/div&gt;&#39; +
+    &#39;&lt;div class=&quot;work-meta-row&quot; style=&quot;margin-bottom:10px;&quot;&gt;&lt;span&gt;&#39; + escapeHtml(prettyCategory(p.category)) + &#39;&lt;/span&gt;&lt;span class=&quot;dot-sep&quot;&gt;&lt;/span&gt;&lt;span&gt;&#39; + escapeHtml(String(p.year)) + &#39;&lt;/span&gt;&lt;span class=&quot;dot-sep&quot;&gt;&lt;/span&gt;&lt;span class=&quot;status-pill &#39; + p.status + &#39;&quot;&gt;&#39; + p.status.toUpperCase() + &#39;&lt;/span&gt;&lt;/div&gt;&#39; +
+    &#39;&lt;h3 style=&quot;font-size:22px;margin-bottom:10px;&quot;&gt;&#39; + escapeHtml(p.title) + &#39;&lt;/h3&gt;&#39; +
+    &#39;&lt;p class=&quot;muted&quot; style=&quot;margin-bottom:16px;&quot;&gt;&#39; + escapeHtml(p.description) + &#39;&lt;/p&gt;&#39; +
+    &#39;&lt;div class=&quot;work-tags&quot; style=&quot;margin-bottom:20px;&quot;&gt;&#39; + (p.technologies||[]).map(function(t){ return &#39;&lt;span class=&quot;tag&quot;&gt;&#39;+escapeHtml(t)+&#39;&lt;/span&gt;&#39;; }).join(&#39;&#39;) + &#39;&lt;/div&gt;&#39; +
+    (p.url ? &#39;&lt;a href=&quot;&#39;+escapeAttr(p.url)+&#39;&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;VIEW PROJECT →&lt;/a&gt;&#39; : &#39;&lt;span class=&quot;muted&quot; style=&quot;font-size:13px;&quot;&gt;No live URL set for this project.&lt;/span&gt;&#39;);
+  openModal(&#39;preview-modal-overlay&#39;);
 }
 
 /* ============================================================
    MODAL HELPERS (generic)
 ============================================================ */
-function openModal(id){ document.getElementById(id).classList.add('open'); document.body.style.overflow='hidden'; }
-function closeModal(id){ document.getElementById(id).classList.remove('open'); document.body.style.overflow=''; }
-document.getElementById('preview-modal-close').addEventListener('click', function(){ closeModal('preview-modal-overlay'); });
-document.getElementById('preview-modal-overlay').addEventListener('click', function(e){ if(e.target === this) closeModal('preview-modal-overlay'); });
+function openModal(id){ document.getElementById(id).classList.add(&#39;open&#39;); document.body.style.overflow=&#39;hidden&#39;; }
+function closeModal(id){ document.getElementById(id).classList.remove(&#39;open&#39;); document.body.style.overflow=&#39;&#39;; }
+document.getElementById(&#39;preview-modal-close&#39;).addEventListener(&#39;click&#39;, function(){ closeModal(&#39;preview-modal-overlay&#39;); });
+document.getElementById(&#39;preview-modal-overlay&#39;).addEventListener(&#39;click&#39;, function(e){ if(e.target === this) closeModal(&#39;preview-modal-overlay&#39;); });
 
 /* ============================================================
    ADD / EDIT PROJECT FORM
 ============================================================ */
-var pfForm = document.getElementById('project-form');
-var pfImageInput = document.getElementById('pf-image-input');
-var pfImagePreview = document.getElementById('pf-image-preview');
-var pfImagePlaceholder = document.getElementById('pf-image-placeholder');
-var pfImageRemoveBtn = document.getElementById('pf-image-remove');
-var pfTechInput = document.getElementById('pf-tech-input');
-var pfTagWrap = document.getElementById('pf-tag-wrap');
-var pfCurrentImage = '';
+var pfForm = document.getElementById(&#39;project-form&#39;);
+var pfImageInput = document.getElementById(&#39;pf-image-input&#39;);
+var pfImagePreview = document.getElementById(&#39;pf-image-preview&#39;);
+var pfImagePlaceholder = document.getElementById(&#39;pf-image-placeholder&#39;);
+var pfImageRemoveBtn = document.getElementById(&#39;pf-image-remove&#39;);
+var pfTechInput = document.getElementById(&#39;pf-tech-input&#39;);
+var pfTagWrap = document.getElementById(&#39;pf-tag-wrap&#39;);
+var pfCurrentImage = &#39;&#39;;
 
 function resetProjectForm(){
   pfForm.reset();
-  document.getElementById('pf-id').value = '';
-  pfCurrentImage = '';
-  pfImagePreview.style.display = 'none';
-  pfImagePlaceholder.style.display = 'flex';
-  pfImageRemoveBtn.style.display = 'none';
+  document.getElementById(&#39;pf-id&#39;).value = &#39;&#39;;
+  pfCurrentImage = &#39;&#39;;
+  pfImagePreview.style.display = &#39;none&#39;;
+  pfImagePlaceholder.style.display = &#39;flex&#39;;
+  pfImageRemoveBtn.style.display = &#39;none&#39;;
   STATE.pfTechTags = [];
   renderTagPills();
   STATE.editingId = null;
 }
 
 function renderTagPills(){
-  Array.prototype.slice.call(pfTagWrap.querySelectorAll('.tag-pill')).forEach(function(el){ el.remove(); });
+  Array.prototype.slice.call(pfTagWrap.querySelectorAll(&#39;.tag-pill&#39;)).forEach(function(el){ el.remove(); });
   STATE.pfTechTags.forEach(function(tag, i){
-    var pill = document.createElement('span');
-    pill.className = 'tag-pill';
-    pill.innerHTML = escapeHtml(tag) + ' <button type="button" data-i="' + i + '" aria-label="Remove ' + escapeAttr(tag) + '">×</button>';
+    var pill = document.createElement(&#39;span&#39;);
+    pill.className = &#39;tag-pill&#39;;
+    pill.innerHTML = escapeHtml(tag) + &#39; &lt;button type=&quot;button&quot; data-i=&quot;&#39; + i + &#39;&quot; aria-label=&quot;Remove &#39; + escapeAttr(tag) + &#39;&quot;&gt;×&lt;/button&gt;&#39;;
     pfTagWrap.insertBefore(pill, pfTechInput);
   });
 }
-pfTagWrap.addEventListener('click', function(e){
-  var btn = e.target.closest('button[data-i]');
+pfTagWrap.addEventListener(&#39;click&#39;, function(e){
+  var btn = e.target.closest(&#39;button[data-i]&#39;);
   if(!btn) return;
-  STATE.pfTechTags.splice(parseInt(btn.getAttribute('data-i'),10), 1);
+  STATE.pfTechTags.splice(parseInt(btn.getAttribute(&#39;data-i&#39;),10), 1);
   renderTagPills();
 });
-pfTechInput.addEventListener('keydown', function(e){
-  if(e.key === 'Enter' || e.key === ','){
+pfTechInput.addEventListener(&#39;keydown&#39;, function(e){
+  if(e.key === &#39;Enter&#39; || e.key === &#39;,&#39;){
     e.preventDefault();
-    var val = pfTechInput.value.trim().replace(/,$/,'');
-    if(val && STATE.pfTechTags.indexOf(val) === -1){
+    var val = pfTechInput.value.trim().replace(/,$/,&#39;&#39;);
+    if(val &amp;&amp; STATE.pfTechTags.indexOf(val) === -1){
       STATE.pfTechTags.push(val);
       renderTagPills();
     }
-    pfTechInput.value = '';
-  } else if(e.key === 'Backspace' && !pfTechInput.value && STATE.pfTechTags.length){
+    pfTechInput.value = &#39;&#39;;
+  } else if(e.key === &#39;Backspace&#39; &amp;&amp; !pfTechInput.value &amp;&amp; STATE.pfTechTags.length){
     STATE.pfTechTags.pop();
     renderTagPills();
   }
 });
 
 /* Image upload via FileReader — swap for a WP media-library/REST upload in production */
-pfImageInput.addEventListener('change', function(e){
-  var file = e.target.files && e.target.files[0];
+pfImageInput.addEventListener(&#39;change&#39;, function(e){
+  var file = e.target.files &amp;&amp; e.target.files[0];
   if(!file) return;
   var reader = new FileReader();
   reader.onload = function(ev){
     pfCurrentImage = ev.target.result;
     pfImagePreview.src = pfCurrentImage;
-    pfImagePreview.style.display = 'block';
-    pfImagePlaceholder.style.display = 'none';
-    pfImageRemoveBtn.style.display = 'inline-block';
+    pfImagePreview.style.display = &#39;block&#39;;
+    pfImagePlaceholder.style.display = &#39;none&#39;;
+    pfImageRemoveBtn.style.display = &#39;inline-block&#39;;
   };
   reader.readAsDataURL(file);
 });
-pfImageRemoveBtn.addEventListener('click', function(){
-  pfCurrentImage = '';
-  pfImageInput.value = '';
-  pfImagePreview.style.display = 'none';
-  pfImagePlaceholder.style.display = 'flex';
-  pfImageRemoveBtn.style.display = 'none';
+pfImageRemoveBtn.addEventListener(&#39;click&#39;, function(){
+  pfCurrentImage = &#39;&#39;;
+  pfImageInput.value = &#39;&#39;;
+  pfImagePreview.style.display = &#39;none&#39;;
+  pfImagePlaceholder.style.display = &#39;flex&#39;;
+  pfImageRemoveBtn.style.display = &#39;none&#39;;
 });
 
 function openProjectModal(editId){
@@ -1610,103 +1610,103 @@ function openProjectModal(editId){
     var p = STATE.projects.find(function(x){ return x.id === editId; });
     if(p){
       STATE.editingId = editId;
-      document.getElementById('pf-id').value = p.id;
-      document.getElementById('pf-title').value = p.title;
-      document.getElementById('pf-category').value = p.category;
-      document.getElementById('pf-year').value = p.year;
-      document.getElementById('pf-description').value = p.description;
-      document.getElementById('pf-url').value = p.url || '';
-      document.getElementById('pf-status').value = p.status;
+      document.getElementById(&#39;pf-id&#39;).value = p.id;
+      document.getElementById(&#39;pf-title&#39;).value = p.title;
+      document.getElementById(&#39;pf-category&#39;).value = p.category;
+      document.getElementById(&#39;pf-year&#39;).value = p.year;
+      document.getElementById(&#39;pf-description&#39;).value = p.description;
+      document.getElementById(&#39;pf-url&#39;).value = p.url || &#39;&#39;;
+      document.getElementById(&#39;pf-status&#39;).value = p.status;
       STATE.pfTechTags = (p.technologies || []).slice();
       renderTagPills();
       if(p.image){
         pfCurrentImage = p.image;
         pfImagePreview.src = p.image;
-        pfImagePreview.style.display = 'block';
-        pfImagePlaceholder.style.display = 'none';
-        pfImageRemoveBtn.style.display = 'inline-block';
+        pfImagePreview.style.display = &#39;block&#39;;
+        pfImagePlaceholder.style.display = &#39;none&#39;;
+        pfImageRemoveBtn.style.display = &#39;inline-block&#39;;
       }
-      document.getElementById('project-modal-title').textContent = 'Edit Project';
-      document.getElementById('project-save-btn').textContent = 'SAVE CHANGES';
+      document.getElementById(&#39;project-modal-title&#39;).textContent = &#39;Edit Project&#39;;
+      document.getElementById(&#39;project-save-btn&#39;).textContent = &#39;SAVE CHANGES&#39;;
     }
   } else {
-    document.getElementById('project-modal-title').textContent = 'Add New Project';
-    document.getElementById('project-save-btn').textContent = 'SAVE PROJECT';
+    document.getElementById(&#39;project-modal-title&#39;).textContent = &#39;Add New Project&#39;;
+    document.getElementById(&#39;project-save-btn&#39;).textContent = &#39;SAVE PROJECT&#39;;
   }
-  openModal('project-modal-overlay');
+  openModal(&#39;project-modal-overlay&#39;);
 }
-document.getElementById('project-modal-close').addEventListener('click', function(){ closeModal('project-modal-overlay'); });
-document.getElementById('project-cancel-btn').addEventListener('click', function(){ closeModal('project-modal-overlay'); });
-document.getElementById('project-modal-overlay').addEventListener('click', function(e){ if(e.target === this) closeModal('project-modal-overlay'); });
+document.getElementById(&#39;project-modal-close&#39;).addEventListener(&#39;click&#39;, function(){ closeModal(&#39;project-modal-overlay&#39;); });
+document.getElementById(&#39;project-cancel-btn&#39;).addEventListener(&#39;click&#39;, function(){ closeModal(&#39;project-modal-overlay&#39;); });
+document.getElementById(&#39;project-modal-overlay&#39;).addEventListener(&#39;click&#39;, function(e){ if(e.target === this) closeModal(&#39;project-modal-overlay&#39;); });
 
-pfForm.addEventListener('submit', function(e){
+pfForm.addEventListener(&#39;submit&#39;, function(e){
   e.preventDefault();
   var data = {
-    title: document.getElementById('pf-title').value.trim(),
-    category: document.getElementById('pf-category').value,
-    year: document.getElementById('pf-year').value,
-    image: pfCurrentImage || 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=60',
-    description: document.getElementById('pf-description').value.trim(),
+    title: document.getElementById(&#39;pf-title&#39;).value.trim(),
+    category: document.getElementById(&#39;pf-category&#39;).value,
+    year: document.getElementById(&#39;pf-year&#39;).value,
+    image: pfCurrentImage || &#39;https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&amp;fit=crop&amp;w=1200&amp;q=60&#39;,
+    description: document.getElementById(&#39;pf-description&#39;).value.trim(),
     technologies: STATE.pfTechTags.slice(),
-    url: document.getElementById('pf-url').value.trim(),
-    status: document.getElementById('pf-status').value
+    url: document.getElementById(&#39;pf-url&#39;).value.trim(),
+    status: document.getElementById(&#39;pf-status&#39;).value
   };
   if(STATE.editingId){
     updateProject(STATE.editingId, data);
   } else {
     addProject(data);
   }
-  closeModal('project-modal-overlay');
+  closeModal(&#39;project-modal-overlay&#39;);
 });
 
-document.getElementById('projects-add-btn').addEventListener('click', function(){ openProjectModal(null); });
-document.getElementById('add-project-shortcut-btn').addEventListener('click', function(){ openProjectModal(null); });
+document.getElementById(&#39;projects-add-btn&#39;).addEventListener(&#39;click&#39;, function(){ openProjectModal(null); });
+document.getElementById(&#39;add-project-shortcut-btn&#39;).addEventListener(&#39;click&#39;, function(){ openProjectModal(null); });
 
 /* Delete confirm modal */
-document.getElementById('delete-modal-close').addEventListener('click', function(){ closeModal('delete-modal-overlay'); });
-document.getElementById('delete-cancel-btn').addEventListener('click', function(){ closeModal('delete-modal-overlay'); });
-document.getElementById('delete-modal-overlay').addEventListener('click', function(e){ if(e.target === this) closeModal('delete-modal-overlay'); });
-document.getElementById('delete-confirm-btn').addEventListener('click', function(){
+document.getElementById(&#39;delete-modal-close&#39;).addEventListener(&#39;click&#39;, function(){ closeModal(&#39;delete-modal-overlay&#39;); });
+document.getElementById(&#39;delete-cancel-btn&#39;).addEventListener(&#39;click&#39;, function(){ closeModal(&#39;delete-modal-overlay&#39;); });
+document.getElementById(&#39;delete-modal-overlay&#39;).addEventListener(&#39;click&#39;, function(e){ if(e.target === this) closeModal(&#39;delete-modal-overlay&#39;); });
+document.getElementById(&#39;delete-confirm-btn&#39;).addEventListener(&#39;click&#39;, function(){
   if(STATE.pendingDeleteId != null){
     deleteProject(STATE.pendingDeleteId);
     STATE.pendingDeleteId = null;
   }
-  closeModal('delete-modal-overlay');
+  closeModal(&#39;delete-modal-overlay&#39;);
 });
 function confirmDeleteProject(id){
   STATE.pendingDeleteId = id;
-  openModal('delete-modal-overlay');
+  openModal(&#39;delete-modal-overlay&#39;);
 }
 
 /* ============================================================
    ADMIN DASHBOARD — NAVIGATION
 ============================================================ */
-var adminApp = document.getElementById('admin-app');
+var adminApp = document.getElementById(&#39;admin-app&#39;);
 function openAdmin(){
-  adminApp.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  adminApp.classList.add(&#39;open&#39;);
+  document.body.style.overflow = &#39;hidden&#39;;
   renderAdminDashboardStats();
   renderAdminProjectsTable();
   renderConversationList();
 }
 function closeAdmin(){
-  adminApp.classList.remove('open');
-  document.body.style.overflow = '';
+  adminApp.classList.remove(&#39;open&#39;);
+  document.body.style.overflow = &#39;&#39;;
 }
-document.getElementById('open-admin-btn').addEventListener('click', openAdmin);
-document.getElementById('admin-back-btn').addEventListener('click', closeAdmin);
+document.getElementById(&#39;open-admin-btn&#39;).addEventListener(&#39;click&#39;, openAdmin);
+document.getElementById(&#39;admin-back-btn&#39;).addEventListener(&#39;click&#39;, closeAdmin);
 
 function switchAdminView(view){
-  document.querySelectorAll('.admin-view').forEach(function(v){ v.classList.remove('active'); });
-  document.getElementById('view-' + view).classList.add('active');
-  document.querySelectorAll('.admin-nav button').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-view') === view); });
-  document.getElementById('admin-sidebar').classList.remove('open');
+  document.querySelectorAll(&#39;.admin-view&#39;).forEach(function(v){ v.classList.remove(&#39;active&#39;); });
+  document.getElementById(&#39;view-&#39; + view).classList.add(&#39;active&#39;);
+  document.querySelectorAll(&#39;.admin-nav button&#39;).forEach(function(b){ b.classList.toggle(&#39;active&#39;, b.getAttribute(&#39;data-view&#39;) === view); });
+  document.getElementById(&#39;admin-sidebar&#39;).classList.remove(&#39;open&#39;);
 }
-document.querySelectorAll('.admin-nav button[data-view]').forEach(function(btn){
-  btn.addEventListener('click', function(){ switchAdminView(btn.getAttribute('data-view')); });
+document.querySelectorAll(&#39;.admin-nav button[data-view]&#39;).forEach(function(btn){
+  btn.addEventListener(&#39;click&#39;, function(){ switchAdminView(btn.getAttribute(&#39;data-view&#39;)); });
 });
-document.getElementById('admin-mobile-toggle').addEventListener('click', function(){
-  document.getElementById('admin-sidebar').classList.toggle('open');
+document.getElementById(&#39;admin-mobile-toggle&#39;).addEventListener(&#39;click&#39;, function(){
+  document.getElementById(&#39;admin-sidebar&#39;).classList.toggle(&#39;open&#39;);
 });
 
 /* ============================================================
@@ -1714,33 +1714,33 @@ document.getElementById('admin-mobile-toggle').addEventListener('click', functio
 ============================================================ */
 function renderAdminDashboardStats(){
   var total = STATE.projects.length;
-  var published = STATE.projects.filter(function(p){ return p.status==='published'; }).length;
+  var published = STATE.projects.filter(function(p){ return p.status===&#39;published&#39;; }).length;
   var drafts = total - published;
   var convos = loadConversations();
   var msgCount = Object.keys(convos).length;
 
-  document.getElementById('stat-total').textContent = total;
-  document.getElementById('stat-published').textContent = published;
-  document.getElementById('stat-drafts').textContent = drafts;
-  document.getElementById('stat-messages').textContent = msgCount;
+  document.getElementById(&#39;stat-total&#39;).textContent = total;
+  document.getElementById(&#39;stat-published&#39;).textContent = published;
+  document.getElementById(&#39;stat-drafts&#39;).textContent = drafts;
+  document.getElementById(&#39;stat-messages&#39;).textContent = msgCount;
 
-  var recentProjects = sortProjects(STATE.projects, 'newest').slice(0,5);
-  document.getElementById('admin-recent-projects').innerHTML = recentProjects.length ? recentProjects.map(function(p){
-    return '<div class="admin-recent-row"><span>' + escapeHtml(p.title) + '</span><span class="status-pill ' + p.status + '">' + p.status.toUpperCase() + '</span></div>';
-  }).join('') : '<p class="muted" style="font-size:13px;">No projects yet.</p>';
+  var recentProjects = sortProjects(STATE.projects, &#39;newest&#39;).slice(0,5);
+  document.getElementById(&#39;admin-recent-projects&#39;).innerHTML = recentProjects.length ? recentProjects.map(function(p){
+    return &#39;&lt;div class=&quot;admin-recent-row&quot;&gt;&lt;span&gt;&#39; + escapeHtml(p.title) + &#39;&lt;/span&gt;&lt;span class=&quot;status-pill &#39; + p.status + &#39;&quot;&gt;&#39; + p.status.toUpperCase() + &#39;&lt;/span&gt;&lt;/div&gt;&#39;;
+  }).join(&#39;&#39;) : &#39;&lt;p class=&quot;muted&quot; style=&quot;font-size:13px;&quot;&gt;No projects yet.&lt;/p&gt;&#39;;
 
   var recentConvos = Object.keys(convos).map(function(k){ return convos[k]; }).sort(function(a,b){ return lastMsgTime(b) - lastMsgTime(a); }).slice(0,5);
-  document.getElementById('admin-recent-messages').innerHTML = recentConvos.length ? recentConvos.map(function(c){
+  document.getElementById(&#39;admin-recent-messages&#39;).innerHTML = recentConvos.length ? recentConvos.map(function(c){
     var last = c.messages[c.messages.length-1];
-    return '<div class="admin-recent-row"><span>' + escapeHtml(c.visitorName) + '</span><span class="muted" style="font-size:12px;">' + (last ? escapeHtml(truncate(last.message,40)) : '') + '</span></div>';
-  }).join('') : '<p class="muted" style="font-size:13px;">No messages yet.</p>';
+    return &#39;&lt;div class=&quot;admin-recent-row&quot;&gt;&lt;span&gt;&#39; + escapeHtml(c.visitorName) + &#39;&lt;/span&gt;&lt;span class=&quot;muted&quot; style=&quot;font-size:12px;&quot;&gt;&#39; + (last ? escapeHtml(truncate(last.message,40)) : &#39;&#39;) + &#39;&lt;/span&gt;&lt;/div&gt;&#39;;
+  }).join(&#39;&#39;) : &#39;&lt;p class=&quot;muted&quot; style=&quot;font-size:13px;&quot;&gt;No messages yet.&lt;/p&gt;&#39;;
 
-  var newCount = Object.keys(convos).filter(function(k){ return convos[k].unread > 0; }).length;
-  var navUnread = document.getElementById('admin-nav-unread');
-  if(newCount > 0){ navUnread.style.display='flex'; navUnread.textContent = newCount; } else { navUnread.style.display='none'; }
+  var newCount = Object.keys(convos).filter(function(k){ return convos[k].unread &gt; 0; }).length;
+  var navUnread = document.getElementById(&#39;admin-nav-unread&#39;);
+  if(newCount &gt; 0){ navUnread.style.display=&#39;flex&#39;; navUnread.textContent = newCount; } else { navUnread.style.display=&#39;none&#39;; }
 }
 function lastMsgTime(c){ var m = c.messages[c.messages.length-1]; return m ? new Date(m.timestamp).getTime() : 0; }
-function truncate(str, n){ return str.length > n ? str.slice(0,n-1)+'…' : str; }
+function truncate(str, n){ return str.length &gt; n ? str.slice(0,n-1)+&#39;…&#39; : str; }
 
 /* ============================================================
    ADMIN DASHBOARD — PROJECTS TABLE
@@ -1748,49 +1748,49 @@ function truncate(str, n){ return str.length > n ? str.slice(0,n-1)+'…' : str;
 function renderAdminProjectsTable(){
   var list = STATE.projects.slice();
   list = searchProjects(list, STATE.searchTerm);
-  if(STATE.statusFilter !== 'all') list = list.filter(function(p){ return p.status === STATE.statusFilter; });
+  if(STATE.statusFilter !== &#39;all&#39;) list = list.filter(function(p){ return p.status === STATE.statusFilter; });
   list = sortProjects(list, STATE.sortBy);
 
-  var tbody = document.getElementById('admin-projects-tbody');
+  var tbody = document.getElementById(&#39;admin-projects-tbody&#39;);
   if(list.length === 0){
-    tbody.innerHTML = '<tr><td colspan="7"><div class="admin-empty">No projects match your search/filter.</div></td></tr>';
+    tbody.innerHTML = &#39;&lt;tr&gt;&lt;td colspan=&quot;7&quot;&gt;&lt;div class=&quot;admin-empty&quot;&gt;No projects match your search/filter.&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&#39;;
     return;
   }
   tbody.innerHTML = list.map(function(p){
-    var dateStr = new Date(p.createdAt).toLocaleDateString(undefined,{ year:'numeric', month:'short', day:'numeric' });
-    return '<tr>' +
-      '<td><img class="admin-thumb" src="' + escapeAttr(p.image||'') + '" alt=""></td>' +
-      '<td>' + escapeHtml(p.title) + '</td>' +
-      '<td>' + escapeHtml(prettyCategory(p.category)) + '</td>' +
-      '<td>' + escapeHtml(String(p.year)) + '</td>' +
-      '<td><span class="status-pill ' + p.status + '">' + p.status.toUpperCase() + '</span></td>' +
-      '<td>' + dateStr + '</td>' +
-      '<td><div class="row-actions">' +
-        '<button class="icon-action" data-action="edit" data-id="' + p.id + '" aria-label="Edit project"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9.5 1.5 12.5 4.5 4.5 12.5 1 13l.5-3.5L9.5 1.5Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></button>' +
-        '<button class="icon-action" data-action="preview" data-id="' + p.id + '" aria-label="Preview project"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7s2.2-4 6-4 6 4 6 4-2.2 4-6 4-6-4-6-4Z" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="7" r="1.6" stroke="currentColor" stroke-width="1.2"/></svg></button>' +
-        '<button class="icon-action delete" data-action="delete" data-id="' + p.id + '" aria-label="Delete project"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 3.5h10M5 3.5V2h4v1.5M3 3.5 3.6 12h6.8L11 3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
-      '</div></td>' +
-    '</tr>';
-  }).join('');
+    var dateStr = new Date(p.createdAt).toLocaleDateString(undefined,{ year:&#39;numeric&#39;, month:&#39;short&#39;, day:&#39;numeric&#39; });
+    return &#39;&lt;tr&gt;&#39; +
+      &#39;&lt;td&gt;&lt;img class=&quot;admin-thumb&quot; src=&quot;&#39; + escapeAttr(p.image||&#39;&#39;) + &#39;&quot; alt=&quot;&quot;&gt;&lt;/td&gt;&#39; +
+      &#39;&lt;td&gt;&#39; + escapeHtml(p.title) + &#39;&lt;/td&gt;&#39; +
+      &#39;&lt;td&gt;&#39; + escapeHtml(prettyCategory(p.category)) + &#39;&lt;/td&gt;&#39; +
+      &#39;&lt;td&gt;&#39; + escapeHtml(String(p.year)) + &#39;&lt;/td&gt;&#39; +
+      &#39;&lt;td&gt;&lt;span class=&quot;status-pill &#39; + p.status + &#39;&quot;&gt;&#39; + p.status.toUpperCase() + &#39;&lt;/span&gt;&lt;/td&gt;&#39; +
+      &#39;&lt;td&gt;&#39; + dateStr + &#39;&lt;/td&gt;&#39; +
+      &#39;&lt;td&gt;&lt;div class=&quot;row-actions&quot;&gt;&#39; +
+        &#39;&lt;button class=&quot;icon-action&quot; data-action=&quot;edit&quot; data-id=&quot;&#39; + p.id + &#39;&quot; aria-label=&quot;Edit project&quot;&gt;&lt;svg width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 14 14&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M9.5 1.5 12.5 4.5 4.5 12.5 1 13l.5-3.5L9.5 1.5Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.2&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;&lt;/button&gt;&#39; +
+        &#39;&lt;button class=&quot;icon-action&quot; data-action=&quot;preview&quot; data-id=&quot;&#39; + p.id + &#39;&quot; aria-label=&quot;Preview project&quot;&gt;&lt;svg width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 14 14&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M1 7s2.2-4 6-4 6 4 6 4-2.2 4-6 4-6-4-6-4Z&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.2&quot;/&gt;&lt;circle cx=&quot;7&quot; cy=&quot;7&quot; r=&quot;1.6&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.2&quot;/&gt;&lt;/svg&gt;&lt;/button&gt;&#39; +
+        &#39;&lt;button class=&quot;icon-action delete&quot; data-action=&quot;delete&quot; data-id=&quot;&#39; + p.id + &#39;&quot; aria-label=&quot;Delete project&quot;&gt;&lt;svg width=&quot;14&quot; height=&quot;14&quot; viewBox=&quot;0 0 14 14&quot; fill=&quot;none&quot;&gt;&lt;path d=&quot;M2 3.5h10M5 3.5V2h4v1.5M3 3.5 3.6 12h6.8L11 3.5&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/&gt;&lt;/svg&gt;&lt;/button&gt;&#39; +
+      &#39;&lt;/div&gt;&lt;/td&gt;&#39; +
+    &#39;&lt;/tr&gt;&#39;;
+  }).join(&#39;&#39;);
 }
-document.getElementById('admin-search-input').addEventListener('input', function(e){ STATE.searchTerm = e.target.value; renderAdminProjectsTable(); });
-document.getElementById('admin-status-filter').addEventListener('change', function(e){ STATE.statusFilter = e.target.value; renderAdminProjectsTable(); });
-document.getElementById('admin-sort-select').addEventListener('change', function(e){ STATE.sortBy = e.target.value; renderAdminProjectsTable(); });
-document.getElementById('admin-projects-tbody').addEventListener('click', function(e){
-  var btn = e.target.closest('button[data-action]');
+document.getElementById(&#39;admin-search-input&#39;).addEventListener(&#39;input&#39;, function(e){ STATE.searchTerm = e.target.value; renderAdminProjectsTable(); });
+document.getElementById(&#39;admin-status-filter&#39;).addEventListener(&#39;change&#39;, function(e){ STATE.statusFilter = e.target.value; renderAdminProjectsTable(); });
+document.getElementById(&#39;admin-sort-select&#39;).addEventListener(&#39;change&#39;, function(e){ STATE.sortBy = e.target.value; renderAdminProjectsTable(); });
+document.getElementById(&#39;admin-projects-tbody&#39;).addEventListener(&#39;click&#39;, function(e){
+  var btn = e.target.closest(&#39;button[data-action]&#39;);
   if(!btn) return;
-  var id = parseInt(btn.getAttribute('data-id'), 10);
-  var action = btn.getAttribute('data-action');
-  if(action === 'edit') openProjectModal(id);
-  if(action === 'preview') previewProject(id);
-  if(action === 'delete') confirmDeleteProject(id);
+  var id = parseInt(btn.getAttribute(&#39;data-id&#39;), 10);
+  var action = btn.getAttribute(&#39;data-action&#39;);
+  if(action === &#39;edit&#39;) openProjectModal(id);
+  if(action === &#39;preview&#39;) previewProject(id);
+  if(action === &#39;delete&#39;) confirmDeleteProject(id);
 });
 
 /* ============================================================
    RESET DEMO DATA
 ============================================================ */
-document.getElementById('reset-demo-btn').addEventListener('click', function(){
-  if(!confirm('This will reset all demo projects and messages back to defaults. Continue?')) return;
+document.getElementById(&#39;reset-demo-btn&#39;).addEventListener(&#39;click&#39;, function(){
+  if(!confirm(&#39;This will reset all demo projects and messages back to defaults. Continue?&#39;)) return;
   STATE.projects = seedProjects();
   saveProjects(STATE.projects);
   localStorage.removeItem(LS_CONVERSATIONS);
@@ -1798,7 +1798,7 @@ document.getElementById('reset-demo-btn').addEventListener('click', function(){
   renderAdminProjectsTable();
   renderAdminDashboardStats();
   renderConversationList();
-  document.getElementById('conv-panel').innerHTML = '<div class="conv-empty-state">Select a conversation to view messages</div>';
+  document.getElementById(&#39;conv-panel&#39;).innerHTML = &#39;&lt;div class=&quot;conv-empty-state&quot;&gt;Select a conversation to view messages&lt;/div&gt;&#39;;
 });
 
 /* ============================================================
@@ -1807,7 +1807,7 @@ document.getElementById('reset-demo-btn').addEventListener('click', function(){
 function getVisitorId(){
   var id = localStorage.getItem(LS_VISITOR_ID);
   if(!id){
-    id = 'visitor_' + Date.now() + '_' + Math.floor(Math.random()*1000);
+    id = &#39;visitor_&#39; + Date.now() + &#39;_&#39; + Math.floor(Math.random()*1000);
     localStorage.setItem(LS_VISITOR_ID, id);
   }
   return id;
@@ -1820,7 +1820,7 @@ function loadConversations(){
   }catch(e){ return {}; }
 }
 function saveConversations(convos){
-  try{ localStorage.setItem(LS_CONVERSATIONS, JSON.stringify(convos)); }catch(e){ console.warn('saveConversations failed', e); }
+  try{ localStorage.setItem(LS_CONVERSATIONS, JSON.stringify(convos)); }catch(e){ console.warn(&#39;saveConversations failed&#39;, e); }
 }
 
 function ensureConversation(visitorId){
@@ -1828,8 +1828,8 @@ function ensureConversation(visitorId){
   if(!convos[visitorId]){
     convos[visitorId] = {
       visitorId: visitorId,
-      visitorName: 'Website Visitor',
-      status: 'new',
+      visitorName: &#39;Website Visitor&#39;,
+      status: &#39;new&#39;,
       unread: 0,
       messages: []
     };
@@ -1838,28 +1838,28 @@ function ensureConversation(visitorId){
   return convos;
 }
 
-var chatBody = document.getElementById('chat-body');
-var chatWindow = document.getElementById('chat-window');
-var chatLauncher = document.getElementById('chat-launcher');
-var chatInput = document.getElementById('chat-input');
+var chatBody = document.getElementById(&#39;chat-body&#39;);
+var chatWindow = document.getElementById(&#39;chat-window&#39;);
+var chatLauncher = document.getElementById(&#39;chat-launcher&#39;);
+var chatInput = document.getElementById(&#39;chat-input&#39;);
 var currentVisitorId = getVisitorId();
 
 function renderMessage(msg){
-  var div = document.createElement('div');
-  div.className = 'chat-msg ' + (msg.sender === 'visitor' ? 'visitor' : 'admin');
-  div.innerHTML = escapeHtml(msg.message) + '<span class="chat-msg-time">' + formatTime(msg.timestamp) + '</span>';
+  var div = document.createElement(&#39;div&#39;);
+  div.className = &#39;chat-msg &#39; + (msg.sender === &#39;visitor&#39; ? &#39;visitor&#39; : &#39;admin&#39;);
+  div.innerHTML = escapeHtml(msg.message) + &#39;&lt;span class=&quot;chat-msg-time&quot;&gt;&#39; + formatTime(msg.timestamp) + &#39;&lt;/span&gt;&#39;;
   chatBody.appendChild(div);
   chatBody.scrollTop = chatBody.scrollHeight;
 }
 function formatTime(ts){
   var d = new Date(ts);
-  return d.toLocaleTimeString(undefined,{ hour:'2-digit', minute:'2-digit' });
+  return d.toLocaleTimeString(undefined,{ hour:&#39;2-digit&#39;, minute:&#39;2-digit&#39; });
 }
 
 function loadMessages(){
   var convos = ensureConversation(currentVisitorId);
   var convo = convos[currentVisitorId];
-  chatBody.innerHTML = '';
+  chatBody.innerHTML = &#39;&#39;;
   if(convo.messages.length === 0){
     sendSystemGreeting();
   } else {
@@ -1868,7 +1868,7 @@ function loadMessages(){
 }
 
 function sendSystemGreeting(){
-  var greeting = { id:'m'+Date.now(), sender:'admin', message:"Hi! 👋 Welcome to SAIF.DEV. How can I help you with your website project?", timestamp:new Date().toISOString(), status:'sent' };
+  var greeting = { id:&#39;m&#39;+Date.now(), sender:&#39;admin&#39;, message:&quot;Hi! 👋 Welcome to SAIF.DEV. How can I help you with your website project?&quot;, timestamp:new Date().toISOString(), status:&#39;sent&#39; };
   var convos = ensureConversation(currentVisitorId);
   convos[currentVisitorId].messages.push(greeting);
   saveConversations(convos);
@@ -1876,21 +1876,21 @@ function sendSystemGreeting(){
 }
 
 function sendMessage(text, sender){
-  sender = sender || 'visitor';
+  sender = sender || &#39;visitor&#39;;
   text = text.trim();
   if(!text) return;
   var convos = ensureConversation(currentVisitorId);
   var convo = convos[currentVisitorId];
-  var msg = { id:'m'+Date.now()+Math.floor(Math.random()*999), sender:sender, message:text, timestamp:new Date().toISOString(), status:'sent' };
+  var msg = { id:&#39;m&#39;+Date.now()+Math.floor(Math.random()*999), sender:sender, message:text, timestamp:new Date().toISOString(), status:&#39;sent&#39; };
   convo.messages.push(msg);
-  if(sender === 'visitor'){
-    convo.status = convo.status === 'closed' ? 'active' : (convo.status || 'active');
-    if(convo.status === 'new') convo.status = 'active';
+  if(sender === &#39;visitor&#39;){
+    convo.status = convo.status === &#39;closed&#39; ? &#39;active&#39; : (convo.status || &#39;active&#39;);
+    if(convo.status === &#39;new&#39;) convo.status = &#39;active&#39;;
   }
   saveConversations(convos);
   renderMessage(msg);
 
-  if(sender === 'visitor'){
+  if(sender === &#39;visitor&#39;){
     /* Simulated demo auto-reply. In production this becomes a real
        admin reply (via the Admin Messages panel below) or a live
        backend response instead of a canned local simulation. */
@@ -1904,17 +1904,17 @@ function sendMessage(text, sender){
 
 function pickAutoReply(text){
   var t = text.toLowerCase();
-  if(t.indexOf('woocommerce') > -1 || t.indexOf('store') > -1 || t.indexOf('shop') > -1) return "Great — I build WooCommerce stores end-to-end. Could you tell me a bit about your products and timeline?";
-  if(t.indexOf('landing') > -1) return "A focused landing page can work really well. What's the main offer or goal you want it to drive?";
-  if(t.indexOf('support') > -1 || t.indexOf('maintenance') > -1 || t.indexOf('fix') > -1) return "Happy to help with support. What issue are you running into on your current site?";
-  if(t.indexOf('website') > -1 || t.indexOf('site') > -1) return "Sounds good! Could you share a little about your business and what the website needs to do for you?";
-  return "Thanks for the message! I'll get back to you shortly — feel free to add any extra details in the meantime.";
+  if(t.indexOf(&#39;woocommerce&#39;) &gt; -1 || t.indexOf(&#39;store&#39;) &gt; -1 || t.indexOf(&#39;shop&#39;) &gt; -1) return &quot;Great — I build WooCommerce stores end-to-end. Could you tell me a bit about your products and timeline?&quot;;
+  if(t.indexOf(&#39;landing&#39;) &gt; -1) return &quot;A focused landing page can work really well. What&#39;s the main offer or goal you want it to drive?&quot;;
+  if(t.indexOf(&#39;support&#39;) &gt; -1 || t.indexOf(&#39;maintenance&#39;) &gt; -1 || t.indexOf(&#39;fix&#39;) &gt; -1) return &quot;Happy to help with support. What issue are you running into on your current site?&quot;;
+  if(t.indexOf(&#39;website&#39;) &gt; -1 || t.indexOf(&#39;site&#39;) &gt; -1) return &quot;Sounds good! Could you share a little about your business and what the website needs to do for you?&quot;;
+  return &quot;Thanks for the message! I&#39;ll get back to you shortly — feel free to add any extra details in the meantime.&quot;;
 }
 
 function receiveMessage(text){
   var convos = ensureConversation(currentVisitorId);
   var convo = convos[currentVisitorId];
-  var msg = { id:'m'+Date.now()+Math.floor(Math.random()*999), sender:'admin', message:text, timestamp:new Date().toISOString(), status:'sent' };
+  var msg = { id:&#39;m&#39;+Date.now()+Math.floor(Math.random()*999), sender:&#39;admin&#39;, message:text, timestamp:new Date().toISOString(), status:&#39;sent&#39; };
   convo.messages.push(msg);
   if(!isChatOpen()) convo.unread = (convo.unread || 0) + 1;
   saveConversations(convos);
@@ -1925,15 +1925,15 @@ function receiveMessage(text){
 }
 
 function showTypingIndicator(){
-  var div = document.createElement('div');
-  div.className = 'chat-typing';
-  div.id = 'chat-typing-el';
-  div.innerHTML = '<span></span><span></span><span></span>';
+  var div = document.createElement(&#39;div&#39;);
+  div.className = &#39;chat-typing&#39;;
+  div.id = &#39;chat-typing-el&#39;;
+  div.innerHTML = &#39;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&#39;;
   chatBody.appendChild(div);
   chatBody.scrollTop = chatBody.scrollHeight;
 }
 function hideTypingIndicator(){
-  var el = document.getElementById('chat-typing-el');
+  var el = document.getElementById(&#39;chat-typing-el&#39;);
   if(el) el.remove();
 }
 
@@ -1947,19 +1947,19 @@ function markAsRead(visitorId){
 }
 
 function closeChat(){
-  chatWindow.classList.remove('open');
-  chatWindow.setAttribute('aria-hidden','true');
-  chatLauncher.classList.remove('hidden-launcher');
-  chatLauncher.setAttribute('aria-expanded','false');
+  chatWindow.classList.remove(&#39;open&#39;);
+  chatWindow.setAttribute(&#39;aria-hidden&#39;,&#39;true&#39;);
+  chatLauncher.classList.remove(&#39;hidden-launcher&#39;);
+  chatLauncher.setAttribute(&#39;aria-expanded&#39;,&#39;false&#39;);
 }
 
-function isChatOpen(){ return chatWindow.classList.contains('open'); }
+function isChatOpen(){ return chatWindow.classList.contains(&#39;open&#39;); }
 
 function openChat(){
-  chatWindow.classList.add('open');
-  chatWindow.setAttribute('aria-hidden','false');
-  chatLauncher.classList.add('hidden-launcher');
-  chatLauncher.setAttribute('aria-expanded','true');
+  chatWindow.classList.add(&#39;open&#39;);
+  chatWindow.setAttribute(&#39;aria-hidden&#39;,&#39;false&#39;);
+  chatLauncher.classList.add(&#39;hidden-launcher&#39;);
+  chatLauncher.setAttribute(&#39;aria-expanded&#39;,&#39;true&#39;);
   loadMessages();
   markAsRead(currentVisitorId);
   chatInput.focus();
@@ -1968,81 +1968,81 @@ function openChat(){
 function updateChatUnreadBadge(){
   var convos = loadConversations();
   var convo = convos[currentVisitorId];
-  var badge = document.getElementById('chat-unread-badge');
+  var badge = document.getElementById(&#39;chat-unread-badge&#39;);
   var unread = convo ? (convo.unread || 0) : 0;
-  if(unread > 0 && !isChatOpen()){
+  if(unread &gt; 0 &amp;&amp; !isChatOpen()){
     badge.hidden = false; badge.textContent = unread;
   } else {
     badge.hidden = true;
   }
 }
 
-chatLauncher.addEventListener('click', openChat);
-document.getElementById('chat-close-btn').addEventListener('click', closeChat);
-document.getElementById('chat-minimize-btn').addEventListener('click', closeChat);
-document.getElementById('contact-chat-btn').addEventListener('click', openChat);
-document.getElementById('chat-send-btn').addEventListener('click', function(){ sendMessage(chatInput.value); chatInput.value=''; });
-chatInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ sendMessage(chatInput.value); chatInput.value=''; } });
-document.getElementById('chat-quick-replies').addEventListener('click', function(e){
-  var btn = e.target.closest('.chat-quick-btn');
+chatLauncher.addEventListener(&#39;click&#39;, openChat);
+document.getElementById(&#39;chat-close-btn&#39;).addEventListener(&#39;click&#39;, closeChat);
+document.getElementById(&#39;chat-minimize-btn&#39;).addEventListener(&#39;click&#39;, closeChat);
+document.getElementById(&#39;contact-chat-btn&#39;).addEventListener(&#39;click&#39;, openChat);
+document.getElementById(&#39;chat-send-btn&#39;).addEventListener(&#39;click&#39;, function(){ sendMessage(chatInput.value); chatInput.value=&#39;&#39;; });
+chatInput.addEventListener(&#39;keydown&#39;, function(e){ if(e.key === &#39;Enter&#39;){ sendMessage(chatInput.value); chatInput.value=&#39;&#39;; } });
+document.getElementById(&#39;chat-quick-replies&#39;).addEventListener(&#39;click&#39;, function(e){
+  var btn = e.target.closest(&#39;.chat-quick-btn&#39;);
   if(!btn) return;
-  sendMessage(btn.getAttribute('data-reply'));
+  sendMessage(btn.getAttribute(&#39;data-reply&#39;));
 });
-window.addEventListener('keydown', function(e){ if(e.key === 'Escape' && isChatOpen()) closeChat(); });
+window.addEventListener(&#39;keydown&#39;, function(e){ if(e.key === &#39;Escape&#39; &amp;&amp; isChatOpen()) closeChat(); });
 
 updateChatUnreadBadge();
 
 /* ============================================================
    ADMIN — MESSAGES DASHBOARD
 ============================================================ */
-var STATE_convFilter = 'all';
+var STATE_convFilter = &#39;all&#39;;
 var STATE_activeConvId = null;
 
 function renderConversationList(){
   var convos = loadConversations();
   var ids = Object.keys(convos);
-  var listEl = document.getElementById('conv-list-items');
+  var listEl = document.getElementById(&#39;conv-list-items&#39;);
 
   var filtered = ids.filter(function(id){
     var c = convos[id];
-    if(STATE_convFilter === 'all') return true;
-    if(STATE_convFilter === 'new') return c.unread > 0;
+    if(STATE_convFilter === &#39;all&#39;) return true;
+    if(STATE_convFilter === &#39;new&#39;) return c.unread &gt; 0;
     return c.status === STATE_convFilter;
   }).sort(function(a,b){ return lastMsgTime(convos[b]) - lastMsgTime(convos[a]); });
 
   if(filtered.length === 0){
-    listEl.innerHTML = '<div class="admin-empty" style="padding:40px 16px;">No conversations here yet.</div>';
+    listEl.innerHTML = &#39;&lt;div class=&quot;admin-empty&quot; style=&quot;padding:40px 16px;&quot;&gt;No conversations here yet.&lt;/div&gt;&#39;;
     return;
   }
 
   listEl.innerHTML = filtered.map(function(id){
     var c = convos[id];
     var last = c.messages[c.messages.length-1];
-    var initial = (c.visitorName || 'V').charAt(0).toUpperCase();
-    return '<div class="conv-item ' + (id === STATE_activeConvId ? 'active' : '') + '" data-id="' + id + '">' +
-      '<div class="conv-avatar">' + initial + '<span class="conv-online-dot"></span></div>' +
-      '<div class="conv-meta">' +
-        '<div class="conv-name-row"><span class="conv-name">' + escapeHtml(c.visitorName) + '</span><span class="conv-time">' + (last ? formatTime(last.timestamp) : '') + '</span></div>' +
-        '<div class="conv-preview">' + (last ? escapeHtml(last.message) : 'No messages yet') + '</div>' +
-      '</div>' +
-      (c.unread > 0 ? '<span class="conv-unread">' + c.unread + '</span>' : '') +
-    '</div>';
-  }).join('');
+    var initial = (c.visitorName || &#39;V&#39;).charAt(0).toUpperCase();
+    return &#39;&lt;div class=&quot;conv-item &#39; + (id === STATE_activeConvId ? &#39;active&#39; : &#39;&#39;) + &#39;&quot; data-id=&quot;&#39; + id + &#39;&quot;&gt;&#39; +
+      &#39;&lt;div class=&quot;conv-avatar&quot;&gt;&#39; + initial + &#39;&lt;span class=&quot;conv-online-dot&quot;&gt;&lt;/span&gt;&lt;/div&gt;&#39; +
+      &#39;&lt;div class=&quot;conv-meta&quot;&gt;&#39; +
+        &#39;&lt;div class=&quot;conv-name-row&quot;&gt;&lt;span class=&quot;conv-name&quot;&gt;&#39; + escapeHtml(c.visitorName) + &#39;&lt;/span&gt;&lt;span class=&quot;conv-time&quot;&gt;&#39; + (last ? formatTime(last.timestamp) : &#39;&#39;) + &#39;&lt;/span&gt;&lt;/div&gt;&#39; +
+        &#39;&lt;div class=&quot;conv-preview&quot;&gt;&#39; + (last ? escapeHtml(last.message) : &#39;No messages yet&#39;) + &#39;&lt;/div&gt;&#39; +
+      &#39;&lt;/div&gt;&#39; +
+      (c.unread &gt; 0 ? &#39;&lt;span class=&quot;conv-unread&quot;&gt;&#39; + c.unread + &#39;&lt;/span&gt;&#39; : &#39;&#39;) +
+    &#39;&lt;/div&gt;&#39;;
+  }).join(&#39;&#39;);
 }
 
-document.querySelectorAll('.conv-filter-tabs button').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    document.querySelectorAll('.conv-filter-tabs button').forEach(function(b){ b.classList.remove('active'); });
-    btn.classList.add('active');
-    STATE_convFilter = btn.getAttribute('data-conv-filter');
+document.querySelectorAll(&#39;.conv-filter-tabs button&#39;).forEach(function(btn){
+  btn.addEventListener(&#39;click&#39;, function(){
+    document.querySelectorAll(&#39;.conv-filter-tabs button&#39;).forEach(function(b){ b.classList.remove(&#39;active&#39;); });
+    btn.classList.add(&#39;active&#39;);
+    STATE_convFilter = btn.getAttribute(&#39;data-conv-filter&#39;);
     renderConversationList();
   });
 });
 
-document.getElementById('conv-list-items').addEventListener('click', function(e){
-  var item = e.target.closest('.conv-item');
+document.getElementById(&#39;conv-list-items&#39;).addEventListener(&#39;click&#39;, function(e){
+  var item = e.target.closest(&#39;.conv-item&#39;);
   if(!item) return;
-  STATE_activeConvId = item.getAttribute('data-id');
+  STATE_activeConvId = item.getAttribute(&#39;data-id&#39;);
   markAsReadAdmin(STATE_activeConvId);
   renderConversationList();
   renderConversationPanel(STATE_activeConvId);
@@ -2057,58 +2057,58 @@ function markAsReadAdmin(id){
 function renderConversationPanel(id){
   var convos = loadConversations();
   var c = convos[id];
-  var panel = document.getElementById('conv-panel');
-  if(!c){ panel.innerHTML = '<div class="conv-empty-state">Conversation not found</div>'; return; }
+  var panel = document.getElementById(&#39;conv-panel&#39;);
+  if(!c){ panel.innerHTML = &#39;&lt;div class=&quot;conv-empty-state&quot;&gt;Conversation not found&lt;/div&gt;&#39;; return; }
 
   panel.innerHTML =
-    '<div class="conv-panel-head">' +
-      '<div><strong style="font-size:14px;">' + escapeHtml(c.visitorName) + '</strong><div class="muted" style="font-size:11.5px;">' + c.status.toUpperCase() + '</div></div>' +
-      '<div style="display:flex;gap:8px;">' +
-        (c.status !== 'closed' ? '<button class="btn btn-ghost btn-sm" id="conv-close-btn">CLOSE CHAT</button>' : '<button class="btn btn-ghost btn-sm" id="conv-reopen-btn">REOPEN</button>') +
-      '</div>' +
-    '</div>' +
-    '<div class="conv-panel-body" id="conv-panel-body"></div>' +
-    '<div class="conv-panel-input"><input type="text" id="conv-reply-input" placeholder="Type a reply…"><button class="btn btn-primary btn-sm" id="conv-reply-send">SEND REPLY</button></div>';
+    &#39;&lt;div class=&quot;conv-panel-head&quot;&gt;&#39; +
+      &#39;&lt;div&gt;&lt;strong style=&quot;font-size:14px;&quot;&gt;&#39; + escapeHtml(c.visitorName) + &#39;&lt;/strong&gt;&lt;div class=&quot;muted&quot; style=&quot;font-size:11.5px;&quot;&gt;&#39; + c.status.toUpperCase() + &#39;&lt;/div&gt;&lt;/div&gt;&#39; +
+      &#39;&lt;div style=&quot;display:flex;gap:8px;&quot;&gt;&#39; +
+        (c.status !== &#39;closed&#39; ? &#39;&lt;button class=&quot;btn btn-ghost btn-sm&quot; id=&quot;conv-close-btn&quot;&gt;CLOSE CHAT&lt;/button&gt;&#39; : &#39;&lt;button class=&quot;btn btn-ghost btn-sm&quot; id=&quot;conv-reopen-btn&quot;&gt;REOPEN&lt;/button&gt;&#39;) +
+      &#39;&lt;/div&gt;&#39; +
+    &#39;&lt;/div&gt;&#39; +
+    &#39;&lt;div class=&quot;conv-panel-body&quot; id=&quot;conv-panel-body&quot;&gt;&lt;/div&gt;&#39; +
+    &#39;&lt;div class=&quot;conv-panel-input&quot;&gt;&lt;input type=&quot;text&quot; id=&quot;conv-reply-input&quot; placeholder=&quot;Type a reply…&quot;&gt;&lt;button class=&quot;btn btn-primary btn-sm&quot; id=&quot;conv-reply-send&quot;&gt;SEND REPLY&lt;/button&gt;&lt;/div&gt;&#39;;
 
-  var bodyEl = document.getElementById('conv-panel-body');
+  var bodyEl = document.getElementById(&#39;conv-panel-body&#39;);
   c.messages.forEach(function(m){
-    var div = document.createElement('div');
-    div.className = 'chat-msg ' + (m.sender === 'visitor' ? 'admin' : 'visitor'); /* mirrored: visitor msgs on left */
-    div.style.alignSelf = m.sender === 'visitor' ? 'flex-start' : 'flex-end';
-    div.innerHTML = escapeHtml(m.message) + '<span class="chat-msg-time">' + formatTime(m.timestamp) + '</span>';
+    var div = document.createElement(&#39;div&#39;);
+    div.className = &#39;chat-msg &#39; + (m.sender === &#39;visitor&#39; ? &#39;admin&#39; : &#39;visitor&#39;); /* mirrored: visitor msgs on left */
+    div.style.alignSelf = m.sender === &#39;visitor&#39; ? &#39;flex-start&#39; : &#39;flex-end&#39;;
+    div.innerHTML = escapeHtml(m.message) + &#39;&lt;span class=&quot;chat-msg-time&quot;&gt;&#39; + formatTime(m.timestamp) + &#39;&lt;/span&gt;&#39;;
     bodyEl.appendChild(div);
   });
   bodyEl.scrollTop = bodyEl.scrollHeight;
 
-  var closeBtn = document.getElementById('conv-close-btn');
-  if(closeBtn) closeBtn.addEventListener('click', function(){ setConversationStatus(id, 'closed'); });
-  var reopenBtn = document.getElementById('conv-reopen-btn');
-  if(reopenBtn) reopenBtn.addEventListener('click', function(){ setConversationStatus(id, 'active'); });
+  var closeBtn = document.getElementById(&#39;conv-close-btn&#39;);
+  if(closeBtn) closeBtn.addEventListener(&#39;click&#39;, function(){ setConversationStatus(id, &#39;closed&#39;); });
+  var reopenBtn = document.getElementById(&#39;conv-reopen-btn&#39;);
+  if(reopenBtn) reopenBtn.addEventListener(&#39;click&#39;, function(){ setConversationStatus(id, &#39;active&#39;); });
 
-  var sendBtn = document.getElementById('conv-reply-send');
-  var input = document.getElementById('conv-reply-input');
+  var sendBtn = document.getElementById(&#39;conv-reply-send&#39;);
+  var input = document.getElementById(&#39;conv-reply-input&#39;);
   function doAdminReply(){
     var text = input.value.trim();
     if(!text) return;
     adminReply(id, text);
-    input.value = '';
+    input.value = &#39;&#39;;
     renderConversationPanel(id);
   }
-  sendBtn.addEventListener('click', doAdminReply);
-  input.addEventListener('keydown', function(e){ if(e.key === 'Enter') doAdminReply(); });
+  sendBtn.addEventListener(&#39;click&#39;, doAdminReply);
+  input.addEventListener(&#39;keydown&#39;, function(e){ if(e.key === &#39;Enter&#39;) doAdminReply(); });
 }
 
 function adminReply(visitorId, text){
   var convos = loadConversations();
   var c = convos[visitorId];
   if(!c) return;
-  var msg = { id:'m'+Date.now()+Math.floor(Math.random()*999), sender:'admin', message:text, timestamp:new Date().toISOString(), status:'sent' };
+  var msg = { id:&#39;m&#39;+Date.now()+Math.floor(Math.random()*999), sender:&#39;admin&#39;, message:text, timestamp:new Date().toISOString(), status:&#39;sent&#39; };
   c.messages.push(msg);
   saveConversations(convos);
   renderConversationList();
   renderAdminDashboardStats();
-  /* If the visitor's chat widget happens to be open in this same browser/tab, reflect it live */
-  if(visitorId === currentVisitorId && isChatOpen()){
+  /* If the visitor&#39;s chat widget happens to be open in this same browser/tab, reflect it live */
+  if(visitorId === currentVisitorId &amp;&amp; isChatOpen()){
     renderMessage(msg);
   } else if(visitorId === currentVisitorId){
     updateChatUnreadBadge();
@@ -2125,113 +2125,113 @@ function setConversationStatus(id, status){
 /* ============================================================
    LOADING SCREEN
 ============================================================ */
-var loader = document.getElementById('loader');
-var loaderFill = document.getElementById('loader-fill');
-window.addEventListener('load', function(){
-  requestAnimationFrame(function(){ loaderFill.style.width = '100%'; });
-  setTimeout(function(){ loader.classList.add('hidden'); }, 650);
+var loader = document.getElementById(&#39;loader&#39;);
+var loaderFill = document.getElementById(&#39;loader-fill&#39;);
+window.addEventListener(&#39;load&#39;, function(){
+  requestAnimationFrame(function(){ loaderFill.style.width = &#39;100%&#39;; });
+  setTimeout(function(){ loader.classList.add(&#39;hidden&#39;); }, 650);
 });
 setTimeout(function(){
-  if(loader && !loader.classList.contains('hidden')){
-    loaderFill.style.width = '100%';
-    setTimeout(function(){ loader.classList.add('hidden'); }, 500);
+  if(loader &amp;&amp; !loader.classList.contains(&#39;hidden&#39;)){
+    loaderFill.style.width = &#39;100%&#39;;
+    setTimeout(function(){ loader.classList.add(&#39;hidden&#39;); }, 500);
   }
 }, 2200);
 
 /* ============================================================
    NAVBAR SCROLL STATE
 ============================================================ */
-var nav = document.getElementById('site-nav');
-var backToTop = document.getElementById('back-to-top');
+var nav = document.getElementById(&#39;site-nav&#39;);
+var backToTop = document.getElementById(&#39;back-to-top&#39;);
 function onScroll(){
   var y = window.scrollY || window.pageYOffset;
-  nav.classList.toggle('scrolled', y > 40);
-  backToTop.classList.toggle('show', y > 600);
+  nav.classList.toggle(&#39;scrolled&#39;, y &gt; 40);
+  backToTop.classList.toggle(&#39;show&#39;, y &gt; 600);
 }
-document.addEventListener('scroll', function(){ requestAnimationFrame(onScroll); }, { passive:true });
+document.addEventListener(&#39;scroll&#39;, function(){ requestAnimationFrame(onScroll); }, { passive:true });
 onScroll();
 
 /* ============================================================
    MOBILE MENU
 ============================================================ */
-var hamburger = document.getElementById('hamburger');
-var mobileMenu = document.getElementById('mobile-menu');
+var hamburger = document.getElementById(&#39;hamburger&#39;);
+var mobileMenu = document.getElementById(&#39;mobile-menu&#39;);
 function closeMenu(){
-  hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded','false');
-  mobileMenu.classList.remove('open'); document.body.style.overflow = '';
+  hamburger.classList.remove(&#39;open&#39;); hamburger.setAttribute(&#39;aria-expanded&#39;,&#39;false&#39;);
+  mobileMenu.classList.remove(&#39;open&#39;); document.body.style.overflow = &#39;&#39;;
 }
 function toggleMenu(){
-  var isOpen = mobileMenu.classList.toggle('open');
-  hamburger.classList.toggle('open', isOpen);
-  hamburger.setAttribute('aria-expanded', String(isOpen));
-  document.body.style.overflow = isOpen ? 'hidden' : '';
+  var isOpen = mobileMenu.classList.toggle(&#39;open&#39;);
+  hamburger.classList.toggle(&#39;open&#39;, isOpen);
+  hamburger.setAttribute(&#39;aria-expanded&#39;, String(isOpen));
+  document.body.style.overflow = isOpen ? &#39;hidden&#39; : &#39;&#39;;
 }
-hamburger.addEventListener('click', toggleMenu);
-mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
-window.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMenu(); });
+hamburger.addEventListener(&#39;click&#39;, toggleMenu);
+mobileMenu.querySelectorAll(&#39;a&#39;).forEach(function(a){ a.addEventListener(&#39;click&#39;, closeMenu); });
+window.addEventListener(&#39;keydown&#39;, function(e){ if(e.key === &#39;Escape&#39;) closeMenu(); });
 
 /* ============================================================
    SMOOTH SCROLL + ACTIVE NAV LINK
 ============================================================ */
-document.querySelectorAll('a[href^="#"]').forEach(function(a){
-  a.addEventListener('click', function(e){
-    var id = a.getAttribute('href');
-    if(id.length > 1){
+document.querySelectorAll(&#39;a[href^=&quot;#&quot;]&#39;).forEach(function(a){
+  a.addEventListener(&#39;click&#39;, function(e){
+    var id = a.getAttribute(&#39;href&#39;);
+    if(id.length &gt; 1){
       var target = document.querySelector(id);
       if(target){
         e.preventDefault();
         var top = target.getBoundingClientRect().top + window.pageYOffset - 84;
-        window.scrollTo({ top: top, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+        window.scrollTo({ top: top, behavior: prefersReducedMotion ? &#39;auto&#39; : &#39;smooth&#39; });
       }
     }
   });
 });
-var navAnchors = document.querySelectorAll('a[data-nav]');
-var sections = Array.prototype.map.call(navAnchors, function(a){ return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+var navAnchors = document.querySelectorAll(&#39;a[data-nav]&#39;);
+var sections = Array.prototype.map.call(navAnchors, function(a){ return document.querySelector(a.getAttribute(&#39;href&#39;)); }).filter(Boolean);
 function updateActiveNav(){
   var y = window.scrollY + 140;
   var current = null;
-  sections.forEach(function(sec){ if(sec.offsetTop <= y){ current = sec.id; } });
-  navAnchors.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+  sections.forEach(function(sec){ if(sec.offsetTop &lt;= y){ current = sec.id; } });
+  navAnchors.forEach(function(a){ a.classList.toggle(&#39;active&#39;, a.getAttribute(&#39;href&#39;) === &#39;#&#39; + current); });
 }
-document.addEventListener('scroll', function(){ requestAnimationFrame(updateActiveNav); }, { passive:true });
+document.addEventListener(&#39;scroll&#39;, function(){ requestAnimationFrame(updateActiveNav); }, { passive:true });
 updateActiveNav();
 
 /* ============================================================
    SCROLL REVEAL (IntersectionObserver)
 ============================================================ */
-var revealObserver = ('IntersectionObserver' in window) ? new IntersectionObserver(function(entries){
+var revealObserver = (&#39;IntersectionObserver&#39; in window) ? new IntersectionObserver(function(entries){
   entries.forEach(function(entry){
-    if(entry.isIntersecting){ entry.target.classList.add('in-view'); revealObserver.unobserve(entry.target); }
+    if(entry.isIntersecting){ entry.target.classList.add(&#39;in-view&#39;); revealObserver.unobserve(entry.target); }
   });
-}, { threshold:0.15, rootMargin:'0px 0px -60px 0px' }) : null;
+}, { threshold:0.15, rootMargin:&#39;0px 0px -60px 0px&#39; }) : null;
 
 function observeReveal(nodeList){
   if(revealObserver){
     nodeList.forEach(function(el){ revealObserver.observe(el); });
   } else {
-    nodeList.forEach(function(el){ el.classList.add('in-view'); });
+    nodeList.forEach(function(el){ el.classList.add(&#39;in-view&#39;); });
   }
 }
-observeReveal(document.querySelectorAll('.reveal'));
+observeReveal(document.querySelectorAll(&#39;.reveal&#39;));
 
 /* ============================================================
    ANIMATED STAT COUNTERS
 ============================================================ */
-var counters = document.querySelectorAll('.counter');
+var counters = document.querySelectorAll(&#39;.counter&#39;);
 function animateCounter(el){
-  var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+  var target = parseInt(el.getAttribute(&#39;data-target&#39;), 10) || 0;
   var duration = 1400, startTime = null;
   function step(ts){
     if(!startTime) startTime = ts;
     var progress = Math.min((ts - startTime) / duration, 1);
     var eased = 1 - Math.pow(1 - progress, 3);
     el.textContent = Math.floor(eased * target);
-    if(progress < 1) requestAnimationFrame(step); else el.textContent = target;
+    if(progress &lt; 1) requestAnimationFrame(step); else el.textContent = target;
   }
   if(prefersReducedMotion){ el.textContent = target; } else { requestAnimationFrame(step); }
 }
-if('IntersectionObserver' in window){
+if(&#39;IntersectionObserver&#39; in window){
   var counterObserver = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       if(entry.isIntersecting){ animateCounter(entry.target); counterObserver.unobserve(entry.target); }
@@ -2240,18 +2240,18 @@ if('IntersectionObserver' in window){
   counters.forEach(function(c){ counterObserver.observe(c); });
 } else { counters.forEach(animateCounter); }
 
-var heroMeter = document.getElementById('hero-meter');
-if(heroMeter) setTimeout(function(){ heroMeter.style.width = '98%'; }, 700);
+var heroMeter = document.getElementById(&#39;hero-meter&#39;);
+if(heroMeter) setTimeout(function(){ heroMeter.style.width = &#39;98%&#39;; }, 700);
 
 /* ============================================================
    HERO MOUSE PARALLAX
 ============================================================ */
-var heroSection = document.getElementById('hero');
-var parallaxCard = document.getElementById('hero-parallax-card');
-var parallaxGrid = document.getElementById('hero-grid');
-if(heroSection && !prefersReducedMotion){
+var heroSection = document.getElementById(&#39;hero&#39;);
+var parallaxCard = document.getElementById(&#39;hero-parallax-card&#39;);
+var parallaxGrid = document.getElementById(&#39;hero-grid&#39;);
+if(heroSection &amp;&amp; !prefersReducedMotion){
   var targetX=0, targetY=0, curX=0, curY=0;
-  heroSection.addEventListener('mousemove', function(e){
+  heroSection.addEventListener(&#39;mousemove&#39;, function(e){
     var rect = heroSection.getBoundingClientRect();
     targetX = (e.clientX - rect.left) / rect.width - 0.5;
     targetY = (e.clientY - rect.top) / rect.height - 0.5;
@@ -2259,8 +2259,8 @@ if(heroSection && !prefersReducedMotion){
   function parallaxLoop(){
     curX += (targetX - curX) * 0.06;
     curY += (targetY - curY) * 0.06;
-    if(parallaxCard) parallaxCard.style.transform = 'translate(' + (curX*22) + 'px,' + (curY*18) + 'px)';
-    if(parallaxGrid) parallaxGrid.style.transform = 'translate(' + (curX*-12) + 'px,' + (curY*-10) + 'px)';
+    if(parallaxCard) parallaxCard.style.transform = &#39;translate(&#39; + (curX*22) + &#39;px,&#39; + (curY*18) + &#39;px)&#39;;
+    if(parallaxGrid) parallaxGrid.style.transform = &#39;translate(&#39; + (curX*-12) + &#39;px,&#39; + (curY*-10) + &#39;px)&#39;;
     requestAnimationFrame(parallaxLoop);
   }
   requestAnimationFrame(parallaxLoop);
@@ -2269,23 +2269,23 @@ if(heroSection && !prefersReducedMotion){
 /* ============================================================
    FLOATING PARTICLES (canvas)
 ============================================================ */
-var canvas = document.getElementById('particle-canvas');
-if(canvas && !prefersReducedMotion){
-  var ctx = canvas.getContext('2d');
+var canvas = document.getElementById(&#39;particle-canvas&#39;);
+if(canvas &amp;&amp; !prefersReducedMotion){
+  var ctx = canvas.getContext(&#39;2d&#39;);
   var particles = [];
-  var PARTICLE_COUNT = window.innerWidth < 768 ? 26 : 50;
+  var PARTICLE_COUNT = window.innerWidth &lt; 768 ? 26 : 50;
   var dpr = Math.min(window.devicePixelRatio || 1, 2);
 
   function resizeCanvas(){
     var rect = heroSection.getBoundingClientRect();
     canvas.width = rect.width * dpr; canvas.height = rect.height * dpr;
-    canvas.style.width = rect.width + 'px'; canvas.style.height = rect.height + 'px';
+    canvas.style.width = rect.width + &#39;px&#39;; canvas.style.height = rect.height + &#39;px&#39;;
     ctx.setTransform(dpr,0,0,dpr,0,0);
   }
   function createParticles(){
     particles = [];
     var rect = heroSection.getBoundingClientRect();
-    for(var i=0;i<PARTICLE_COUNT;i++){
+    for(var i=0;i&lt;PARTICLE_COUNT;i++){
       particles.push({ x:Math.random()*rect.width, y:Math.random()*rect.height, r:Math.random()*1.6+0.4, vx:(Math.random()-0.5)*0.15, vy:(Math.random()-0.5)*0.15, o:Math.random()*0.5+0.15 });
     }
   }
@@ -2294,16 +2294,16 @@ if(canvas && !prefersReducedMotion){
     ctx.clearRect(0,0,rect.width,rect.height);
     particles.forEach(function(p){
       p.x += p.vx; p.y += p.vy;
-      if(p.x<0) p.x=rect.width; if(p.x>rect.width) p.x=0;
-      if(p.y<0) p.y=rect.height; if(p.y>rect.height) p.y=0;
+      if(p.x&lt;0) p.x=rect.width; if(p.x&gt;rect.width) p.x=0;
+      if(p.y&lt;0) p.y=rect.height; if(p.y&gt;rect.height) p.y=0;
       ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle = 'rgba(56,189,248,' + p.o + ')'; ctx.fill();
+      ctx.fillStyle = &#39;rgba(56,189,248,&#39; + p.o + &#39;)&#39;; ctx.fill();
     });
     requestAnimationFrame(drawParticles);
   }
   resizeCanvas(); createParticles(); requestAnimationFrame(drawParticles);
   var resizeTimeout;
-  window.addEventListener('resize', function(){
+  window.addEventListener(&#39;resize&#39;, function(){
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(function(){ resizeCanvas(); createParticles(); }, 200);
   });
@@ -2312,14 +2312,14 @@ if(canvas && !prefersReducedMotion){
 /* ============================================================
    BACK TO TOP
 ============================================================ */
-backToTop.addEventListener('click', function(){ window.scrollTo({ top:0, behavior: prefersReducedMotion ? 'auto' : 'smooth' }); });
+backToTop.addEventListener(&#39;click&#39;, function(){ window.scrollTo({ top:0, behavior: prefersReducedMotion ? &#39;auto&#39; : &#39;smooth&#39; }); });
 
 /* ============================================================
    INITIAL RENDER
 ============================================================ */
 renderProjects();
 resetProjectForm();
-</script>
+&lt;/script&gt;
 
-</body>
-</html>
+&lt;/body&gt;
+&lt;/html&gt;
