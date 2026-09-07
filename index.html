@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saif Islam — WordPress Developer & Visual Storyteller</title>
+    
+    <!-- SEO & OpenGraph Meta Tags -->
+    <meta name="description" content="Portfolio of Saif Islam, a Senior WordPress Developer, Custom Theme Architect & Visual Motion Designer. Crafting futuristic, ultra-fast web experiences and cinematic digital products.">
+    <meta name="author" content="Saif Islam">
+    <meta name="keywords" content="WordPress Developer, Custom PHP, Headless WP, Motion Design, WooCommerce, Web Developer Portfolio">
+    <meta property="og:title" content="Saif Islam — WordPress Developer & Visual Storyteller">
+    <meta property="og:description" content="Cinematic web developer portfolio blending custom WordPress backend engineering with visual storytelling and motion graphics.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: '#050505',
+                        surface: '#0d0d0d',
+                        'surface-light': '#151515',
+                        muted: '#888888',
+                        accent: '#ff0000',
+                        border: '#292929',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        'glow-red': '0 0 25px -5px rgba(255, 0, 0, 0.4)',
+                        'glow-red-lg': '0 0 50px -10px rgba(255, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --bg: #050505;
+            --surface: #0d0d0d;
+            --surface-light: #151515;
+            --text: #ffffff;
+            --muted: #888888;
+            --accent: #ff0000;
+            --border: #292929;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        /* Base Styles */
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* Scanline Overlay Effect */
+        .scanline-overlay {
+            background: linear-gradient(
+                rgba(18, 16, 16, 0) 50%, 
+                rgba(0, 0, 0, 0.25) 50%
+            ), linear-gradient(
+                90deg,
+                rgba(255, 0, 0, 0.03),
+                rgba(0, 255, 0, 0.01),
+                rgba(0, 0, 255, 0.03)
+            );
+            background-size: 100% 3px, 6px 100%;
+            pointer-events: none;
+        }
+
+        /* Glassmorphism Styles */
+        .glass-panel {
+            background: rgba(13, 13, 13, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        .glass-card {
+            background: rgba(21, 21, 21, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(255, 0, 0, 0.5);
+            box-shadow: 0 10px 30px -10px rgba(255, 0, 0, 0.2);
+            transform: translateY(-4px);
+        }
+
+        /* Custom Cursor */
+        #cursor-dot, #cursor-ring {
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            transition: opacity 0.3s ease;
+        }
+        #cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent);
+        }
+        #cursor-ring {
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            transition: transform 0.15s ease-out, width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+        }
+
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Pulse Animation */
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.2); }
+        }
+        .animate-pulse-glow {
+            animation: pulse-glow 2s infinite ease-in-out;
+        }
+
+        /* Grid Background Pattern */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        /* HUD Camera Frame Lines */
+        .hud-corner-tl { border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+        .hud-corner-tr { border-top: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+        .hud-corner-bl { border-bottom: 2px solid var(--accent); border-left: 2px solid var(--accent); }
+        .hud-corner-br { border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
+
+        /* Video Filter simulation */
+        .grayscale-filter {
+            filter: grayscale(80%) contrast(110%);
+            transition: filter 0.5s ease;
+        }
+        .glass-card:hover .grayscale-filter {
+            filter: grayscale(0%) contrast(100%);
+        }
+    </style>
+</head>
+<body class="relative text-white selection:bg-accent selection:text-white">
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot" class="hidden md:block"></div>
+    <div id="cursor-ring" class="hidden md:block"></div>
+
+    <!-- Scanline Screen FX -->
+    <div class="scanline-overlay fixed inset-0 z-50 pointer-events-none opacity-40"></div>
+
+    <!-- Preloader Screen -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-bg flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="w-72 max-w-[80vw] flex flex-col items-center">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="w-2.5 h-2.5 rounded-full bg-accent animate-ping"></span>
+                <span class="font-mono text-xs tracking-widest text-muted">SYSTEM INITIALIZING...</span>
+            </div>
+            <!-- Progress counter -->
+            <div id="loader-counter" class="font-heading text-5xl font-bold tracking-tighter mb-4 text-white">0%</div>
+            <!-- Progress Line -->
+            <div class="w-full h-[2px] bg-border overflow-hidden relative">
+                <div id="loader-bar" class="h-full bg-accent w-0 transition-all duration-100 ease-out"></div>
+            </div>
+            <div class="mt-4 font-mono text-[10px] text-muted flex justify-between w-full uppercase">
+                <span>SAIF ISLAM // 2026</span>
+                <span>WP DEV & VISUALS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-40 px-4 md:px-8 py-4 transition-all duration-300" id="main-header">
+        <nav class="max-w-7xl mx-auto glass-panel rounded-2xl px-5 py-3.5 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" class="group flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-surface-light border border-border flex items-center justify-center font-mono font-bold text-accent group-hover:border-accent transition-colors">
+                    S<span class="text-white">I</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-bold text-sm tracking-wide group-hover:text-accent transition-colors">SAIF ISLAM</span>
+                    <span class="font-mono text-[10px] text-muted -mt-0.5">DEV / VISUALS</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden lg:flex items-center gap-8 font-mono text-xs tracking-wider">
+                <a href="#work" class="hover:text-accent transition-colors py-1">WORK</a>
+                <a href="#about" class="hover:text-accent transition-colors py-1">ABOUT</a>
+                <a href="#skills" class="hover:text-accent transition-colors py-1">SKILLS</a>
+                <a href="#experience" class="hover:text-accent transition-colors py-1">EXPERIENCE</a>
+                <a href="#services" class="hover:text-accent transition-colors py-1">SERVICES</a>
+                <a href="#contact" class="hover:text-accent transition-colors py-1">CONTACT</a>
+            </div>
+
+            <!-- Right Controls & CTA -->
+            <div class="hidden sm:flex items-center gap-5">
+                <!-- Status Badge -->
+                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-light border border-border text-[11px] font-mono">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-gray-300 tracking-tight">AVAILABLE FOR WORK</span>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#contact" class="relative group inline-flex items-center justify-center px-5 py-2 rounded-xl bg-accent text-white font-mono text-xs font-semibold uppercase tracking-wider overflow-hidden shadow-glow-red hover:shadow-glow-red-lg transition-all">
+                    <span class="relative z-10">LET'S TALK</span>
+                    <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform"></div>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg bg-surface-light border border-border text-white hover:text-accent focus:outline-none">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Drawer Overlay -->
+        <div id="mobile-drawer" class="lg:hidden fixed inset-x-4 top-20 hidden glass-panel rounded-2xl p-6 border border-border flex flex-col gap-5 shadow-2xl transition-all z-50">
+            <div class="flex items-center justify-between border-b border-border pb-3">
+                <div class="flex items-center gap-2 font-mono text-xs text-muted">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    AVAILABLE FOR WORK
+                </div>
+                <span class="font-mono text-xs text-muted">NAVIGATION</span>
+            </div>
+            <div class="flex flex-col gap-4 font-mono text-sm tracking-wider">
+                <a href="#work" class="mobile-link hover:text-accent transition-colors py-1 border-b border-border/40">01. WORK</a>
+                <a href="#about" class="mobile-link hover:text-accent transition-colors py-1 border-b border-border/40">02. ABOUT</a>
+                <a href="#skills" class="mobile-link hover:text-accent transition-colors py-1 border-b border-border/40">03. SKILLS</a>
+                <a href="#experience" class="mobile-link hover:text-accent transition-colors py-1 border-b border-border/40">04. EXPERIENCE</a>
+                <a href="#services" class="mobile-link hover:text-accent transition-colors py-1 border-b border-border/40">05. SERVICES</a>
+                <a href="#contact" class="mobile-link hover:text-accent transition-colors py-1">06. CONTACT</a>
+            </div>
+            <a href="#contact" class="mobile-link w-full py-3 text-center bg-accent text-white font-mono text-xs font-bold rounded-xl tracking-widest shadow-glow-red uppercase">
+                LET'S TALK
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-grid-pattern">
+        <!-- Interactive Background Canvas -->
+        <canvas id="hero-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Main Content -->
+                <div class="lg:col-span-8 flex flex-col items-start">
+                    
+                    <!-- Reel Pill Badge -->
+                    <div class="reveal inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-light border border-border/80 mb-6 font-mono text-xs tracking-wider text-muted">
+                        <span class="w-1.5 h-1.5 rounded-full bg-accent animate-ping"></span>
+                        <span class="text-white font-medium">CREATIVE REEL 2026</span>
+                        <span class="text-border">|</span>
+                        <span class="text-accent">WORDPRESS ARCHITECT</span>
+                    </div>
+
+                    <!-- Main Name Headline -->
+                    <h1 class="reveal font-heading font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[0.95] mb-6">
+                        SAIF ISLAM<span class="text-accent">.</span>
+                    </h1>
+
+                    <!-- Professional Title & Subtitle -->
+                    <div class="reveal mb-8">
+                        <h2 class="font-mono text-lg sm:text-2xl text-gray-300 font-semibold tracking-wide mb-3">
+                            WordPress Developer &amp; Visual Digital Architect
+                        </h2>
+                        <p class="text-muted text-base sm:text-lg max-w-2xl font-normal leading-relaxed">
+                            I engineer custom high-performance WordPress backends, bespoke Gutenberg design ecosystems, and cinematic web interfaces for global brands and creative agencies.
+                        </p>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="reveal flex flex-wrap items-center gap-4 w-full sm:w-auto">
+                        <a href="#work" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-accent text-white font-mono text-xs font-bold uppercase tracking-widest shadow-glow-red hover:shadow-glow-red-lg hover:-translate-y-1 transition-all text-center flex items-center justify-center gap-2">
+                            EXPLORE WORK
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                        <a href="#showreel" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-surface-light border border-border text-white font-mono text-xs font-bold uppercase tracking-widest hover:border-accent hover:bg-surface hover:-translate-y-1 transition-all text-center flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            WATCH SHOWREEL
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Telemetry HUD Card -->
+                <div class="lg:col-span-4 reveal">
+                    <div class="glass-card rounded-2xl p-6 relative overflow-hidden border border-border/80">
+                        <!-- HUD Corners -->
+                        <div class="absolute top-2 left-2 w-3 h-3 hud-corner-tl"></div>
+                        <div class="absolute top-2 right-2 w-3 h-3 hud-corner-tr"></div>
+                        <div class="absolute bottom-2 left-2 w-3 h-3 hud-corner-bl"></div>
+                        <div class="absolute bottom-2 right-2 w-3 h-3 hud-corner-br"></div>
+
+                        <div class="flex items-center justify-between border-b border-border pb-4 mb-5">
+                            <span class="font-mono text-xs text-accent font-bold tracking-widest">SYSTEM TELEMETRY</span>
+                            <span class="font-mono text-[10px] text-muted" id="hero-clock">UTC 00:00:00</span>
+                        </div>
+
+                        <!-- Mini Stats Grid -->
+                        <div class="grid grid-cols-2 gap-4 font-mono">
+                            <div class="p-3 rounded-xl bg-surface/80 border border-border">
+                                <div class="text-xs text-muted mb-1">CORE STACK</div>
+                                <div class="text-sm font-bold text-white">PHP / Custom WP</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-surface/80 border border-border">
+                                <div class="text-xs text-muted mb-1">OPT SCORE</div>
+                                <div class="text-sm font-bold text-emerald-400">99 / 100 GTmetrix</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-surface/80 border border-border">
+                                <div class="text-xs text-muted mb-1">VISUAL SUITE</div>
+                                <div class="text-sm font-bold text-white">Pr / Ae / Resolve</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-surface/80 border border-border">
+                                <div class="text-xs text-muted mb-1">PROJECTS</div>
+                                <div class="text-sm font-bold text-accent">100+ Completed</div>
+                            </div>
+                        </div>
+
+                        <!-- Current Focus Bar -->
+                        <div class="mt-5 pt-4 border-t border-border flex items-center justify-between">
+                            <span class="font-mono text-[11px] text-muted">CURRENT FOCUS:</span>
+                            <span class="font-mono text-xs text-gray-200 font-medium">Headless WP + React Native</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work" class="py-24 relative z-10 bg-surface/50 border-y border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <div class="font-mono text-xs text-accent tracking-widest uppercase mb-2">// PORTFOLIO</div>
+                    <h2 class="font-heading font-bold text-3xl sm:text-5xl text-white tracking-tight">SELECTED WORK</h2>
+                </div>
+
+                <!-- Filter Controls -->
+                <div class="mt-6 md:mt-0 flex flex-wrap gap-2 font-mono text-xs" id="project-filters">
+                    <button data-filter="all" class="filter-btn active px-4 py-2 rounded-xl bg-accent text-white font-semibold transition-all">ALL</button>
+                    <button data-filter="custom-wp" class="filter-btn px-4 py-2 rounded-xl bg-surface-light border border-border text-muted hover:text-white transition-all">CUSTOM WP</button>
+                    <button data-filter="ecommerce" class="filter-btn px-4 py-2 rounded-xl bg-surface-light border border-border text-muted hover:text-white transition-all">E-COMMERCE</button>
+                    <button data-filter="visuals" class="filter-btn px-4 py-2 rounded-xl bg-surface-light border border-border text-muted hover:text-white transition-all">VISUAL EDITS</button>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card reveal glass-card rounded-2xl overflow-hidden group cursor-pointer" data-category="custom-wp" onclick="openProjectModal('cinematic-wp')">
+                    <div class="relative h-60 overflow-hidden bg-surface">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800" alt="Cinematic WordPress Architecture" class="w-full h-full object-cover grayscale-filter group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute top-4 left-4 font-mono text-[10px] px-2.5 py-1 rounded bg-black/70 border border-border backdrop-blur-md text-accent">01 // COMMERCIAL</div>
+                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                            <span class="font-mono text-xs text-gray-300">2026</span>
+                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-glow-red">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-accent transition-colors mb-2">Aether Architect Portal</h3>
+                        <p class="text-muted text-sm line-clamp-2 mb-4 font-normal">Custom WordPress backend with headless GraphQL API integration and custom Gutenberg visual blocks.</p>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">PHP 8.2</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">Gutenberg</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card reveal glass-card rounded-2xl overflow-hidden group cursor-pointer" data-category="ecommerce" onclick="openProjectModal('cyber-store')">
+                    <div class="relative h-60 overflow-hidden bg-surface">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800" alt="WooCommerce Luxury Store" class="w-full h-full object-cover grayscale-filter group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute top-4 left-4 font-mono text-[10px] px-2.5 py-1 rounded bg-black/70 border border-border backdrop-blur-md text-accent">02 // E-COMMERCE</div>
+                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                            <span class="font-mono text-xs text-gray-300">2025</span>
+                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-glow-red">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-accent transition-colors mb-2">Neura Luxury Gear Store</h3>
+                        <p class="text-muted text-sm line-clamp-2 mb-4 font-normal">Ultra-fast WooCommerce deployment featuring custom checkout workflows, Stripe API, and dynamic filtering.</p>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">WooCommerce</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">Stripe API</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">Redis Cache</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card reveal glass-card rounded-2xl overflow-hidden group cursor-pointer" data-category="visuals" onclick="openProjectModal('motion-reel')">
+                    <div class="relative h-60 overflow-hidden bg-surface">
+                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800" alt="Video Motion Graphics Edit" class="w-full h-full object-cover grayscale-filter group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute top-4 left-4 font-mono text-[10px] px-2.5 py-1 rounded bg-black/70 border border-border backdrop-blur-md text-accent">03 // VISUAL MOTION</div>
+                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                            <span class="font-mono text-xs text-gray-300">2025</span>
+                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-glow-red">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-accent transition-colors mb-2">Cyberpunk Commercial Edit</h3>
+                        <p class="text-muted text-sm line-clamp-2 mb-4 font-normal">High-octane commercial visual sequence featuring custom color grading, sound design, and After Effects motion overlays.</p>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">Premiere Pro</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">After Effects</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">DaVinci</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card reveal glass-card rounded-2xl overflow-hidden group cursor-pointer" data-category="custom-wp" onclick="openProjectModal('headless-agency')">
+                    <div class="relative h-60 overflow-hidden bg-surface">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800" alt="Headless WP Portfolio" class="w-full h-full object-cover grayscale-filter group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute top-4 left-4 font-mono text-[10px] px-2.5 py-1 rounded bg-black/70 border border-border backdrop-blur-md text-accent">04 // HEADLESS WP</div>
+                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                            <span class="font-mono text-xs text-gray-300">2026</span>
+                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-glow-red">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-accent transition-colors mb-2">Vanguard Creative Network</h3>
+                        <p class="text-muted text-sm line-clamp-2 mb-4 font-normal">Headless WordPress coupled with Next.js frontend, micro-animations, and instant REST page transitions.</p>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">Headless WP</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">GraphQL</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card reveal glass-card rounded-2xl overflow-hidden group cursor-pointer" data-category="visuals" onclick="openProjectModal('youtube-documentary')">
+                    <div class="relative h-60 overflow-hidden bg-surface">
+                        <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=800" alt="Documentary Visual Editing" class="w-full h-full object-cover grayscale-filter group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute top-4 left-4 font-mono text-[10px] px-2.5 py-1 rounded bg-black/70 border border-border backdrop-blur-md text-accent">05 // DOCUMENTARY</div>
+                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                            <span class="font-mono text-xs text-gray-300">2025</span>
+                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-glow-red">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-accent transition-colors mb-2">The Silicon Renaissance</h3>
+                        <p class="text-muted text-sm line-clamp-2 mb-4 font-normal">Long-form tech documentary edit featuring historical motion graphics, audio mastering, and kinetic text visuals.</p>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">YouTube Longform</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">Color Grade</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">Sound Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card reveal glass-card rounded-2xl overflow-hidden group cursor-pointer" data-category="ecommerce" onclick="openProjectModal('speed-opt')">
+                    <div class="relative h-60 overflow-hidden bg-surface">
+                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=800" alt="Speed Optimization & Security" class="w-full h-full object-cover grayscale-filter group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute top-4 left-4 font-mono text-[10px] px-2.5 py-1 rounded bg-black/70 border border-border backdrop-blur-md text-accent">06 // OPTIMIZATION</div>
+                        <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                            <span class="font-mono text-xs text-gray-300">2026</span>
+                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow-glow-red">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-bold text-xl text-white group-hover:text-accent transition-colors mb-2">Titan Commerce Speed Architecture</h3>
+                        <p class="text-muted text-sm line-clamp-2 mb-4 font-normal">Complete database cleanup, object caching implementation, and asset minification boost page load from 4.2s to 0.6s.</p>
+                        <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">Core Web Vitals</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">WP Rocket</span>
+                            <span class="px-2 py-0.5 rounded bg-surface border border-border text-gray-400">Cloudflare Enterprise</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Camera/Developer HUD Showreel Section -->
+    <section id="showreel" class="py-24 relative overflow-hidden bg-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12">
+                <div class="reveal inline-flex items-center gap-2 font-mono text-xs text-accent tracking-widest uppercase mb-2">
+                    <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+                    VISUAL PRODUCTION
+                </div>
+                <h2 class="reveal font-heading font-bold text-4xl sm:text-6xl text-white tracking-tight mb-4">SHOWREEL 2026</h2>
+                <p class="reveal text-muted text-base max-w-xl mx-auto">A compilation of visual edits, motion typography, and custom web interface animations crafted for clients worldwide.</p>
+            </div>
+
+            <!-- HUD Camera Player Frame -->
+            <div class="reveal glass-panel rounded-3xl p-3 sm:p-5 relative border border-border shadow-2xl">
+                <!-- Video Monitor Box -->
+                <div class="relative aspect-video rounded-2xl overflow-hidden bg-surface group flex items-center justify-center border border-border">
+                    
+                    <!-- HUD Overlay Indicators -->
+                    <div class="absolute top-4 left-4 z-20 flex items-center gap-3 font-mono text-[11px]">
+                        <span class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-black/80 border border-border text-white">
+                            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                            REC [4K PRORES]
+                        </span>
+                        <span class="hidden sm:inline-block px-2.5 py-1 rounded bg-black/80 border border-border text-muted">24.00 FPS</span>
+                    </div>
+
+                    <div class="absolute top-4 right-4 z-20 font-mono text-xs px-2.5 py-1 rounded bg-black/80 border border-border text-accent" id="timecode-display">
+                        00:01:24:12
+                    </div>
+
+                    <div class="absolute bottom-4 left-4 z-20 hidden sm:flex items-center gap-2 font-mono text-[10px] text-muted">
+                        <span class="px-2 py-0.5 rounded bg-black/80 border border-border">AUDIO: 48kHz / 24-bit</span>
+                        <span class="px-2 py-0.5 rounded bg-black/80 border border-border">ISO 400</span>
+                    </div>
+
+                    <!-- Center Background Poster Image -->
+                    <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1400" alt="Showreel Video Cover" class="w-full h-full object-cover grayscale-filter group-hover:scale-105 transition-transform duration-700">
+
+                    <!-- Overlay Dark Tint -->
+                    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors"></div>
+
+                    <!-- Center Big Play Button -->
+                    <button onclick="playShowreelVideo()" aria-label="Play Showreel Video" class="absolute z-30 w-20 h-20 rounded-full bg-accent/90 text-white flex items-center justify-center shadow-glow-red hover:scale-110 transition-transform group">
+                        <svg class="w-8 h-8 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </button>
+
+                    <!-- Crosshair HUD Center Graphics -->
+                    <div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-30">
+                        <div class="w-12 h-12 border border-white/50 rounded-full flex items-center justify-center">
+                            <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HUD Bottom Control Bar -->
+                <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs px-2 text-muted">
+                    <div class="flex items-center gap-4">
+                        <button onclick="playShowreelVideo()" class="text-white hover:text-accent transition-colors flex items-center gap-1.5">
+                            <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            WATCH REEL (01:45)
+                        </button>
+                        <span>|</span>
+                        <span>ASPECT: 16:9 CINEMATIC</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span>AUDIO TRACK: ORIGINAL COMPOSITION</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 relative z-10 bg-surface/30 border-y border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Bio Text -->
+                <div class="lg:col-span-7">
+                    <div class="reveal font-mono text-xs text-accent tracking-widest uppercase mb-2">// BIOGRAPHY &amp; VISION</div>
+                    <h2 class="reveal font-heading font-bold text-3xl sm:text-5xl text-white tracking-tight mb-6">
+                        BRIDGING BACKEND CODE WITH VISUAL MOTION
+                    </h2>
+                    
+                    <p class="reveal text-gray-300 text-base sm:text-lg leading-relaxed mb-6 font-normal">
+                        I transform complex digital requirements into high-impact, custom WordPress ecosystems and engaging visual motion stories. My work unites custom PHP backend architecture, clean Gutenberg development, and high-end video motion graphics.
+                    </p>
+
+                    <p class="reveal text-muted text-sm sm:text-base leading-relaxed mb-8">
+                        Whether engineering a high-speed WooCommerce backend or cutting together a high-octane brand commercial in Premiere &amp; After Effects, I believe performance, aesthetics, and technical execution must coexist seamlessly.
+                    </p>
+
+                    <!-- Statistics Bar -->
+                    <div class="reveal grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-border font-mono">
+                        <div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-white font-heading tracking-tight" id="stat-years">0</div>
+                            <div class="text-[11px] text-accent tracking-wider uppercase mt-1">YEARS EXP</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-white font-heading tracking-tight" id="stat-projects">0</div>
+                            <div class="text-[11px] text-accent tracking-wider uppercase mt-1">PROJECTS</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-white font-heading tracking-tight" id="stat-clients">0</div>
+                            <div class="text-[11px] text-accent tracking-wider uppercase mt-1">GLOBAL CLIENTS</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl sm:text-4xl font-extrabold text-white font-heading tracking-tight" id="stat-views">0</div>
+                            <div class="text-[11px] text-accent tracking-wider uppercase mt-1">MEDIA VIEWS</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Developer Card -->
+                <div class="lg:col-span-5 reveal">
+                    <div class="glass-card rounded-3xl p-8 relative overflow-hidden border border-border">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-2xl overflow-hidden border-2 border-accent relative bg-surface">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400" alt="Saif Islam Profile Avatar" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-xl text-white">SAIF ISLAM</h3>
+                                <div class="font-mono text-xs text-accent">WordPress &amp; Motion Lead</div>
+                            </div>
+                        </div>
+
+                        <!-- Philosophy Bullet List -->
+                        <div class="space-y-4 font-mono text-xs">
+                            <div class="p-3.5 rounded-xl bg-surface border border-border/80 flex items-start gap-3">
+                                <span class="text-accent font-bold text-base">01.</span>
+                                <div>
+                                    <div class="text-white font-bold mb-0.5">ZERO BLOAT ENGINEERING</div>
+                                    <div class="text-muted text-[11px]">Bespoke lightweight WordPress theme code over slow visual page builders.</div>
+                                </div>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-surface border border-border/80 flex items-start gap-3">
+                                <span class="text-accent font-bold text-base">02.</span>
+                                <div>
+                                    <div class="text-white font-bold mb-0.5">CINEMATIC RETENTION</div>
+                                    <div class="text-muted text-[11px]">Dynamic video motion graphics designed to keep viewers engaged longer.</div>
+                                </div>
+                            </div>
+                            <div class="p-3.5 rounded-xl bg-surface border border-border/80 flex items-start gap-3">
+                                <span class="text-accent font-bold text-base">03.</span>
+                                <div>
+                                    <div class="text-white font-bold mb-0.5">HEADLESS FLEXIBILITY</div>
+                                    <div class="text-muted text-[11px]">Modern GraphQL APIs connecting WordPress with React &amp; Mobile Clients.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Skills Section -->
+    <section id="skills" class="py-24 relative z-10 bg-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="reveal font-mono text-xs text-accent tracking-widest uppercase mb-2">// TECHNICAL MATRIX</div>
+                <h2 class="reveal font-heading font-bold text-4xl sm:text-5xl text-white tracking-tight">SKILLS &amp; ARSENAL</h2>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- Skill Card -->
+                <div class="reveal glass-card rounded-2xl p-5 border border-border hover:border-accent transition-all group">
+                    <div class="font-mono text-xs text-muted mb-2">BACKEND CORE</div>
+                    <div class="font-heading font-bold text-lg text-white group-hover:text-accent transition-colors">WordPress Core / PHP</div>
+                    <div class="mt-3 w-full bg-surface-light h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-accent h-full w-[95%]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card -->
+                <div class="reveal glass-card rounded-2xl p-5 border border-border hover:border-accent transition-all group">
+                    <div class="font-mono text-xs text-muted mb-2">E-COMMERCE</div>
+                    <div class="font-heading font-bold text-lg text-white group-hover:text-accent transition-colors">WooCommerce Dev</div>
+                    <div class="mt-3 w-full bg-surface-light h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-accent h-full w-[90%]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card -->
+                <div class="reveal glass-card rounded-2xl p-5 border border-border hover:border-accent transition-all group">
+                    <div class="font-mono text-xs text-muted mb-2">FRONTEND API</div>
+                    <div class="font-heading font-bold text-lg text-white group-hover:text-accent transition-colors">Gutenberg / React</div>
+                    <div class="mt-3 w-full bg-surface-light h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-accent h-full w-[88%]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card -->
+                <div class="reveal glass-card rounded-2xl p-5 border border-border hover:border-accent transition-all group">
+                    <div class="font-mono text-xs text-muted mb-2">VIDEO MOTION</div>
+                    <div class="font-heading font-bold text-lg text-white group-hover:text-accent transition-colors">Adobe After Effects</div>
+                    <div class="mt-3 w-full bg-surface-light h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-accent h-full w-[92%]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card -->
+                <div class="reveal glass-card rounded-2xl p-5 border border-border hover:border-accent transition-all group">
+                    <div class="font-mono text-xs text-muted mb-2">VIDEO EDITING</div>
+                    <div class="font-heading font-bold text-lg text-white group-hover:text-accent transition-colors">Premiere Pro / DaVinci</div>
+                    <div class="mt-3 w-full bg-surface-light h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-accent h-full w-[94%]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card -->
+                <div class="reveal glass-card rounded-2xl p-5 border border-border hover:border-accent transition-all group">
+                    <div class="font-mono text-xs text-muted mb-2">PERFORMANCE</div>
+                    <div class="font-heading font-bold text-lg text-white group-hover:text-accent transition-colors">Core Web Vitals &amp; SEO</div>
+                    <div class="mt-3 w-full bg-surface-light h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-accent h-full w-[96%]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card -->
+                <div class="reveal glass-card rounded-2xl p-5 border border-border hover:border-accent transition-all group">
+                    <div class="font-mono text-xs text-muted mb-2">DESIGN SUITE</div>
+                    <div class="font-heading font-bold text-lg text-white group-hover:text-accent transition-colors">Photoshop &amp; Illustrator</div>
+                    <div class="mt-3 w-full bg-surface-light h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-accent h-full w-[85%]"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card -->
+                <div class="reveal glass-card rounded-2xl p-5 border border-border hover:border-accent transition-all group">
+                    <div class="font-mono text-xs text-muted mb-2">HEADLESS TECH</div>
+                    <div class="font-heading font-bold text-lg text-white group-hover:text-accent transition-colors">GraphQL &amp; REST API</div>
+                    <div class="mt-3 w-full bg-surface-light h-1.5 rounded-full overflow-hidden">
+                        <div class="bg-accent h-full w-[89%]"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 relative z-10 bg-surface/40 border-y border-border">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="reveal font-mono text-xs text-accent tracking-widest uppercase mb-2">// CAREER TRACK</div>
+                <h2 class="reveal font-heading font-bold text-4xl sm:text-5xl text-white tracking-tight">EXPERIENCE TIMELINE</h2>
+            </div>
+
+            <!-- Timeline Vertical Line Wrapper -->
+            <div class="relative border-l border-border/80 ml-4 sm:ml-32 space-y-12">
+                
+                <!-- Timeline Item 1 -->
+                <div class="reveal relative pl-8 sm:pl-12 group">
+                    <!-- Date Pill on Left -->
+                    <div class="sm:absolute -left-32 top-0 font-mono text-xs text-accent font-bold py-1 px-2 rounded bg-surface border border-border inline-block mb-3 sm:mb-0">
+                        2023 — PRESENT
+                    </div>
+                    <!-- Glowing Dot -->
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-bg border-2 border-accent group-hover:scale-125 transition-transform shadow-glow-red"></div>
+
+                    <div class="glass-card rounded-2xl p-6 border border-border">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="font-heading font-bold text-xl text-white">Senior WordPress Architect &amp; Motion Lead</h3>
+                            <span class="font-mono text-xs text-muted">Aether Agency Studio</span>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed font-normal mb-4">
+                            Leading custom PHP theme architecture, headless WordPress installations, and dynamic video promos for enterprise clients. Reduced average site load times by 65%.
+                        </p>
+                        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                            <span class="px-2.5 py-1 rounded bg-surface border border-border text-gray-300">Custom WP Themes</span>
+                            <span class="px-2.5 py-1 rounded bg-surface border border-border text-gray-300">After Effects</span>
+                            <span class="px-2.5 py-1 rounded bg-surface border border-border text-gray-300">REST API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="reveal relative pl-8 sm:pl-12 group">
+                    <div class="sm:absolute -left-32 top-0 font-mono text-xs text-muted font-bold py-1 px-2 rounded bg-surface border border-border inline-block mb-3 sm:mb-0">
+                        2021 — 2023
+                    </div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-bg border-2 border-border group-hover:border-accent transition-colors"></div>
+
+                    <div class="glass-card rounded-2xl p-6 border border-border">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="font-heading font-bold text-xl text-white">Full-Stack WordPress Developer</h3>
+                            <span class="font-mono text-xs text-muted">Nexus Media Digital</span>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed font-normal mb-4">
+                            Engineered 40+ custom WooCommerce websites with tailored checkout plug-ins, custom payment gateways, and responsive Gutenberg block libraries.
+                        </p>
+                        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                            <span class="px-2.5 py-1 rounded bg-surface border border-border text-gray-300">WooCommerce</span>
+                            <span class="px-2.5 py-1 rounded bg-surface border border-border text-gray-300">PHP Security</span>
+                            <span class="px-2.5 py-1 rounded bg-surface border border-border text-gray-300">Elementor Pro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="reveal relative pl-8 sm:pl-12 group">
+                    <div class="sm:absolute -left-32 top-0 font-mono text-xs text-muted font-bold py-1 px-2 rounded bg-surface border border-border inline-block mb-3 sm:mb-0">
+                        2020 — 2021
+                    </div>
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-bg border-2 border-border group-hover:border-accent transition-colors"></div>
+
+                    <div class="glass-card rounded-2xl p-6 border border-border">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="font-heading font-bold text-xl text-white">Visual Motion Editor &amp; Designer</h3>
+                            <span class="font-mono text-xs text-muted">Freelance / Global Studios</span>
+                        </div>
+                        <p class="text-muted text-sm leading-relaxed font-normal mb-4">
+                            Produced social media video campaigns, cinematic YouTube edits, color grading, and motion graphics overlay sequences generating over 10M+ collective impressions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 font-mono text-[10px]">
+                            <span class="px-2.5 py-1 rounded bg-surface border border-border text-gray-300">Premiere Pro</span>
+                            <span class="px-2.5 py-1 rounded bg-surface border border-border text-gray-300">DaVinci Resolve</span>
+                            <span class="px-2.5 py-1 rounded bg-surface border border-border text-gray-300">Kinetic Typography</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 relative z-10 bg-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="reveal font-mono text-xs text-accent tracking-widest uppercase mb-2">// CAPABILITIES</div>
+                <h2 class="reveal font-heading font-bold text-4xl sm:text-5xl text-white tracking-tight">SERVICES &amp; SOLUTIONS</h2>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="reveal glass-card rounded-3xl p-8 border border-border hover:border-accent transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-surface-light border border-border flex items-center justify-center font-mono text-accent font-bold text-lg mb-6 group-hover:border-accent transition-colors">
+                            01
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-white mb-3 group-hover:text-accent transition-colors">Custom WordPress Themes</h3>
+                        <p class="text-muted text-sm leading-relaxed mb-6 font-normal">
+                            Hand-coded PHP themes built without heavy builder bloat. Light, responsive, security-hardened, and designed specifically for your brand.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 font-mono text-xs text-gray-300 pt-4 border-t border-border">
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Bespoke Gutenberg Blocks</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Custom PHP Post Types</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> 100% Mobile Responsive</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="reveal glass-card rounded-3xl p-8 border border-border hover:border-accent transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-surface-light border border-border flex items-center justify-center font-mono text-accent font-bold text-lg mb-6 group-hover:border-accent transition-colors">
+                            02
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-white mb-3 group-hover:text-accent transition-colors">WooCommerce Architect</h3>
+                        <p class="text-muted text-sm leading-relaxed mb-6 font-normal">
+                            High-converting e-commerce web setups. Custom payment gateways, tailored product customizers, and frictionless checkout user flows.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 font-mono text-xs text-gray-300 pt-4 border-t border-border">
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Custom Checkout Hooks</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Payment Gateway Sync</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Inventory Auto-Sync</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="reveal glass-card rounded-3xl p-8 border border-border hover:border-accent transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-surface-light border border-border flex items-center justify-center font-mono text-accent font-bold text-lg mb-6 group-hover:border-accent transition-colors">
+                            03
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-white mb-3 group-hover:text-accent transition-colors">Visual &amp; Motion Edits</h3>
+                        <p class="text-muted text-sm leading-relaxed mb-6 font-normal">
+                            Cinematic video editing, dynamic motion graphics overlays, commercial trailers, and sound design tailored for digital engagement.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 font-mono text-xs text-gray-300 pt-4 border-t border-border">
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Commercial Reel Edits</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> 4K DaVinci Color Grading</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Kinetic Motion Graphics</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="reveal glass-card rounded-3xl p-8 border border-border hover:border-accent transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-surface-light border border-border flex items-center justify-center font-mono text-accent font-bold text-lg mb-6 group-hover:border-accent transition-colors">
+                            04
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-white mb-3 group-hover:text-accent transition-colors">Headless WP &amp; React</h3>
+                        <p class="text-muted text-sm leading-relaxed mb-6 font-normal">
+                            Decoupled WordPress architectures leveraging GraphQL API backends and instant Next.js / React frontend user interfaces.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 font-mono text-xs text-gray-300 pt-4 border-t border-border">
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> WP GraphQL Integration</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Instant Page Routing</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Static Site Generation</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="reveal glass-card rounded-3xl p-8 border border-border hover:border-accent transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-surface-light border border-border flex items-center justify-center font-mono text-accent font-bold text-lg mb-6 group-hover:border-accent transition-colors">
+                            05
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-white mb-3 group-hover:text-accent transition-colors">Speed &amp; Core Web Vitals</h3>
+                        <p class="text-muted text-sm leading-relaxed mb-6 font-normal">
+                            Diagnosing and fixing slow site response times. Code optimization, asset minification, and caching strategy for guaranteed 90+ GTmetrix scores.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 font-mono text-xs text-gray-300 pt-4 border-t border-border">
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Database Query Cleanup</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Object &amp; Redis Caching</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Image Compression Pipelines</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="reveal glass-card rounded-3xl p-8 border border-border hover:border-accent transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-surface-light border border-border flex items-center justify-center font-mono text-accent font-bold text-lg mb-6 group-hover:border-accent transition-colors">
+                            06
+                        </div>
+                        <h3 class="font-heading font-bold text-2xl text-white mb-3 group-hover:text-accent transition-colors">WordPress Maintenance &amp; Security</h3>
+                        <p class="text-muted text-sm leading-relaxed mb-6 font-normal">
+                            Comprehensive backend malware cleanup, firewall installation, security hardening, automated off-site backups, and ongoing uptime management.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 font-mono text-xs text-gray-300 pt-4 border-t border-border">
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> 24/7 Security Hardening</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Malware &amp; Backdoor Removal</li>
+                        <li class="flex items-center gap-2"><span class="text-accent">✔</span> Automated Cloud Backups</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative z-10 bg-surface/60 border-t border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Heading & Quick Actions -->
+                <div class="lg:col-span-6 flex flex-col justify-between">
+                    <div>
+                        <div class="reveal font-mono text-xs text-accent tracking-widest uppercase mb-2">// INITIATE CONTACT</div>
+                        <h2 class="reveal font-heading font-bold text-4xl sm:text-6xl text-white tracking-tight leading-tight mb-6">
+                            LET'S CREATE SOMETHING WORTH WATCHING<span class="text-accent">.</span>
+                        </h2>
+                        <p class="reveal text-muted text-base sm:text-lg mb-8 max-w-lg">
+                            Have a custom WordPress platform project or cinematic video production in mind? Let's turn your ideas into functional digital reality.
+                        </p>
+                    </div>
+
+                    <!-- Direct Email Quick Action Box -->
+                    <div class="reveal p-6 rounded-2xl bg-surface border border-border mb-8 lg:mb-0">
+                        <div class="font-mono text-xs text-muted mb-2">DIRECT EMAIL ADDRESS</div>
+                        <div class="flex items-center justify-between gap-4">
+                            <span class="font-mono text-sm sm:text-base text-white font-bold tracking-wide overflow-hidden text-ellipsis" id="email-address">saif.islam.dev@example.com</span>
+                            <button onclick="copyEmailToClipboard()" aria-label="Copy Email Address to Clipboard" class="px-4 py-2 rounded-xl bg-surface-light border border-border text-xs font-mono text-accent hover:border-accent hover:bg-accent hover:text-white transition-all flex items-center gap-1.5 shrink-0">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 012-2v-8a2 2 0 01-2-2h-8a2 2 0 01-2 2v8a2 2 0 012 2z"></path></svg>
+                                <span id="copy-btn-text">COPY</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Glass Form -->
+                <div class="lg:col-span-6 reveal">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="glass-card rounded-3xl p-8 border border-border space-y-6">
+                        
+                        <div>
+                            <label for="form-name" class="block font-mono text-xs text-muted mb-2">YOUR NAME</label>
+                            <input type="text" id="form-name" required placeholder="e.g. Alex Mercer" class="w-full px-4 py-3.5 rounded-xl bg-surface/80 border border-border text-white text-sm focus:outline-none focus:border-accent transition-colors font-sans">
+                        </div>
+
+                        <div>
+                            <label for="form-email" class="block font-mono text-xs text-muted mb-2">EMAIL ADDRESS</label>
+                            <input type="email" id="form-email" required placeholder="alex@company.com" class="w-full px-4 py-3.5 rounded-xl bg-surface/80 border border-border text-white text-sm focus:outline-none focus:border-accent transition-colors font-sans">
+                        </div>
+
+                        <div>
+                            <label for="form-service" class="block font-mono text-xs text-muted mb-2">REQUIRED SERVICE</label>
+                            <select id="form-service" class="w-full px-4 py-3.5 rounded-xl bg-surface/80 border border-border text-white text-sm focus:outline-none focus:border-accent transition-colors font-sans">
+                                <option value="wp-custom">Custom WordPress Theme Development</option>
+                                <option value="woocommerce">WooCommerce Store Development</option>
+                                <option value="motion-edit">Video Motion &amp; Post-Production</option>
+                                <option value="headless">Headless WP &amp; Web Apps</option>
+                                <option value="speed-sec">Speed Optimization &amp; Security</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="form-message" class="block font-mono text-xs text-muted mb-2">PROJECT DETAILS</label>
+                            <textarea id="form-message" rows="4" required placeholder="Tell me about project goals, timelines, and scope..." class="w-full px-4 py-3.5 rounded-xl bg-surface/80 border border-border text-white text-sm focus:outline-none focus:border-accent transition-colors font-sans resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-xl bg-accent text-white font-mono text-xs font-bold uppercase tracking-widest shadow-glow-red hover:shadow-glow-red-lg transition-all flex items-center justify-center gap-2">
+                            <span>START A PROJECT</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+
+                        <div id="form-status" class="hidden text-center font-mono text-xs text-emerald-400 py-2">
+                            ✓ MESSAGE SENT SUCCESSFULLY. I WILL RESPOND WITHIN 24 HOURS.
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-bg border-t border-border font-mono text-xs text-muted relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <!-- Logo & Info -->
+                <div class="flex items-center gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-surface border border-border flex items-center justify-center text-accent font-bold">
+                        SI
+                    </div>
+                    <span>SAIF ISLAM // WORDPRESS DEVELOPER &amp; VISUALIST</span>
+                </div>
+
+                <!-- Footer Nav Links -->
+                <div class="flex flex-wrap gap-6 text-[11px]">
+                    <a href="#work" class="hover:text-accent transition-colors">WORK</a>
+                    <a href="#about" class="hover:text-accent transition-colors">ABOUT</a>
+                    <a href="#skills" class="hover:text-accent transition-colors">SKILLS</a>
+                    <a href="#experience" class="hover:text-accent transition-colors">EXPERIENCE</a>
+                    <a href="#services" class="hover:text-accent transition-colors">SERVICES</a>
+                    <a href="#contact" class="hover:text-accent transition-colors">CONTACT</a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-4 text-white">
+                    <a href="#" aria-label="GitHub Profile" class="hover:text-accent transition-colors">GH</a>
+                    <a href="#" aria-label="LinkedIn Profile" class="hover:text-accent transition-colors">LN</a>
+                    <a href="#" aria-label="YouTube Channel" class="hover:text-accent transition-colors">YT</a>
+                    <a href="#" aria-label="Behance Portfolio" class="hover:text-accent transition-colors">BE</a>
+                    <a href="#" aria-label="Instagram Profile" class="hover:text-accent transition-colors">IG</a>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between text-[10px] text-muted gap-4">
+                <div>© 2026 SAIF ISLAM. ALL RIGHTS RESERVED.</div>
+                <div class="flex items-center gap-4">
+                    <span>DESIGN: DARK CINEMATIC / TECH HUD</span>
+                    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-accent transition-colors flex items-center gap-1">
+                        TOP ▲
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl">
+        <div class="glass-card max-w-3xl w-full max-h-[90vh] rounded-3xl overflow-y-auto border border-border p-6 sm:p-8 relative">
+            <button onclick="closeProjectModal()" aria-label="Close Project Detail Modal" class="absolute top-6 right-6 p-2 rounded-full bg-surface border border-border text-white hover:text-accent transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <div id="modal-content">
+                <!-- Dynamic Content Loaded via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        // Modal Data Map
+        const modalDataMap = {
+            'cinematic-wp': {
+                title: 'Aether Architect Portal',
+                category: 'COMMERCIAL / CUSTOM WP',
+                year: '2026',
+                img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200',
+                desc: 'A full bespoke WordPress solution engineered for a European architecture firm. Custom post types, ACF Pro fields, GraphQL endpoints, and tailored Gutenberg blocks designed for maximum editor freedom without page builder slowdown.',
+                stack: ['PHP 8.2', 'WordPress Core', 'Gutenberg Blocks', 'GraphQL', 'Tailwind CSS']
+            },
+            'cyber-store': {
+                title: 'Neura Luxury Gear Store',
+                category: 'E-COMMERCE / WOOCOMMERCE',
+                year: '2025',
+                img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200',
+                desc: 'High-conversion WooCommerce platform designed for luxury audio equipment. Includes AJAX filter matrices, dynamic cart drawer, multi-currency Stripe checkout, and automated inventory sync with external ERP systems.',
+                stack: ['WooCommerce', 'Stripe API', 'Redis Cache', 'Custom PHP Hooks', 'JavaScript ES6']
+            },
+            'motion-reel': {
+                title: 'Cyberpunk Commercial Edit',
+                category: 'VISUAL MOTION / ADVERTISING',
+                year: '2025',
+                img: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=1200',
+                desc: 'Fast-paced commercial visual promo with heavy After Effects kinetic typography, glitch transitions, 3D camera tracking, and custom sound design mastered in Premiere Pro.',
+                stack: ['Premiere Pro', 'After Effects', 'DaVinci Resolve', 'Kinetic Motion']
+            },
+            'headless-agency': {
+                title: 'Vanguard Creative Network',
+                category: 'HEADLESS WP / NEXT.JS',
+                year: '2026',
+                img: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200',
+                desc: 'Decoupled web app utilizing WordPress purely as a headless CMS with Next.js frontend. Enables sub-100ms client page transitions and flawless SEO rankings.',
+                stack: ['Headless WP', 'GraphQL API', 'Next.js', 'React', 'Framer Motion']
+            },
+            'youtube-documentary': {
+                title: 'The Silicon Renaissance',
+                category: 'DOCUMENTARY / LONG-FORM',
+                year: '2025',
+                img: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1200',
+                desc: 'Longform YouTube documentary edit covering tech evolution. Built retention-focused pacing with archival footage restoration, animated infographics, and sound design.',
+                stack: ['YouTube Longform', 'DaVinci Resolve', 'Color Grade', 'Audio Mastering']
+            },
+            'speed-opt': {
+                title: 'Titan Commerce Speed Architecture',
+                category: 'OPTIMIZATION / CORE WEB VITALS',
+                year: '2026',
+                img: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=1200',
+                desc: 'Complete optimization overhaul for a high-traffic WooCommerce store suffering from slow database queries. Boosted GTmetrix performance score from 42 to 99.',
+                stack: ['Database Cleanup', 'Redis Object Cache', 'Cloudflare Workers', 'Core Web Vitals']
+            }
+        };
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const loaderCounter = document.getElementById('loader-counter');
+            const loaderBar = document.getElementById('loader-bar');
+            const preloader = document.getElementById('preloader');
+            let count = 0;
+
+            const interval = setInterval(() => {
+                count += Math.floor(Math.random() * 15) + 5;
+                if (count >= 100) {
+                    count = 100;
+                    clearInterval(interval);
+                    setTimeout(() => {
+                        preloader.classList.add('opacity-0');
+                        setTimeout(() => preloader.style.display = 'none', 700);
+                    }, 200);
+                }
+                loaderCounter.textContent = `${count}%`;
+                loaderBar.style.width = `${count}%`;
+            }, 60);
+
+            // Initialize Background Canvas
+            initHeroCanvas();
+            // Start Clock
+            initDigitalClock();
+            // Scroll Reveal Observer
+            initScrollReveal();
+            // Filter System Setup
+            initPortfolioFilters();
+            // Custom Cursor Setup
+            initCustomCursor();
+            // Counter Numbers Setup
+            initCounterAnimation();
+        });
+
+        function initCustomCursor() {
+            const dot = document.getElementById('cursor-dot');
+            const ring = document.getElementById('cursor-ring');
+            if (!dot || !ring) return;
+
+            window.addEventListener('mousemove', (e) => {
+                dot.style.left = `${e.clientX}px`;
+                dot.style.top = `${e.clientY}px`;
+                
+                ring.animate({
+                    left: `${e.clientX}px`,
+                    top: `${e.clientY}px`
+                }, { duration: 250, fill: "forwards" });
+            });
+
+            // Scale ring on hoverable items
+            const hoverables = document.querySelectorAll('a, button, .project-card, input, select, textarea');
+            hoverables.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    ring.style.transform = 'translate(-50%, -50%) scale(1.6)';
+                    ring.style.borderColor = 'var(--accent)';
+                });
+                el.addEventListener('mouseleave', () => {
+                    ring.style.transform = 'translate(-50%, -50%) scale(1)';
+                    ring.style.borderColor = 'rgba(255, 0, 0, 0.5)';
+                });
+            });
+        }
+
+        function initHeroCanvas() {
+            const canvas = document.getElementById('hero-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            let width, height;
+            let particles = [];
+            let mouse = { x: null, y: null, radius: 120 };
+
+            function resize() {
+                width = canvas.width = canvas.parentElement.clientWidth;
+                height = canvas.height = canvas.parentElement.clientHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            window.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            });
+
+            // Particle Class
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 0.6;
+                    this.vy = (Math.random() - 0.5) * 0.6;
+                    this.radius = Math.random() * 1.5 + 1;
+                    this.baseAlpha = Math.random() * 0.4 + 0.1;
+                    this.color = Math.random() > 0.85 ? '#ff0000' : '#888888';
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+
+                    // Mouse Interaction
+                    if (mouse.x && mouse.y) {
+                        let dx = mouse.x - this.x;
+                        let dy = mouse.y - this.y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < mouse.radius) {
+                            let angle = Math.atan2(dy, dx);
+                            let force = (mouse.radius - dist) / mouse.radius;
+                            this.x -= Math.cos(angle) * force * 2;
+                            this.y -= Math.sin(angle) * force * 2;
+                        }
+                    }
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.globalAlpha = this.baseAlpha;
+                    ctx.fill();
+                    ctx.globalAlpha = 1;
+                }
+            }
+
+            // Init particles
+            const count = Math.floor((width * height) / 12000);
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+
+                // Draw connecting lines
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a + 1; b < particles.length; b++) {
+                        let dx = particles[a].x - particles[b].x;
+                        let dy = particles[a].y - particles[b].y;
+                        let dist = Math.sqrt(dx * dx + dy * dy);
+
+                        if (dist < 100) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.strokeStyle = '#292929';
+                            ctx.globalAlpha = (1 - dist / 100) * 0.25;
+                            ctx.lineWidth = 0.8;
+                            ctx.stroke();
+                            ctx.globalAlpha = 1;
+                        }
+                    }
+                }
+
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        function initDigitalClock() {
+            const clockEl = document.getElementById('hero-clock');
+            const timecodeEl = document.getElementById('timecode-display');
+
+            function update() {
+                const now = new Date();
+                const hours = String(now.getUTCHours()).padStart(2, '0');
+                const minutes = String(now.getUTCMinutes()).padStart(2, '0');
+                const seconds = String(now.getUTCSeconds()).padStart(2, '0');
+                const ms = String(Math.floor(now.getMilliseconds() / 10)).padStart(2, '0');
+
+                if (clockEl) clockEl.textContent = `UTC ${hours}:${minutes}:${seconds}`;
+                if (timecodeEl) timecodeEl.textContent = `00:${hours}:${minutes}:${ms}`;
+            }
+            setInterval(update, 40);
+            update();
+        }
+
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isOpen = !mobileDrawer.classList.contains('hidden');
+                if (isOpen) {
+                    mobileDrawer.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                } else {
+                    mobileDrawer.classList.remove('hidden');
+                    hamburgerIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                }
+            });
+        }
+
+        // Close Mobile Menu when clicking link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileDrawer) mobileDrawer.classList.add('hidden');
+                if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+                if (closeIcon) closeIcon.classList.add('hidden');
+            });
+        });
+
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            reveals.forEach(el => observer.observe(el));
+        }
+
+        function initPortfolioFilters() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('active', 'bg-accent', 'text-white');
+                        b.classList.add('bg-surface-light', 'text-muted');
+                    });
+
+                    btn.classList.add('active', 'bg-accent', 'text-white');
+                    btn.classList.remove('bg-surface-light', 'text-muted');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        if (filter === 'all' || category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+
+        function initCounterAnimation() {
+            const yearsEl = document.getElementById('stat-years');
+            const projectsEl = document.getElementById('stat-projects');
+            const clientsEl = document.getElementById('stat-clients');
+            const viewsEl = document.getElementById('stat-views');
+
+            let animated = false;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !animated) {
+                        animated = true;
+                        animateNumber(yearsEl, 0, 5, '+', 1500);
+                        animateNumber(projectsEl, 0, 100, '+', 1800);
+                        animateNumber(clientsEl, 0, 30, '+', 1600);
+                        animateNumber(viewsEl, 0, 10, 'M+', 2000);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            if (yearsEl) observer.observe(yearsEl.parentElement.parentElement);
+        }
+
+        function animateNumber(element, start, end, suffix, duration) {
+            if (!element) return;
+            let current = start;
+            const stepTime = Math.abs(Math.floor(duration / (end - start)));
+            const timer = setInterval(() => {
+                current += 1;
+                element.textContent = current + suffix;
+                if (current >= end) {
+                    element.textContent = end + suffix;
+                    clearInterval(timer);
+                }
+            }, stepTime);
+        }
+
+        function openProjectModal(key) {
+            const modal = document.getElementById('project-modal');
+            const modalContent = document.getElementById('modal-content');
+            const data = modalDataMap[key];
+            if (!modal || !data) return;
+
+            modalContent.innerHTML = `
+                <div class="font-mono text-xs text-accent uppercase mb-1">${data.category} // ${data.year}</div>
+                <h2 class="font-heading font-bold text-3xl text-white mb-4">${data.title}</h2>
+                
+                <div class="rounded-2xl overflow-hidden mb-6 border border-border">
+                    <img src="${data.img}" alt="${data.title}" class="w-full h-auto object-cover max-h-80">
+                </div>
+
+                <p class="text-gray-300 text-sm leading-relaxed mb-6 font-normal">${data.desc}</p>
+
+                <div class="mb-6">
+                    <div class="font-mono text-xs text-muted mb-2">TECHNOLOGY STACK</div>
+                    <div class="flex flex-wrap gap-2 font-mono text-xs">
+                        ${data.stack.map(s => `<span class="px-3 py-1 rounded bg-surface border border-border text-gray-200">${s}</span>`).join('')}
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-4 border-t border-border">
+                    <button onclick="closeProjectModal()" class="px-6 py-2.5 rounded-xl bg-accent text-white font-mono text-xs font-bold uppercase shadow-glow-red">
+                        CLOSE PREVIEW
+                    </button>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('project-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        function playShowreelVideo() {
+            openProjectModal('motion-reel');
+        }
+
+        function copyEmailToClipboard() {
+            const emailText = document.getElementById('email-address').textContent;
+            const copyBtnText = document.getElementById('copy-btn-text');
+
+            // Standard fallback using textarea copy
+            const textarea = document.createElement('textarea');
+            textarea.value = emailText;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            copyBtnText.textContent = 'COPIED!';
+            setTimeout(() => {
+                copyBtnText.textContent = 'COPY';
+            }, 2000);
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            if (status) {
+                status.classList.remove('hidden');
+                document.getElementById('contact-form').reset();
+                setTimeout(() => {
+                    status.classList.add('hidden');
+                }, 5000);
+            }
+        }
+    </script>
+</body>
+</html>
